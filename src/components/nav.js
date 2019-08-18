@@ -14,6 +14,7 @@ class Nav extends Component {
   }
   componentDidMount() {
     window.addEventListener('resize', this.checkMobile);
+    this.checkMobile();
     this.checkCurrent();
   }
   componentWillUnmount(){

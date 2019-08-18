@@ -10,6 +10,7 @@ class Home extends Component {
   }
   componentDidMount() {
     window.addEventListener('resize', this.checkMobile);
+    this.checkMobile();
   }
   componentWillUnmount(){
     window.removeEventListener('resize', this.checkMobile);
@@ -44,8 +45,8 @@ class Home extends Component {
       letterSpacing: "1px"
     }
     var homeH4 = {
-      fontSize: "18px",
-      lineHeight: "27px",
+      fontSize: !isMobile ? "18px":"14px",
+      lineHeight: !isMobile ? "27px":"18px",
       color: "#222222",
       fontWeight: 500
     }
