@@ -9,6 +9,7 @@ import Projects from './pages/projects.js';
 import Pages from './pages/pages.js';
 
 import Nav from './components/nav.js';
+import Footer from './components/footer.js';
 import data from './data/data.js';
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
           <Route exact path={'/'+data["pages"][4]} component={Talks} />
           <Route exact path={'/'+data["pages"][5]} component={Travel} />
         </Switch>
+        <Footer/>
       </main>
     );
   }
