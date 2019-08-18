@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.5542a31b.chunk.css",
-    "main.js": "/static/js/main.a0b7f0cb.chunk.js",
-    "main.js.map": "/static/js/main.a0b7f0cb.chunk.js.map",
+    "main.css": "/static/css/main.069e2ccd.chunk.css",
+    "main.js": "/static/js/main.94ba426f.chunk.js",
+    "main.js.map": "/static/js/main.94ba426f.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.91d9f00c.js",
     "runtime~main.js.map": "/static/js/runtime~main.91d9f00c.js.map",
-    "static/js/2.81374cc2.chunk.js": "/static/js/2.81374cc2.chunk.js",
-    "static/js/2.81374cc2.chunk.js.map": "/static/js/2.81374cc2.chunk.js.map",
+    "static/js/2.34575cc9.chunk.js": "/static/js/2.34575cc9.chunk.js",
+    "static/js/2.34575cc9.chunk.js.map": "/static/js/2.34575cc9.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.4b03a42dd8e25954803877cc7a56347a.js": "/precache-manifest.4b03a42dd8e25954803877cc7a56347a.js",
+    "precache-manifest.a8f2bfd43392f3f2f40dce2468357c8e.js": "/precache-manifest.a8f2bfd43392f3f2f40dce2468357c8e.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.5542a31b.chunk.css.map": "/static/css/main.5542a31b.chunk.css.map",
+    "static/css/main.069e2ccd.chunk.css.map": "/static/css/main.069e2ccd.chunk.css.map",
     "static/media/index.css": "/static/media/AirbnbCerealMedium.220b1dd3.woff",
     "static/media/logo.svg": "/static/media/logo.37f2e4a9.svg"
   }
