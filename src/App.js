@@ -11,11 +11,39 @@ import Pages from './pages/pages.js';
 import Nav from './components/nav.js';
 import Footer from './components/footer.js';
 import data from './data/data.js';
+import loading from './images/loading.gif';
+
+// import Lottie from 'react-lottie';
+// import * as animationData from './data/loading.json'
 
 class App extends Component {
+  componentDidMount(){
+    document.body.classList.add('overflow-y-hidden');
+    document.getElementById('loading').classList.remove('fade');
+
+    setTimeout(function(){
+      document.getElementById('loading').classList.add('fade');
+      document.body.classList.remove('overflow-y-hidden');
+    },2000);
+  }
   render() {
+    {/*
+    const defaultOptions = {
+      loop: true,
+      autoplay: true, 
+      animationData: animationData.default,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice'
+      }
+    };
+    */}
+      
     return (
       <main>
+        <div id="loading" className="flex items-center justify-center">
+          {/*<Lottie options={defaultOptions} height={120} width={120} />*/}
+          <img src={loading} alt="Loading..." width="80" height="80"/>
+        </div>
         <Nav active={window.location.pathname}/>
         <Switch>
           <Route exact path='/' component={Home} />

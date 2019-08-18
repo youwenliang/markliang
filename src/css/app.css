@@ -13,6 +13,22 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    opacity: 1;
+    z-index: 100;
+    transition: opacity 0s linear;
+}
+
+#loading.fade {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s linear;
+}
+
 .box {
 	max-width: 1024px;
 }
