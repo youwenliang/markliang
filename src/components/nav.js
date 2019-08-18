@@ -8,31 +8,24 @@ class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: $(window).width() <= 959 ? true : false,
+      width: window.innerWidth,
       open: false
     }
-    this.checkMobile = this.checkMobile.bind(this);
-    this.checkCurrent = this.checkCurrent.bind(this);
   }
   componentDidMount() {
-    var $this = this;
-    window.addEventListener('resize', $this.checkMobile, false);
-    $this.checkCurrent();
-  }
-  componentDidUpdate() {
-    var $this = this;
-    $this.checkCurrent();
+    window.addEventListener('resize', this.checkMobile);
+    this.checkCurrent();
   }
   componentWillUnmount(){
-    var $this = this;
-    window.removeEventListener('resize', $this.checkMobile, false);
+    window.removeEventListener('resize', this.checkMobile);
   }
-  checkMobile() {
-    var $this = this;
-    if($(window).width() <= 959) $this.setState({mobile:true});
-    else $this.setState({mobile:false});
+  componentDidUpdate() {
+    this.checkCurrent();
   }
-  checkCurrent(){
+  checkMobile = () => {
+    this.setState({ width: window.innerWidth });
+  }
+  checkCurrent = () =>{
     var pages = data["pages"];
     var current = pages.indexOf(this.props.active.split('/')[1])+1;
     if(current === 0) current = 1;
@@ -51,13 +44,16 @@ class Nav extends Component {
   }
   
   render() {
+    const { width } = this.state;
+    const isMobile = width <= 959;
+
     var navStyle = {
       maxWidth: 960
     }
 
-    var navList = this.state.mobile ? (
+    var navList = isMobile ? (
       <div className="pa3 dark-gray pointer">
-        <i class="material-icons md-24" onClick={this.openPanel.bind(this)}>menu</i>
+        <i className="material-icons md-24" onClick={this.openPanel.bind(this)}>menu</i>
       </div>
     ) : (
       <ul className="ttu ls2 f12">
@@ -70,7 +66,7 @@ class Nav extends Component {
       </ul>
     )
 
-    var panel = <Panel closePanel={this.closePanel.bind(this)} display={this.state.open} mobile={this.state.mobile}/>
+    var panel = <Panel closePanel={this.closePanel.bind(this)} display={this.state.open} mobile={isMobile}/>
 
     return (
       <nav className="center flex items-center" style={navStyle}>
@@ -101,7 +97,7 @@ class Panel extends Component {
       <div className="panel bg-blue absolute w-100 h-100 top-0" style={panelStyle}>
         <div style={{height: "64px"}} className="flex items-center">
           <div className="pa3 white pointer absolute right-0 dib">
-            <i class="material-icons md-24" onClick={this.props.closePanel}>close</i>
+            <i className="material-icons md-24" onClick={this.props.closePanel}>close</i>
           </div>
         </div>
         <div className="mv4 center tc">

@@ -96,6 +96,7 @@ body {
 nav {
 	flex-direction: row;
 	justify-content: space-between;
+	margin-bottom: 50px;
 }
 
 nav ul {
@@ -137,6 +138,7 @@ nav li.active:after {
   nav {
 	flex-direction: column;
 	justify-content: center;
+	margin-bottom: 100px;
   }
 
   nav ul {
@@ -148,6 +150,7 @@ nav li.active:after {
   nav {
 	flex-direction: row !important;
 	justify-content: space-between !important;
+	margin-bottom: 0px !important;
   }
 
   nav ul {
