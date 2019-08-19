@@ -1,18 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.b526c492.chunk.css",
-    "main.js": "/static/js/main.57d364a2.chunk.js",
-    "main.js.map": "/static/js/main.57d364a2.chunk.js.map",
+    "main.js": "/static/js/main.81f27737.chunk.js",
+    "main.js.map": "/static/js/main.81f27737.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.91d9f00c.js",
     "runtime~main.js.map": "/static/js/runtime~main.91d9f00c.js.map",
-    "static/js/2.3f5db6a8.chunk.js": "/static/js/2.3f5db6a8.chunk.js",
-    "static/js/2.3f5db6a8.chunk.js.map": "/static/js/2.3f5db6a8.chunk.js.map",
+    "static/js/2.694f36a8.chunk.js": "/static/js/2.694f36a8.chunk.js",
+    "static/js/2.694f36a8.chunk.js.map": "/static/js/2.694f36a8.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f0c3c003bc19d71936610e6b366c48ba.js": "/precache-manifest.f0c3c003bc19d71936610e6b366c48ba.js",
+    "precache-manifest.39a13966ab01dd2fc3a7a55db9054fc0.js": "/precache-manifest.39a13966ab01dd2fc3a7a55db9054fc0.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.b526c492.chunk.css.map": "/static/css/main.b526c492.chunk.css.map",
     "static/media/index.css": "/static/media/AirbnbCerealMedium.220b1dd3.woff",
-    "static/media/loading.gif": "/static/media/loading.7ae789e3.gif",
     "static/media/logo.svg": "/static/media/logo.37f2e4a9.svg"
   }
 }
