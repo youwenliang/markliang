@@ -9,14 +9,14 @@
     "jquery-mousewheel": "^3.1.13",
     "jquery-ui": "^1.12.1",
     "material-design-icons": "^3.0.1",
-    "react": "^16.9.0",
+    "react": "^16.8.6",
     "react-browser-router": "^2.1.1",
-    "react-dom": "^16.9.0",
+    "react-dom": "^16.8.6",
     "react-gsap": "^1.2.0",
     "react-lazy-load": "^3.0.13",
     "react-lottie": "^1.2.3",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "3.1.1",
+    "react-scripts": "^3.0.1",
     "react-scrollmagic": "^2.1.0",
     "react-service-worker": "^0.1.1",
     "serviceworker": "^0.1.7",
@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && react-snapshot",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -54,23 +54,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "reactSnapshot": {
-    "include": [
-      "/about/",
-      "/projects/",
-      "/writing/",
-      "/talks/",
-      "/travel/"
-    ],
-    "exclude": [
-      "/about",
-      "/projects",
-      "/writing",
-      "/talks",
-      "/travel"
-    ],
-    "snapshotDelay": 300
   },
   "homepage": "http://home.youwenliang.com"
 }

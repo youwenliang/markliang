@@ -45,8 +45,8 @@ class Home extends Component {
       letterSpacing: "1px"
     }
     var homeH4 = {
-      fontSize: !isMobile ? "18px":"14px",
-      lineHeight: !isMobile ? "27px":"18px",
+      fontSize: !isMobile ? "18px":"16px",
+      lineHeight: !isMobile ? "27px":"24px",
       color: "#222222",
       fontWeight: 500
     }

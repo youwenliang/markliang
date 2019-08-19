@@ -11,7 +11,10 @@ import Pages from './pages/pages.js';
 import Nav from './components/nav.js';
 import Footer from './components/footer.js';
 import data from './data/data.js';
-import loading from './images/loading.gif';
+// import loading from './images/loading.gif';
+
+import Lottie from 'react-lottie';
+import * as animationData from './data/loading.json'
 
 class App extends Component {
   componentDidMount(){
@@ -24,10 +27,20 @@ class App extends Component {
     },2000);
   }
   render() {
+    const defaultOptions = {
+      loop: false,
+      autoplay: true, 
+      animationData: animationData.default,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice'
+      }
+    };
+      
     return (
       <main>
         <div id="loading" className="flex items-center justify-center">
-          <img src={loading} alt="Loading..." width="80" height="80"/>
+          <Lottie options={defaultOptions} height={120} width={120} />
+          {/*<img src={loading} alt="Loading..." width="80" height="80"/>*/}
         </div>
         <Nav active={window.location.pathname}/>
         <Switch>
