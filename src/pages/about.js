@@ -40,7 +40,7 @@ class About extends Component {
     var margin1 = isMobile ? "mb40":"mb50"
 
     return (
-      <section id="about">
+      <section id="about" className="page">
         <div className="box center">
           <div className={"flex flex-row-l flex-column ph4-l ph3 "+margin1}>
             <div className="w-two-thirds-l w-100 ph2 o2">

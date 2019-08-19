@@ -11,6 +11,17 @@ body {
 	scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image: radial-gradient(rgba(123,172,203,.1) 7%,transparent 0);
+	background-size: 30px 30px;
+}
+
+main {
+	position: relative;
+	min-height: 100vh;
+}
+
+section {
+	padding-bottom: 64px;
 }
 
 #loading {
@@ -86,6 +97,13 @@ body {
 	background-color: #1F3140;
 }
 
+footer {
+	z-index: 9;
+	position: absolute;
+  	bottom: 0;
+  	width: 100%;
+}
+
 /* Nav.js */
 
 #logo {
@@ -101,6 +119,8 @@ nav {
 	flex-direction: row;
 	justify-content: space-between;
 	margin-bottom: 50px;
+	position: relative;
+	z-index: 10;
 }
 
 nav ul {
@@ -169,6 +189,10 @@ nav li.active:after {
   #logo img {
   	width: 30px;
   }
+}
+
+.panel {
+	z-index: 8;
 }
 
 .panel ul {

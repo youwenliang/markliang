@@ -53,8 +53,8 @@ class Nav extends Component {
     }
 
     var navList = isMobile ? (
-      <div className="pa3 dark-gray pointer">
-        <i className="material-icons md-24" onClick={this.openPanel.bind(this)}>menu</i>
+      <div className="pa3 dark-gray pointer" onClick={this.openPanel.bind(this)}>
+        <i className="material-icons md-24">menu</i>
       </div>
     ) : (
       <ul className="ttu ls2 f12">
@@ -90,10 +90,10 @@ class Panel extends Component {
       zIndex: 100
     }
     return (
-      <div className="panel bg-blue absolute w-100 h-100 top-0" style={panelStyle}>
+      <div className="panel bg-blue absolute w-100 vh-100 top-0" style={panelStyle}>
         <div style={{height: "64px"}} className="flex items-center">
-          <div className="pa3 white pointer absolute right-0 dib">
-            <i className="material-icons md-24" onClick={this.props.closePanel}>close</i>
+          <div className="pa3 white pointer absolute right-0 dib" onClick={this.props.closePanel}>
+            <i className="material-icons md-24">close</i>
           </div>
         </div>
         <div className="mv4 center tc">

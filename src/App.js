@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Transition, TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/home.js';
 import About from './pages/about.js';
@@ -26,6 +27,11 @@ class App extends Component {
       document.body.classList.remove('overflow-y-hidden');
     },2000);
   }
+
+  componentDidUpdate(){
+    
+  }
+
   render() {
     const defaultOptions = {
       loop: false,
@@ -45,12 +51,12 @@ class App extends Component {
         <Nav active={window.location.pathname}/>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path={'/'+data["pages"][1]} component={About} />
-          <Route exact path={'/'+data["pages"][2]} component={Projects} />
-          <Route exact path={'/'+data["pages"][2]+'/:id'} component={Pages} />
-          <Route exact path={'/'+data["pages"][3]} component={Writing} />
-          <Route exact path={'/'+data["pages"][4]} component={Talks} />
-          <Route exact path={'/'+data["pages"][5]} component={Travel} />
+          <Route path={'/'+data["pages"][1]} component={About} />
+          <Route path={'/'+data["pages"][2]} component={Projects} />
+          <Route path={'/'+data["pages"][2]+'/:id'} component={Pages} />
+          <Route path={'/'+data["pages"][3]} component={Writing} />
+          <Route path={'/'+data["pages"][4]} component={Talks} />
+          <Route path={'/'+data["pages"][5]} component={Travel} />
         </Switch>
         <Footer/>
       </main>

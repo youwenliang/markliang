@@ -4,7 +4,7 @@ class Footer extends Component {
   render() {
     var footerStyle = {
       height: "64px",
-      background: "rgba(123,172,203,.2)",
+      background: "#E1EDF4",
       textAlign: "center"
     }
 

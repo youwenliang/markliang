@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import data from '../data/data.js';
+import human from '../images/illustration1.svg';
 
 class Home extends Component {
   constructor(props) {
@@ -34,7 +35,8 @@ class Home extends Component {
       fontSize: !isMobile ? "30px":"18px",
       lineHeight: !isMobile ? "48px":"30px",
       color: "#484848",
-      fontWeight: 500
+      fontWeight: 500,
+      marginBottom: 0
     }
     var homeH5 = {
       fontSize: "14px",
@@ -62,22 +64,30 @@ class Home extends Component {
       details.push(temp);
     }
 
-    var margin1 = isMobile ? "mb40":"mb50"
-    var margin2 = isMobile ? "mb50":"mb100"
+    var margin = isMobile ? "mb50":"mb100"
+
+    var humanStyle = isMobile ? {
+      top: "50px",
+      clipPath: "circle(150px at center 100px)",
+      "-webkit-clip-path": "circle(150px at center 100px)"
+    } : {
+      top: "50px"
+    }
 
     return (
-      <section id="home">
+      <section id="home" className="page">
         <div className="box center">
-          <div className={"flex flex-row-l flex-column ph4-l ph3 "+margin1}>
-            <div className="w-two-thirds-l w-100 ph2 o2">
+          <div className={"flex flex-row-l flex-column ph4-l ph3 "+margin}>
+            <div className="w-two-thirds-l w-100 ph2 o2 relative">
               <h1 style={homeH1} dangerouslySetInnerHTML={{__html:cdata.h1}}></h1>
               <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata.h3}}></h3>
             </div>
-            <div className="w-third-l w-100 ph2 o1">
+            <div className="w-third-l w-100 ph2 o1 relative">
               <div className="bg-blue o-20 w-100 br-100 circle center"></div>
+              <img className="absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang" style={humanStyle}/>
             </div>
           </div>
-          <div className={"cf ph4-l ph3 "+margin2}>
+          <div className={"cf ph4-l ph3 "+margin}>
             {details}
           </div>
         </div>
