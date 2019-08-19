@@ -11,7 +11,7 @@ class Footer extends Component {
     var footerTextStyle = {
       fontSize: "12px",
       lineHeight: "64px",
-      color: "rgba(123,172,203,1)",
+      color: "#30638D",
       margin: 0,
       fontWeight: 700
     }

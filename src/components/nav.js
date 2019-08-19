@@ -58,12 +58,7 @@ class Nav extends Component {
       </div>
     ) : (
       <ul className="ttu ls2 f12">
-        <li><Link to ='/'>Home</Link></li>
-        <li><Link to ={'/'+data["pages"][1]}>{data["pages"][1]}</Link></li>
-        <li><Link to ={'/'+data["pages"][2]}>{data["pages"][2]}</Link></li>
-        <li><Link to ={'/'+data["pages"][3]}>{data["pages"][3]}</Link></li>
-        <li><Link to ={'/'+data["pages"][4]}>{data["pages"][4]}</Link></li>
-        <li><Link to ={'/'+data["pages"][5]}>{data["pages"][5]}</Link></li>
+        <PageList/>
       </ul>
     )
 
@@ -104,15 +99,21 @@ class Panel extends Component {
         <div className="mv4 center tc">
           <img src={logo} width="30" alt="Mark Liang"/>
           <ul className="ttu ls2 f14" onClick={this.props.closePanel}>
-            <li><Link to ='/'>Home</Link></li>
-            <li><Link to ={'/'+data["pages"][1]}>{data["pages"][1]}</Link></li>
-            <li><Link to ={'/'+data["pages"][2]}>{data["pages"][2]}</Link></li>
-            <li><Link to ={'/'+data["pages"][3]}>{data["pages"][3]}</Link></li>
-            <li><Link to ={'/'+data["pages"][4]}>{data["pages"][4]}</Link></li>
-            <li><Link to ={'/'+data["pages"][5]}>{data["pages"][5]}</Link></li>
+            <PageList/>
           </ul>
         </div>
       </div>
     )
   }
+}
+
+function PageList(props) {
+  let list = [];
+  for(var i = 0; i < data["pages"].length; i++) {
+    var temp = null;
+    if(i === 0) temp = (<li><Link to ='/'>{data["pages"][i]}</Link></li>)
+    else temp = (<li><Link to ={'/'+data["pages"][i]}>{data["pages"][i]}</Link></li>)
+    list.push(temp);
+  }
+  return list
 }
