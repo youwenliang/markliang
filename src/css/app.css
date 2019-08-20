@@ -141,21 +141,23 @@ nav li a {
 	color: #222222;
 }
 
-nav li:after {
+nav li::after {
 	content: '';
-	width: 0;
+	transform: scaleX(0);
+	transform-origin: right center;
+	width: calc(100% - 2px);
 	height: 4px;
 	background-color: #7BACCB;
 	position: absolute;
 	bottom: -8px;
 	left: 0;
-	transition: all 0.2s cubic-bezier(0.333, 0, 0, 1);
+	transition: transform .5s cubic-bezier(.19,1,.22,1);
 }
 
-nav li:hover:after,
-nav li.active:after {
-	width: calc(100% - 2px);
-	right: 0;
+nav li:hover::after,
+nav li.active::after {
+	transform: scaleX(1);
+	transform-origin: left center;
 }
 
 @media screen and (min-height: 700px) {
@@ -204,7 +206,7 @@ nav li.active:after {
 	margin: 0 auto 36px;
 	transform: translateY(25px);
     opacity: 0;
-    transition: all .3s cubic-bezier(0.333, 0, 0, 1) .3s;
+    transition-timing-function: cubic-bezier(.19,1,.22,1);
 }
 
 @media screen and (max-height: 600px) {
@@ -217,6 +219,7 @@ nav li.active:after {
 .panel.set li {
     transform: translateY(0px);
     opacity: 1;
+    transition-duration: 0;
 }
 
 .panel li a {
@@ -225,32 +228,34 @@ nav li.active:after {
 
 .panel li:after {
 	content: '';
-	width: 0;
+	transform: scaleX(0);
+	transform-origin: right center;
+	width: calc(100% - 2px);
 	height: 4px;
 	background-color: #1F3140;
 	position: absolute;
 	bottom: -8px;
 	left: 0;
-	transition: all 0.2s cubic-bezier(0.333, 0, 0, 1);
+	transition: transform .5s cubic-bezier(.19,1,.22,1);
 }
 
 .panel.set li:nth-child(1) {
     transition-delay: .1s;
 }
 .panel.set li:nth-child(2) {
-    transition-delay: .15s;
-}
-.panel.set li:nth-child(3) {
     transition-delay: .2s;
 }
-.panel.set li:nth-child(4) {
-    transition-delay: .25s;
-}
-.panel.set li:nth-child(5) {
+.panel.set li:nth-child(3) {
     transition-delay: .3s;
 }
+.panel.set li:nth-child(4) {
+    transition-delay: .4s;
+}
+.panel.set li:nth-child(5) {
+    transition-delay: .5s;
+}
 .panel.set li:nth-child(6) {
-    transition-delay: .35s;
+    transition-delay: .6s;
 }
 
 /* Typography */
@@ -362,3 +367,77 @@ font-weight: 700;
 font-display: swap;
 src: local('Airbnb Cereal App Bold'), url('./css/fonts/AirbnbCerealBold.woff') format('woff');
 }
+
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.is-active:hover {
+    opacity: 0.7; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #fff; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*
+   * Squeeze
+   */
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--squeeze .hamburger-inner::before {
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+  .hamburger--squeeze .hamburger-inner::after {
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .hamburger--squeeze.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+  .hamburger--squeeze.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }

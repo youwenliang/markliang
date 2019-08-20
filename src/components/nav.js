@@ -33,15 +33,20 @@ class Nav extends Component {
     $('nav li.active').removeClass('active');
     $('nav li:nth-child('+current+')').addClass('active');
   }
-  closePanel() {
-    this.setState({open: false})
-    $('body').removeClass('overflow-y-hidden');
-    $('.panel').removeClass('set');
-  }
-  openPanel() {
-    this.setState({open: true})
-    $('body').addClass('overflow-y-hidden');
-    $('.panel').addClass('set');
+  togglePanel() {
+    if(this.state.open) {
+      this.setState({open: false})
+      $('body').removeClass('overflow-y-hidden');
+      $('.panel').removeClass('set');
+      $('.hamburger').removeClass('is-active');
+      $('.panel li').css({"transition-duration": "0"});
+    } else {
+      this.setState({open: true})
+      $('body').addClass('overflow-y-hidden');
+      $('.panel').addClass('set');
+      $('.hamburger').addClass('is-active');
+      $('.panel li').css({"transition-duration": ".6s"});
+    }
   }
   
   render() {
@@ -52,17 +57,25 @@ class Nav extends Component {
       maxWidth: 960
     }
 
+    var buttonStyle = {
+      transform: "scale(.6)",
+      zIndex: 101
+    }
+
     var navList = isMobile ? (
-      <div className="pa3 dark-gray pointer" onClick={this.openPanel.bind(this)}>
-        <i className="material-icons md-24">menu</i>
-      </div>
+      <button className="hamburger hamburger--squeeze" type="button" style={buttonStyle} onClick={this.togglePanel.bind(this)}>
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
+      </button>
+
     ) : (
       <ul className="ttu ls2 f12">
         <PageList/>
       </ul>
     )
 
-    var panel = <Panel closePanel={this.closePanel.bind(this)} display={this.state.open} mobile={isMobile}/>
+    var panel = <Panel togglePanel={this.togglePanel.bind(this)} display={this.state.open} mobile={isMobile}/>
 
     return (
       <nav className="center flex items-center" style={navStyle}>
@@ -91,14 +104,9 @@ class Panel extends Component {
     }
     return (
       <div className="panel bg-blue absolute w-100 vh-100 top-0" style={panelStyle}>
-        <div style={{height: "64px"}} className="flex items-center">
-          <div className="pa3 white pointer absolute right-0 dib" onClick={this.props.closePanel}>
-            <i className="material-icons md-24">close</i>
-          </div>
-        </div>
         <div className="mv4 center tc">
           <img src={logo} width="30" alt="Mark Liang"/>
-          <ul className="ttu ls2 f14" onClick={this.props.closePanel}>
+          <ul className="ttu ls2 f14" onClick={this.props.togglePanel}>
             <PageList/>
           </ul>
         </div>
