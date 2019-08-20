@@ -36,13 +36,13 @@ class Nav extends Component {
   togglePanel() {
     if(this.state.open) {
       this.setState({open: false})
-      $('body').removeClass('overflow-y-hidden');
+      $('main').removeClass('overflow-y-hidden vh-100');
       $('.panel').removeClass('set');
       $('.hamburger').removeClass('is-active');
       $('.panel li').css({"transition-duration": "0"});
     } else {
       this.setState({open: true})
-      $('body').addClass('overflow-y-hidden');
+      $('main').addClass('overflow-y-hidden vh-100');
       $('.panel').addClass('set');
       $('.hamburger').addClass('is-active');
       $('.panel li').css({"transition-duration": ".6s"});

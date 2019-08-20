@@ -69,11 +69,11 @@ class About extends Component {
 
     for (var i = 0; i < 4; i++) {
       var temp = (
-        <div className="fl w-100 w-50-l pa2 mb50 tl-l tc" key={i}>
+        <div className="fl w-50-ns w-100 pa2 mb4-ns mb3 tl-ns tc" key={i}>
           <img className="mb3" src={icons[i]} width="120" alt={cdata["focus-title"][i]}/>
-          <h4 className="mv3-l mv2" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["focus-title"][i]}}></h4>
-          <h5 className={"mv4-l mv3 "+mw} style={aboutH5} dangerouslySetInnerHTML={{__html:cdata["focus-content"][i]}}></h5>
-          <h6 className="mv3-l mv2 pre-wrap" style={aboutH6} dangerouslySetInnerHTML={{__html:cdata["focus-tag"][i]}}></h6>
+          <h4 className="mv3-ns mv2" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["focus-title"][i]}}></h4>
+          <h5 className={"mv4-ns mv3 db-ns dn "+mw} style={aboutH5} dangerouslySetInnerHTML={{__html:cdata["focus-content"][i]}}></h5>
+          <h6 className="mv3-ns mv2 pre-wrap" style={aboutH6} dangerouslySetInnerHTML={{__html:cdata["focus-tag"][i]}}></h6>
         </div>
       )
       focus.push(temp);

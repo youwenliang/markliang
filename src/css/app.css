@@ -13,6 +13,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-image: radial-gradient(rgba(123,172,203,.1) 7%,transparent 0);
 	background-size: 30px 30px;
+	position: relative;
 }
 
 main {
@@ -316,7 +317,7 @@ nav li.active::after {
 .button::after {
 	content: '';
 	width: 100%;
-	height: 100%;
+	height: calc(100% + 2px);
 	display: block;
 	position: absolute;
 	background-color: #274873;
@@ -333,6 +334,30 @@ nav li.active::after {
 }
 
 .button:hover::after {
+	transform: scaleX(1);
+	transform-origin: left center;
+}
+
+.title-links {
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+}
+
+.title-links::after {
+	content: '';
+	width: calc(100% - 25px);
+	height: 2px;
+	display: block;
+	position: absolute;
+	background-color: #274873;
+	bottom: 15px;
+	left: 25px;
+	transform: scaleX(0);
+	transform-origin: right center;
+	transition: transform .5s cubic-bezier(.19,1,.22,1);
+}
+.title-links:hover::after {
 	transform: scaleX(1);
 	transform-origin: left center;
 }

@@ -42,7 +42,10 @@ var data = {
 			"h1": "Writing<br/>—",
 			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
 			"button": "read more",
-			"small-title": "Featured blog posts"
+			"small-title": "Featured blog posts",
+			"post-titles": ["From Observation to Insights", "TNW 2019 — Disneyland for Nerds", "My experience at UX London 2018", "Learn a New Language"],
+			"post-links": ["","","",""],
+			"post-dates": ["May 17, 2019", "May 15, 2019", "Aug. 24, 2018", "Mar. 3, 2018"]
 		},
 		"talks": {
 			"h1": "Talks<br/>—",
