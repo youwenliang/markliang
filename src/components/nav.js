@@ -104,11 +104,13 @@ class Panel extends Component {
     }
     return (
       <div className="panel bg-blue absolute w-100 vh-100 top-0" style={panelStyle}>
-        <div className="mv4 center tc">
-          <img src={logo} width="30" alt="Mark Liang"/>
-          <ul className="ttu ls2 f14" onClick={this.props.togglePanel}>
-            <PageList/>
-          </ul>
+        <div className="mt100">
+          <div className="mv4 center tc">
+            <img src={logo} width="30" alt="Mark Liang"/>
+            <ul className="ttu ls2 f14" onClick={this.props.togglePanel}>
+              <PageList/>
+            </ul>
+          </div>
         </div>
       </div>
     )

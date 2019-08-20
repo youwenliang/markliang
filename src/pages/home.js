@@ -69,14 +69,6 @@ class Home extends Component {
 
     var margin = isMobile ? "mb50":"mb100"
 
-    var humanStyle = isMobile ? {
-      top: "50px",
-      clipPath: "circle(150px at center 100px)",
-      "-webkit-clip-path": "circle(150px at center 100px)"
-    } : {
-      top: "50px"
-    }
-
     return (
       <section id="home" className="page">
         <div className="box center">
@@ -87,7 +79,7 @@ class Home extends Component {
             </div>
             <div className="w-third-l w-100 ph2 o1 relative">
               <div className="bg-blue o-20 w-100 br-100 circle center"></div>
-              <img className="absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang" style={humanStyle}/>
+              <img className="human absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang"/>
             </div>
           </div>
           <div className={"cf ph4-l ph3 "+margin}>
