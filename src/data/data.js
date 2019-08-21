@@ -50,7 +50,10 @@ var data = {
 		"talks": {
 			"h1": "Talks<br/>—",
 			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
-			"small-title": "Past talks"
+			"small-title": "Past talks",
+			"talk-titles": ["From Observation to Insights", "Prototyping & User Testing", "Delightful Experience with Technology", "Why and Why Not"],
+			"talk-locations": ["Meitu", "Da-Tung University", "Ogilvy", "UI/UX Night"],
+			"talk-dates": ["Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2015  "]
 		},
 		"travel": {
 			"h1": "Travel<br/>—",

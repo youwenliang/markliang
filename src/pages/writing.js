@@ -57,7 +57,7 @@ class Writing extends Component {
       var temp = (
         <div className="fl w-100 pa2" key={i}>
             <a className="title-links" href={cdata["post-links"]} target="_blank" rel="noopener noreferrer">
-              <h4 style={writingH4} className="mt0 mb2-l mb2" dangerouslySetInnerHTML={{__html:"✍  "+cdata["post-titles"][i]}}></h4>
+              <h4 style={writingH4} className="mt0 mb2-l mb2" dangerouslySetInnerHTML={{__html:cdata["post-titles"][i]}}></h4>
             </a>
             <h5 style={writingH5} className="mt0 mb3-l mb2" dangerouslySetInnerHTML={{__html:"— "+cdata["post-dates"][i]}}></h5>
         </div>
