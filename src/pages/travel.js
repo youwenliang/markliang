@@ -52,9 +52,46 @@ class Travel extends Component {
             </div>
           </div>
           <div className="ph4-l ph3">
-            <div className="ph2">
-              <p className="small-title mb40">{cdata["small-title"][0]}</p>
-              <p className="small-title mb40">{cdata["small-title"][1]}</p>
+            <div className="mb100 tc">
+              <div className="flex justify-between w-100 ph2">
+                <p className="small-title mb40">{cdata["small-title"][0]}</p>
+              </div>
+              <div className="cf">
+                <div className="fl w-25-l w-50 pa2">
+                  <div className="w-100 h5 bg-blue"></div>
+                </div>
+                <div className="fl w-25-l w-50 pa2">
+                  <div className="w-100 h5 bg-blue"></div>
+                </div>
+                <div className="fl w-25-l w-50 pa2">
+                  <div className="w-100 h5 bg-blue"></div>
+                </div>
+                <div className="fl w-25-l w-50 pa2">
+                  <div className="w-100 h5 bg-blue"></div>
+                </div>
+                <div className="fl w-25-l w-50 pa2">
+                  <div className="w-100 h5 bg-blue"></div>
+                </div>
+                <div className="fl w-25-l w-50 pa2">
+                  <div className="w-100 h5 bg-blue"></div>
+                </div>
+                <div className="fl w-25-l w-50 pa2">
+                  <div className="w-100 h5 bg-blue"></div>
+                </div>
+                <div className="fl w-25-l w-50 pa2">
+                  <div className="w-100 h5 bg-blue"></div>
+                </div>
+              </div>
+              <div className="button mt3 tc center">View More</div>
+            </div>
+            <div className="ph2 mb100 tc">
+              <div className="flex justify-between w-100">
+                <p className="small-title mb40">{cdata["small-title"][1]}</p>
+              </div>
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hQAP3JU1ktA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div className="button mt3">View More</div>
             </div>
           </div>
         </div>
