@@ -32,9 +32,9 @@ class About extends Component {
     const isMobile = width <= 959;
 
     var homeH1 = {
-      fontSize: !isMobile ? "48px":"30px",
-      lineHeight: !isMobile ? "60px":"40px",
-      color: "#010101",
+      fontSize: !isMobile ? "54px":"30px",
+      lineHeight: !isMobile ? "68px":"40px",
+      color: "#222222",
       fontWeight: 700
     }
     var homeH3 = {
@@ -93,17 +93,21 @@ class About extends Component {
               <img className="human absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang"/>
             </div>
           </div>
-          <div className="ph4-l ph3">
+          <div className="ph4-l ph3 mb100">
             <div className="ph2">
-              <p className="small-title mb40">{cdata["small-title"][0]}</p>
+              <p className="small-title mb40 mt0">{cdata["small-title"][0]}</p>
               <h1 style={homeH1} dangerouslySetInnerHTML={{__html:cdata["h1-mission"]}}></h1>
               <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata["h3-mission"]}}></h3>
             </div>
           </div>
-          <div className="ph4-l ph3 mb50">
-            <p className="small-title mb40 mt100 ph2">{cdata["small-title"][1]}</p>
-            <div className="cf">
-              {focus}
+        </div>
+        <div className="fade-section">
+          <div className="box center">
+            <div className="ph4-l ph3">
+              <p className="small-title mb40 mt0 ph2">{cdata["small-title"][1]}</p>
+              <div className="cf">
+                {focus}
+              </div>
             </div>
           </div>
         </div>

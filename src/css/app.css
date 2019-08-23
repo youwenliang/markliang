@@ -115,6 +115,17 @@ footer {
   	width: 100%;
 }
 
+.fade-section {
+	padding: 100px 0;
+	background-color: #f4f4f4;
+}
+
+@media screen and (max-width: 959px) {
+	.fade-section {
+		padding: 50px 0;
+	}
+}
+
 /* Nav.js */
 
 #logo {
@@ -299,7 +310,7 @@ nav li.active::after {
 .small-title {
 	font-size: 14px;
 	letter-spacing: 2px;
-	color: #1F3140;
+	color: #30638D;
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -321,9 +332,10 @@ nav li.active::after {
 	border: 3px solid #274873;
 	transition: all .4s linear;
 	position: relative;
+	z-index: 1;
 }
 
-.button::after {
+.button::before {
 	content: '';
 	width: 100%;
 	height: calc(100% + 2px);
@@ -342,9 +354,15 @@ nav li.active::after {
 	color: #fff;
 }
 
-.button:hover::after {
+.button:hover::before {
 	transform: scaleX(1);
 	transform-origin: left center;
+}
+
+.square:after {
+  	content: "";
+  	display: block;
+  	padding-bottom: 100%;
 }
 
 .title-links {
@@ -417,6 +435,21 @@ nav li.active::after {
 
 .mb100 {
 	margin-bottom: 100px;
+}
+
+@media screen and (max-width: 959px) {
+	.mv100 {
+		margin: 50px 0;
+	}
+
+	.mt100 {
+		margin-top: 50px;
+	}
+
+	.mb100 {
+		margin-bottom: 50px;
+	}
+
 }
 
 .mwh400 {

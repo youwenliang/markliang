@@ -26,9 +26,9 @@ class Travel extends Component {
     const isMobile = width <= 959;
 
     var homeH1 = {
-      fontSize: !isMobile ? "48px":"30px",
-      lineHeight: !isMobile ? "60px":"40px",
-      color: "#010101",
+      fontSize: !isMobile ? "54px":"30px",
+      lineHeight: !isMobile ? "68px":"40px",
+      color: "#222222",
       fontWeight: 700
     }
     var homeH3 = {
@@ -37,6 +37,7 @@ class Travel extends Component {
       color: "#484848",
       fontWeight: 500
     }
+    var box = isMobile ? "":"box";
 
     return (
       <section id="about">
@@ -51,49 +52,53 @@ class Travel extends Component {
               <img className="human absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang"/>
             </div>
           </div>
-          <div className="ph4-l ph3">
-            <div className="mb100 tc">
-              <div className="flex justify-between w-100 ph2">
-                <p className="small-title mb40">{cdata["small-title"][0]}</p>
-              </div>
-              <div className="cf">
-                <div className="fl w-25-l w-50 pa2">
-                  <div className="w-100 h5 bg-blue"></div>
-                </div>
-                <div className="fl w-25-l w-50 pa2">
-                  <div className="w-100 h5 bg-blue"></div>
-                </div>
-                <div className="fl w-25-l w-50 pa2">
-                  <div className="w-100 h5 bg-blue"></div>
-                </div>
-                <div className="fl w-25-l w-50 pa2">
-                  <div className="w-100 h5 bg-blue"></div>
-                </div>
-                <div className="fl w-25-l w-50 pa2">
-                  <div className="w-100 h5 bg-blue"></div>
-                </div>
-                <div className="fl w-25-l w-50 pa2">
-                  <div className="w-100 h5 bg-blue"></div>
-                </div>
-                <div className="fl w-25-l w-50 pa2">
-                  <div className="w-100 h5 bg-blue"></div>
-                </div>
-                <div className="fl w-25-l w-50 pa2">
-                  <div className="w-100 h5 bg-blue"></div>
-                </div>
-              </div>
-              <div className="button mt3 tc center">View More</div>
-            </div>
-            <div className="ph2 mb100 tc">
+        </div>
+        <div className="fade-section">
+          <div className="box center ph4-l ph3">
+            <div className="ph2 tc">
               <div className="flex justify-between w-100">
-                <p className="small-title mb40">{cdata["small-title"][1]}</p>
+                <p className="small-title mb40 mt0">{cdata["small-title"][1]}</p>
               </div>
-              <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/hQAP3JU1ktA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <div className="button mt3">View More</div>
             </div>
           </div>
+          <div className={"center tc ph4-l ph0 "+box}>
+            <div class="video-wrapper mb2 ">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/hQAP3JU1ktA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div className="button mt3">View More</div>
+          </div>
+        </div>
+        <div className="box center mt100">
+          <div className="ph4-l ph3">
+            <div className="tc">
+              <div className="flex justify-between w-100 ph2">
+                <p className="small-title mb40 mt0">{cdata["small-title"][0]}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={"center tc mb100 "+box}>
+          <div className="cf ph4-l ph0">
+            <div className="fl w-third-ns w-50 pa2-l pa1">
+              <div className="w-100 square bg-blue"></div>
+            </div>
+            <div className="fl w-third-ns w-50 pa2-l pa1">
+              <div className="w-100 square bg-blue"></div>
+            </div>
+            <div className="fl w-third-ns w-50 pa2-l pa1">
+              <div className="w-100 square bg-blue"></div>
+            </div>
+            <div className="fl w-third-ns w-50 pa2-l pa1">
+              <div className="w-100 square bg-blue"></div>
+            </div>
+            <div className="fl w-third-ns w-50 pa2-l pa1">
+              <div className="w-100 square bg-blue"></div>
+            </div>
+            <div className="fl w-third-ns w-50 pa2-l pa1">
+              <div className="w-100 square bg-blue"></div>
+            </div>
+          </div>
+          <div className="button mt3 tc center">View More</div>
         </div>
       </section>
     );

@@ -26,9 +26,9 @@ class Writing extends Component {
     const isMobile = width <= 959;
 
     var homeH1 = {
-      fontSize: !isMobile ? "48px":"30px",
-      lineHeight: !isMobile ? "60px":"40px",
-      color: "#010101",
+      fontSize: !isMobile ? "54px":"30px",
+      lineHeight: !isMobile ? "68px":"40px",
+      color: "#222222",
       fontWeight: 700
     }
     var homeH3 = {
@@ -80,7 +80,7 @@ class Writing extends Component {
             </div>
           </div>
           <div className="ph4-l ph3">
-            <p className="small-title mb40 ph2">{cdata["small-title"]}</p>
+            <p className="small-title mb40 mt0 ph2">{cdata["small-title"]}</p>
             <div className="cf mb100">
               {writing}
             </div>

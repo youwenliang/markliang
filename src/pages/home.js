@@ -29,17 +29,18 @@ class Home extends Component {
     const isMobile = width <= 959;
 
     var homeH1 = {
-      fontSize: !isMobile ? "48px":"30px",
-      lineHeight: !isMobile ? "60px":"40px",
-      color: "#010101",
-      fontWeight: 700
+      fontSize: !isMobile ? "54px":"30px",
+      lineHeight: !isMobile ? "68px":"40px",
+      color: "#222222",
+      fontWeight: 700,
+      marginBottom: 0
     }
     var homeH3 = {
       fontSize: !isMobile ? "30px":"18px",
       lineHeight: !isMobile ? "48px":"30px",
       color: "#484848",
       fontWeight: 500,
-      marginBottom: 0
+      margin: "0 auto"
     }
     var homeH5 = {
       fontSize: "14px",

@@ -26,9 +26,9 @@ class Projects extends Component {
     const isMobile = width <= 959;
 
     var homeH1 = {
-      fontSize: !isMobile ? "48px":"30px",
-      lineHeight: !isMobile ? "60px":"40px",
-      color: "#010101",
+      fontSize: !isMobile ? "54px":"30px",
+      lineHeight: !isMobile ? "68px":"40px",
+      color: "#222222",
       fontWeight: 700
     }
     var homeH3 = {
@@ -53,8 +53,8 @@ class Projects extends Component {
           </div>
           <div className="ph4-l ph3">
             <div className="ph2">
-              <p className="small-title mb40">{cdata["small-title"][0]}</p>
-              <p className="small-title mb40">{cdata["small-title"][1]}</p>
+              <p className="small-title mb40 mt0">{cdata["small-title"][0]}</p>
+              <p className="small-title mb40 mt0">{cdata["small-title"][1]}</p>
             </div>
           </div>
         </div>

@@ -30,9 +30,9 @@ class Talks extends Component {
     const isMobile = width <= 959;
 
     var homeH1 = {
-      fontSize: !isMobile ? "48px":"30px",
-      lineHeight: !isMobile ? "60px":"40px",
-      color: "#010101",
+      fontSize: !isMobile ? "54px":"30px",
+      lineHeight: !isMobile ? "68px":"40px",
+      color: "#222222",
       fontWeight: 700
     }
     var homeH3 = {
@@ -43,12 +43,12 @@ class Talks extends Component {
     }
     var photo = [];
     var url = [p1,p2,p3,p4];
-    for(var i = 0; i < 4; i++) {
-      var temp = {
-        background: "url("+url[i]+") no-repeat center center",
+    for(var j = 0; j < 4; j++) {
+      var tempURL = {
+        background: "url("+url[j]+") no-repeat center center",
         backgroundSize: "cover"
       }
-      photo.push(temp);
+      photo.push(tempURL);
     }
 
     var talk = [];
@@ -93,21 +93,21 @@ class Talks extends Component {
             </div>
           </div>
           <div className="ph4-l ph3">
-            <p className="small-title mb40 ph2">{cdata["small-title"]}</p>
+            <p className="small-title mb40 mt0 ph2">{cdata["small-title"]}</p>
             <div className="cf mb100">
               {talk}
             </div>
             <div className="cf mb100">
-              <div className="fl w-100 w-40-ns pa2">
+              <div className="fl w-100 w-40-l pa2">
                 <div className="w-100 w-100 h5 bg-blue" style={photo[0]}></div>
               </div>
-              <div className="fl w-100 w-60-ns pa2">
+              <div className="fl w-100 w-60-l pa2">
                 <div className="w-100 w-100 h5 bg-blue" style={photo[1]}></div>
               </div>
-              <div className="fl w-100 w-60-ns pa2">
+              <div className="fl w-100 w-60-l pa2">
                 <div className="w-100 w-100 h5 bg-blue" style={photo[2]}></div>
               </div>
-              <div className="fl w-100 w-40-ns pa2">
+              <div className="fl w-100 w-40-l pa2">
                 <div className="w-100 w-100 h5 bg-blue" style={photo[3]}></div>
               </div>
             </div>

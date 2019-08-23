@@ -9,8 +9,8 @@ var data = {
 	],
 	"contents": {
 		"home": {
-			"h1": "Hello,<br/>I'm Mark Liang.<br/>—",
-			"h3": "I’m a Product/UX Designer with over 5 years of experience in design and prototyping, passionate about crafting user experiences and bringing ideas to life with codes.",
+			"h1": "Hello,<br/>I'm Mark Liang.<br/><span class='blue fw1'>—</span>",
+			"h3": "I’m a <span class='blue'>Product/UX Designer</span> with over 5 years of experience in design and prototyping, passionate about crafting user experiences and bringing ideas to life with codes.",
 			"h5": [
 				"currently<br/>—",
 				"location<br/>—",
@@ -23,7 +23,7 @@ var data = {
 			],
 		},
 		"about": {
-			"h1": "About<br/>—",
+			"h1": "About<span class='blue'>:<br/></span>",
 			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
 			"button": "view resume",
 			"small-title": ["What's my mission?", "What's my focus?"],
@@ -34,12 +34,12 @@ var data = {
 			"focus-tag": ["Lorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet","Lorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet","Lorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet","Lorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet"]
 		},
 		"projects": {
-			"h1": "Projects<br/>—",
+			"h1": "Projects<span class='blue'>:<br/></span>",
 			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
 			"small-title": ["Featured projects", "Side projects"]
 		},
 		"writing": {
-			"h1": "Writing<br/>—",
+			"h1": "Writing<span class='blue'>:<br/></span>",
 			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
 			"button": "read more",
 			"small-title": "Featured blog posts",
@@ -48,7 +48,7 @@ var data = {
 			"post-dates": ["May 17, 2019", "May 15, 2019", "Aug. 24, 2018", "Mar. 3, 2018"]
 		},
 		"talks": {
-			"h1": "Talks<br/>—",
+			"h1": "Talks<span class='blue'>:<br/></span>",
 			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
 			"small-title": "Past talks",
 			"talk-titles": ["From Observation to Insights", "Prototyping & User Testing", "Delightful Experience with Technology", "Why and Why Not"],
@@ -56,7 +56,7 @@ var data = {
 			"talk-dates": ["Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2015  "]
 		},
 		"travel": {
-			"h1": "Travel<br/>—",
+			"h1": "Travel<span class='blue'>:<br/></span>",
 			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
 			"small-title": ["Travel photography", "Latest travel video"]
 		}
