@@ -56,7 +56,7 @@ class Writing extends Component {
     for (var i = 0; i < cdata["post-titles"].length; i++) {
       var temp = (
         <div className="fl w-100 pa2" key={i}>
-            <a className="title-links" href={cdata["post-links"]} target="_blank" rel="noopener noreferrer">
+            <a className="title-links" href={cdata["post-links"][i]} target="_blank" rel="noopener noreferrer">
               <h4 style={writingH4} className="mt0 mb2-l mb2" dangerouslySetInnerHTML={{__html:cdata["post-titles"][i]}}></h4>
             </a>
             <h5 style={writingH5} className="mt0 mb3-l mb2" dangerouslySetInnerHTML={{__html:"— "+cdata["post-dates"][i]}}></h5>
@@ -68,17 +68,18 @@ class Writing extends Component {
     return (
       <section id="about" className="page">
         <div className="box center">
-          <div className="flex flex-row-l flex-column ph4-l ph3 mb100">
+          <div className="flex flex-row-l flex-column ph4-l ph3 mb50">
             <div className="w-two-thirds-l w-100 ph2 o2">
               <h1 style={homeH1} dangerouslySetInnerHTML={{__html:cdata.h1}}></h1>
               <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata.h3}}></h3>
-              <div className="button mt2">{cdata.button}</div>
+              <a href={cdata.url} target='_blank' rel='noopener noreferrer'><div className="button mt2 mb0">{cdata.button}</div></a>
             </div>
             <div className="w-third-l w-100 ph2 o1 relative">
               <div className="bg-blue o-20 w-100 br-100 circle center"></div>
               <img className="human absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang"/>
             </div>
           </div>
+          <hr className="section-divider"></hr>
           <div className="ph4-l ph3">
             <p className="small-title mb40 mt0 ph2">{cdata["small-title"]}</p>
             <div className="cf mb100">

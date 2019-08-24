@@ -3,6 +3,7 @@ import FsLightbox from 'fslightbox-react';
 import ImageBox from '../components/lightbox.js';
 import { buildUrl, instafeed } from 'react-instafeed'
 import useAbortableFetch from 'use-abortable-fetch';
+import Slider from "react-slick";
 
 import gdata from '../data/data.js';
 import human from '../images/illustration1.svg';
@@ -111,13 +112,22 @@ class Travel extends Component {
 
     var imagebox = this.state.load ? (<ImageBox onRef={ref => (this.child = ref)} content={instagramImages}/>) : null;
 
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
     return (
       <section id="about">
         <div className="box center">
-          <div className="flex flex-row-l flex-column ph4-l ph3 mb100">
+          <div className="flex flex-row-l flex-column ph4-l ph3 mb50">
             <div className="w-two-thirds-l w-100 ph2 o2">
               <h1 style={homeH1} dangerouslySetInnerHTML={{__html:cdata.h1}}></h1>
               <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata.h3}}></h3>
+              <a href={cdata.url[0]} target='_blank' rel='noopener noreferrer'><div className="button mt2 mb0">{cdata.button}</div></a>
             </div>
             <div className="w-third-l w-100 ph2 o1 relative">
               <div className="bg-blue o-20 w-100 br-100 circle center"></div>
@@ -125,22 +135,8 @@ class Travel extends Component {
             </div>
           </div>
         </div>
-        <div className="fade-section">
-          <div className="box center ph4-l ph3">
-            <div className="ph2 tc">
-              <div className="flex justify-between w-100">
-                <p className="small-title mb40 mt0">{cdata["small-title"][1]}</p>
-              </div>
-            </div>
-          </div>
-          <div className={"center tc ph4-l ph0 "+box}>
-            <div className="video-wrapper mb2-l mb1">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/hQAP3JU1ktA?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            </div>
-            <div className="button mt3">View More</div>
-          </div>
-        </div>
-        <div className="box center mt100">
+        <hr className="section-divider"></hr>
+        <div className="box center">
           <div className="ph4-l ph3">
             <div className="tc">
               <div className="flex justify-between w-100 ph2">
@@ -154,7 +150,29 @@ class Travel extends Component {
             {instagram}
             {imagebox}
           </div>
-          <div className="button mt3 tc center">View More</div>
+        </div>
+        <div className="fade-section mt100">
+          <div className="box center ph4-l ph3">
+            <div className="ph2 tc">
+              <div className="flex justify-between w-100">
+                <p className="small-title mb40 mt0">{cdata["small-title"][1]}</p>
+              </div>
+            </div>
+          </div>
+          <div className={"center tl ph4-l ph0 "+box}>
+            <Slider {...settings}>
+              <div className="video-wrapper mb2-l mb1">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hQAP3JU1ktA?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              </div>
+              <div className="video-wrapper mb2-l mb1">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/B0oDiyoZT0c?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              </div>
+              <div className="video-wrapper mb2-l mb1">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7v4JpCHXhvA?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              </div>
+            </Slider>
+            <a href={cdata.url[1]} target='_blank' rel='noopener noreferrer'><div className="button mt2 mb0">View more</div></a>
+          </div>
         </div>
       </section>
     );

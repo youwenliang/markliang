@@ -26,6 +26,7 @@ var data = {
 			"h1": "About<span class='blue'>:<br/></span>",
 			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
 			"button": "view resume",
+			"url": "https://www.dropbox.com/s/it7vkl9x61ptx5o/Mark_Liang_Resume.pdf?dl=0",
 			"small-title": ["What's my mission?", "What's my focus?"],
 			"h1-mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do est laborum.",
 			"h3-mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
@@ -41,9 +42,10 @@ var data = {
 			"h1": "Writing<span class='blue'>:<br/></span>",
 			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
 			"button": "read more",
+			"url": "https://medium.com/@youwenliang",
 			"small-title": "Featured blog posts",
 			"post-titles": ["From Observation to Insights", "TNW 2019 — Disneyland for Nerds", "My experience at UX London 2018", "Learn a New Language"],
-			"post-links": ["","","",""],
+			"post-links": ["https://medium.com/mozilla-taipei-ux/from-observation-to-insights-digital-behavior-observation-in-thailand-78418050aaf1","https://medium.com/@youwenliang/tnw-2019-disneyland-for-nerds-6e2d889d5ad7","https://medium.com/@youwenliang/ux-london-2018-804be6e0362","https://medium.com/@youwenliang/learn-a-new-language-16baf32b2049"],
 			"post-dates": ["May 17, 2019", "May 15, 2019", "Aug. 24, 2018", "Mar. 3, 2018"]
 		},
 		"talks": {
@@ -57,6 +59,8 @@ var data = {
 		"travel": {
 			"h1": "Travel<span class='blue'>:<br/></span>",
 			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+			"button": "Visit Sometrips",
+			"url": ["https://www.instagram.com/sometrips/","http://bit.ly/SomeTrips"],
 			"small-title": ["Travel photography", "Latest travel video"]
 		}
 	}

@@ -41,16 +41,17 @@ class Projects extends Component {
     return (
       <section id="about">
         <div className="box center">
-          <div className="flex flex-row-l flex-column ph4-l ph3 mb100">
+          <div className="flex flex-row-l flex-column ph4-l ph3 mb50">
             <div className="w-two-thirds-l w-100 ph2 o2">
               <h1 style={homeH1} dangerouslySetInnerHTML={{__html:cdata.h1}}></h1>
-              <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata.h3}}></h3>
+              <h3 className="mb0" style={homeH3} dangerouslySetInnerHTML={{__html:cdata.h3}}></h3>
             </div>
             <div className="w-third-l w-100 ph2 o1 relative">
               <div className="bg-blue o-20 w-100 br-100 circle center"></div>
               <img className="human absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang"/>
             </div>
           </div>
+          <hr className="section-divider"></hr>
           <div className="ph4-l ph3">
             <div className="ph2">
               <p className="small-title mb40 mt0">{cdata["small-title"][0]}</p>

@@ -1,6 +1,5 @@
 @import "tachyons";
 
-
 html, body {
 	padding: 0;
 	margin: 0;
@@ -23,6 +22,28 @@ main {
 
 section {
 	padding-bottom: 64px;
+}
+
+.section-divider {
+	position: relative;
+	border: none;
+	display: block;
+	padding-bottom: 50px;
+	margin: 0;
+}
+
+.section-divider:before {
+	content: '...';
+	letter-spacing: 10px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+	text-align: center;
+	top: -27px;
+	font-size: 30px;
+	color: #7baccb;
 }
 
 .human {
@@ -594,3 +615,58 @@ src: local('Airbnb Cereal App Bold'), url('./css/fonts/AirbnbCerealBold.woff') f
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+
+
+.slick-arrow {
+	z-index: 1;
+	background: #7BACCB;
+	width: 64px;
+	height: 64px;
+	transition: all .4s linear;
+}
+
+.fslightbox-slide-btn {
+	padding: 22px !important;
+	background: #7BACCB !important;
+}
+
+.slick-arrow:hover {
+	background: #7BACCB;
+	opacity: .8;
+}
+
+.slick-next:before {
+	font-family: "Material Icons"; 
+	content: "arrow_forward";
+	font-size: 30px;
+	color: #ffffff;
+	-webkit-font-feature-settings: 'liga';
+
+}
+
+.slick-prev:before {
+	font-family: "Material Icons"; 
+	content: "arrow_back";
+	font-size: 30px;
+	color: #ffffff;
+	-webkit-font-feature-settings: 'liga';
+
+}
+
+@media screen and (max-width: 959px) {
+	.fslightbox-slide-btn {
+		padding: 14px !important;
+		background: #7BACCB !important;
+	}
+	.slick-arrow {
+		width: 48px;
+		height: 48px;
+	}
+	.slick-next {
+		right: 0;
+	}
+	.slick-prev {
+		left: 0;
+	}
+}
