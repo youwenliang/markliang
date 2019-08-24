@@ -17,9 +17,9 @@ var data = {
 				"contact<br/>—"
 			],
 			"h4": [
-				"Senior Product/UX Designer<br/>at <a href='https://www.mozilla.org' target='_blank' rel='noopener noreferrer' class='fw7 dark-gray'>Mozilla Taiwan</a>",
-				"Taipei City, Taiwan",
-				"<span class='user-select'>youwenmarkliang@gmail.com</span>"
+				"<span class='user-select'>Senior Product/UX Designer<br/>at <a href='https://www.mozilla.org' target='_blank' rel='noopener noreferrer' class='fw7 dark-gray'>Mozilla Taiwan</a></span>",
+				"<span class='user-select'>Taipei City, Taiwan</span>",
+				"<span class='user-select'><a href='mailto:youwenmarkliang@gmail.com' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>youwenmarkliang@gmail.com</a></span>"
 			],
 		},
 		"about": {
@@ -30,8 +30,7 @@ var data = {
 			"h1-mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do est laborum.",
 			"h3-mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
 			"focus-title": ["UX/UI Design", "Prototyping", "Web Development", "Video Editing"],
-			"focus-content": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."],
-			"focus-tag": ["Lorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet","Lorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet","Lorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet","Lorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet\nLorem ipsum dolor sit amet"]
+			"focus-tag": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."],
 		},
 		"projects": {
 			"h1": "Projects<span class='blue'>:<br/></span>",

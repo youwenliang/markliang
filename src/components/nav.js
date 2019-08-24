@@ -121,8 +121,8 @@ function PageList(props) {
   let list = [];
   for(var i = 0; i < data["pages"].length; i++) {
     var temp = null;
-    if(i === 0) temp = (<li><Link to ='/'>{data["pages"][i]}</Link></li>)
-    else temp = (<li><Link to ={'/'+data["pages"][i]}>{data["pages"][i]}</Link></li>)
+    if(i === 0) temp = (<li key={i}><Link to ='/'>{data["pages"][i]}</Link></li>)
+    else temp = (<li key={i}><Link to ={'/'+data["pages"][i]}>{data["pages"][i]}</Link></li>)
     list.push(temp);
   }
   return list

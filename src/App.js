@@ -15,7 +15,7 @@ import data from './data/data.js';
 // import loading from './images/loading.gif';
 
 import Lottie from 'react-lottie';
-import * as animationData from './data/loading.json'
+import * as animationData from './data/loading_white.json'
 
 class App extends Component {
   componentDidMount(){

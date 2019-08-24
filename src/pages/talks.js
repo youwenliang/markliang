@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import FsLightbox from 'fslightbox-react';
+
+import ImageBox from '../components/lightbox.js';
 import data from '../data/data.js';
 import human from '../images/illustration1.svg';
 import p1 from '../images/photos/photo1.jpg';
@@ -9,6 +12,7 @@ import p4 from '../images/photos/photo4.jpg';
 class Talks extends Component {
   constructor(props) {
     super(props);
+    this.child = React.createRef();
     this.state = {
       width: window.innerWidth
     }
@@ -23,6 +27,9 @@ class Talks extends Component {
   checkMobile = () => {
     this.setState({ width: window.innerWidth });
   }
+  onClick = (n) => {
+    this.child.openLightboxOnSlide(n);
+  };
   
   render() {
     var cdata = data["contents"]["talks"];
@@ -98,24 +105,26 @@ class Talks extends Component {
               {talk}
             </div>
             <div className="cf mb100">
-              <div className="fl w-100 w-40-l pa2">
+              <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(1)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[0]}></div>
               </div>
-              <div className="fl w-100 w-60-l pa2">
+              <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(2)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[1]}></div>
               </div>
-              <div className="fl w-100 w-60-l pa2">
+              <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(3)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[2]}></div>
               </div>
-              <div className="fl w-100 w-40-l pa2">
+              <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(4)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[3]}></div>
               </div>
             </div>
+            <ImageBox onRef={ref => (this.child = ref)} content={[p1,p2,p3,p4]}/>
           </div>
         </div>
       </section>
     );
   }
 }
+
 
 export default Talks;

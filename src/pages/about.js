@@ -37,6 +37,12 @@ class About extends Component {
       color: "#222222",
       fontWeight: 700
     }
+    var homeH2 = {
+      fontSize: !isMobile ? "48px":"27px",
+      lineHeight: !isMobile ? "60px":"36px",
+      color: "#222222",
+      fontWeight: 700
+    }
     var homeH3 = {
       fontSize: !isMobile ? "24px":"18px",
       lineHeight: !isMobile ? "36px":"30px",
@@ -45,14 +51,14 @@ class About extends Component {
     }
 
     var aboutH4 = {
-      fontSize: !isMobile ? "30px":"20px",
-      lineHeight: !isMobile ? "30px":"20px",
+      fontSize: !isMobile ? "24px":"20px",
+      lineHeight: !isMobile ? "24px":"20px",
       color: "#010101",
       fontWeight: 700 
     }
     var aboutH5 = {
       fontSize: !isMobile ? "20px":"16px",
-      lineHeight: !isMobile ? "30px":"20px",
+      lineHeight: !isMobile ? "24px":"20px",
       color: "#484848",
       fontWeight: 500
     }
@@ -66,14 +72,16 @@ class About extends Component {
 
     var focus = [];
     var mw = isMobile ? "" : "mwh400";
+    var iw = isMobile ? "80" : "100";
 
     for (var i = 0; i < 4; i++) {
       var temp = (
-        <div className="fl w-50-ns w-100 pa2 mb4-ns mb3 tl-ns tc" key={i}>
-          <img className="mb3" src={icons[i]} width="120" alt={cdata["focus-title"][i]}/>
-          <h4 className="mv3-ns mv2" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["focus-title"][i]}}></h4>
-          <h5 className={"mv4-ns mv3 db-ns dn "+mw} style={aboutH5} dangerouslySetInnerHTML={{__html:cdata["focus-content"][i]}}></h5>
-          <h6 className="mv3-ns mv2 pre-wrap" style={aboutH6} dangerouslySetInnerHTML={{__html:cdata["focus-tag"][i]}}></h6>
+        <div className="fl w-50-l w-100 pa3 tl-l tc" key={i}>
+          <div className="bg-white pa4">
+            <img className="mb3" src={icons[i]} width={iw} alt={cdata["focus-title"][i]}/>
+            <h4 className="mv3-ns mv2" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["focus-title"][i]}}></h4>
+            <h6 className="mt3-ns mt2 mb0 pre-wrap" style={aboutH6} dangerouslySetInnerHTML={{__html:cdata["focus-tag"][i]}}></h6>
+          </div>
         </div>
       )
       focus.push(temp);
@@ -96,15 +104,15 @@ class About extends Component {
           <div className="ph4-l ph3 mb100">
             <div className="ph2">
               <p className="small-title mb40 mt0">{cdata["small-title"][0]}</p>
-              <h1 style={homeH1} dangerouslySetInnerHTML={{__html:cdata["h1-mission"]}}></h1>
+              <h2 style={homeH2} dangerouslySetInnerHTML={{__html:cdata["h1-mission"]}}></h2>
               <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata["h3-mission"]}}></h3>
             </div>
           </div>
         </div>
         <div className="fade-section">
           <div className="box center">
-            <div className="ph4-l ph3">
-              <p className="small-title mb40 mt0 ph2">{cdata["small-title"][1]}</p>
+            <div className="ph4-l ph2">
+              <p className="small-title mb40 mt0 ph3">{cdata["small-title"][1]}</p>
               <div className="cf">
                 {focus}
               </div>
