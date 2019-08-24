@@ -1,6 +1,4 @@
-import React, { Component, useState } from 'react';
-import FsLightbox from 'fslightbox-react';
-
+import React, { Component } from 'react';
 import ImageBox from '../components/lightbox.js';
 import data from '../data/data.js';
 import human from '../images/illustration1.svg';
@@ -92,7 +90,8 @@ class Talks extends Component {
           <div className="flex flex-row-l flex-column ph4-l ph3 mb50">
             <div className="w-two-thirds-l w-100 ph2 o2">
               <h1 style={homeH1} dangerouslySetInnerHTML={{__html:cdata.h1}}></h1>
-              <h3 className="mb0" style={homeH3} dangerouslySetInnerHTML={{__html:cdata.h3}}></h3>
+              <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata.h3}}></h3>
+              <a href={cdata.url} target='_blank' rel='noopener noreferrer'><div className="button mt2 mb0">{cdata.button}</div></a>
             </div>
             <div className="w-third-l w-100 ph2 o1 relative">
               <div className="bg-blue o-20 w-100 br-100 circle center"></div>

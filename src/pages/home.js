@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Tween, Timeline } from 'react-gsap';
 import data from '../data/data.js';
 import human from '../images/illustration1.svg';
-import { Zoom, Fade} from 'react-reveal';
+import { Tween, Timeline } from 'react-gsap';
+import { Zoom, Fade } from 'react-reveal';
 
 
 class Home extends Component {

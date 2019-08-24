@@ -47,12 +47,22 @@ section {
 }
 
 .human {
+	top: 0px;
+}
+
+.circle {
 	top: 50px;
+	position: relative;
 }
 
 @media screen and (max-width: 959px) {
 	.human {
+		top: 50px;
 		clip-path: circle(150px at center 100px);
+	}
+	.circle {
+		top: 0px;
+		position: relative;
 	}
 }
 
@@ -617,6 +627,15 @@ src: local('Airbnb Cereal App Bold'), url('./css/fonts/AirbnbCerealBold.woff') f
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 
+.slick-dots li {
+	margin: 0 !important;
+}
+.slick-active button:before {
+	font-size: 10px !important;
+	top: 1px !important;
+	position: absolute;
+	color: #1b6492 !important;
+}
 
 .slick-arrow {
 	z-index: 1;

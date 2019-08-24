@@ -1,19 +1,10 @@
-import React, { Component, useState, Fragment } from 'react';
-import FsLightbox from 'fslightbox-react';
+import React, { Component } from 'react';
 import ImageBox from '../components/lightbox.js';
-import { buildUrl, instafeed } from 'react-instafeed'
-import useAbortableFetch from 'use-abortable-fetch';
+import { buildUrl } from 'react-instafeed'
 import Slider from "react-slick";
 
 import gdata from '../data/data.js';
 import human from '../images/illustration1.svg';
-
-import p1 from '../images/photos/photo1.jpg';
-import p2 from '../images/photos/photo1.jpg';
-import p3 from '../images/photos/photo1.jpg';
-import p4 from '../images/photos/photo1.jpg';
-import p5 from '../images/photos/photo1.jpg';
-import p6 from '../images/photos/photo1.jpg';
 
 const options = {
   get: 'user',
@@ -63,8 +54,6 @@ class Travel extends Component {
     .catch(function(error) {
       console.log('Looks like there was a problem: \n', error);
     });
-
-
   }
   componentWillUnmount(){
     window.removeEventListener('resize', this.checkMobile);
@@ -103,7 +92,7 @@ class Travel extends Component {
           backgroundSize: "cover"
         }
         instagram.push(
-          <div className="fl w-25-l w-50 pa2-l pa1 pointer" key={k} onClick={this.onClick.bind(this, k+1)}>
+          <div className="fl w-25-l w-50 pa2-ns pa0 pointer" key={k} onClick={this.onClick.bind(this, k+1)}>
             <div className="w-100 square" style={bg}></div>
           </div>
         )
@@ -159,19 +148,19 @@ class Travel extends Component {
               </div>
             </div>
           </div>
-          <div className={"center tl ph4-l ph0 "+box}>
+          <div className={"center tc ph4-l ph0 "+box}>
             <Slider {...settings}>
               <div className="video-wrapper mb2-l mb1">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/hQAP3JU1ktA?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe title="Whistler" id="iframeid1" width="560" height="315" src="https://www.youtube.com/embed/hQAP3JU1ktA?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
               <div className="video-wrapper mb2-l mb1">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/B0oDiyoZT0c?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe title="Beijing" id="iframeid2" width="560" height="315" src="https://www.youtube.com/embed/B0oDiyoZT0c?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
               <div className="video-wrapper mb2-l mb1">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7v4JpCHXhvA?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe title="Netherlands" id="iframeid3" width="560" height="315" src="https://www.youtube.com/embed/7v4JpCHXhvA?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
             </Slider>
-            <a href={cdata.url[1]} target='_blank' rel='noopener noreferrer'><div className="button mt2 mb0">View more</div></a>
+            <a href={cdata.url[1]} target='_blank' rel='noopener noreferrer'><div className="button mt5 mb0">View more</div></a>
           </div>
         </div>
       </section>

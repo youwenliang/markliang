@@ -11,7 +11,9 @@ import Pages from './pages/pages.js';
 
 import Nav from './components/nav.js';
 import Footer from './components/footer.js';
+import ScrollTop from './components/scrolltop.js';
 import data from './data/data.js';
+import $ from 'jquery';
 // import loading from './images/loading.gif';
 
 import Lottie from 'react-lottie';
@@ -29,7 +31,7 @@ class App extends Component {
   }
 
   componentDidUpdate(){
-    
+    $(window).scrollTop(0);
   }
 
   render() {
@@ -59,6 +61,7 @@ class App extends Component {
           <Route path={'/'+data["pages"][5]} component={Travel} />
         </Switch>
         <Footer/>
+        <ScrollTop/>
       </main>
     );
   }

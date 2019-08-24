@@ -56,12 +56,6 @@ class About extends Component {
       color: "#010101",
       fontWeight: 700 
     }
-    var aboutH5 = {
-      fontSize: !isMobile ? "20px":"16px",
-      lineHeight: !isMobile ? "24px":"20px",
-      color: "#484848",
-      fontWeight: 500
-    }
 
     var aboutH6 = {
       fontSize: !isMobile ? "18px":"14px",
@@ -71,7 +65,6 @@ class About extends Component {
     }
 
     var focus = [];
-    var mw = isMobile ? "" : "mwh400";
     var iw = isMobile ? "80" : "100";
 
     for (var i = 0; i < 4; i++) {
