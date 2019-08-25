@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import data from '../data/data.js';
+import Footer from '../components/footer.js';
 import human from '../images/illustration1.svg';
 import { Tween, Timeline } from 'react-gsap';
 import { Zoom, Fade } from 'react-reveal';
@@ -93,13 +94,14 @@ class Home extends Component {
             </div>
             <div className="w-third-l w-100 ph2 o1 relative">
               <div className="bg-blue o-20 w-100 br-100 circle center"></div>
-              <img className="human absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang"/>
+              <img className="human absolute left-0 right-0 center" src={human} height="515" alt="Mark Liang"/>
             </div>
           </div>
           <div className={"cf ph4-l ph3 "+margin}>
             {details}
           </div>
         </div>
+        <Footer/>
       </section>
     );
   }

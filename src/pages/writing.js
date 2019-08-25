@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import data from '../data/data.js';
+import Footer from '../components/footer.js';
 import human from '../images/illustration1.svg';
 
 class Writing extends Component {
@@ -66,7 +67,7 @@ class Writing extends Component {
     }
 
     return (
-      <section id="about" className="page">
+      <section id="writing" className="page">
         <div className="box center">
           <div className="flex flex-row-l flex-column ph4-l ph3 mb50">
             <div className="w-two-thirds-l w-100 ph2 o2">
@@ -87,6 +88,7 @@ class Writing extends Component {
             </div>
           </div>
         </div>
+        <Footer/>
       </section>
     );
   }

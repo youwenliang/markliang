@@ -20,8 +20,10 @@ main {
 	min-height: 100vh;
 }
 
-section {
-	padding-bottom: 64px;
+.page {
+	position: absolute;
+	left: 0;
+	right: 0;
 }
 
 .section-divider {
@@ -142,7 +144,6 @@ section {
 footer {
 	z-index: 9;
 	position: absolute;
-  	bottom: 0;
   	width: 100%;
 }
 

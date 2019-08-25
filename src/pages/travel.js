@@ -4,6 +4,7 @@ import { buildUrl } from 'react-instafeed'
 import Slider from "react-slick";
 
 import gdata from '../data/data.js';
+import Footer from '../components/footer.js';
 import human from '../images/illustration1.svg';
 
 const options = {
@@ -110,7 +111,7 @@ class Travel extends Component {
     };
 
     return (
-      <section id="about">
+      <section id="travel" className="page">
         <div className="box center">
           <div className="flex flex-row-l flex-column ph4-l ph3 mb50">
             <div className="w-two-thirds-l w-100 ph2 o2">
@@ -163,6 +164,7 @@ class Travel extends Component {
             <a href={cdata.url[1]} target='_blank' rel='noopener noreferrer'><div className="button mt5 mb0">View more</div></a>
           </div>
         </div>
+        <Footer/>
       </section>
     );
   }

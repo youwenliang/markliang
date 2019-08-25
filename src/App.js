@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Transition, TransitionGroup, CSSTransition } from 'react-transition-group';
+import { play, exit } from './timelines'
+
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/home.js';
 import About from './pages/about.js';
@@ -20,6 +22,12 @@ import Lottie from 'react-lottie';
 import * as animationData from './data/loading_white.json'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: window.innerWidth
+    }
+  }
   componentDidMount(){
     document.body.classList.add('overflow-y-hidden');
     document.getElementById('loading').classList.remove('fade');
@@ -28,13 +36,23 @@ class App extends Component {
       document.getElementById('loading').classList.add('fade');
       document.body.classList.remove('overflow-y-hidden');
     },2000);
+    window.addEventListener('resize', this.checkMobile);
+    this.checkMobile();
   }
-
+  componentWillUnmount(){
+    window.removeEventListener('resize', this.checkMobile);
+  }
+  checkMobile = () => {
+    this.setState({ width: window.innerWidth });
+  }
   componentDidUpdate(){
     $(window).scrollTop(0);
   }
 
   render() {
+    const { width } = this.state;
+    const isMobile = width <= 959;
+
     const defaultOptions = {
       loop: false,
       autoplay: true, 
@@ -51,16 +69,31 @@ class App extends Component {
           {/*<img src={loading} alt="Loading..." width="80" height="80"/>*/}
         </div>
         <Nav active={window.location.pathname}/>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path={'/'+data["pages"][1]} component={About} />
-          <Route path={'/'+data["pages"][2]} component={Projects} />
-          <Route path={'/'+data["pages"][2]+'/:id'} component={Pages} />
-          <Route path={'/'+data["pages"][3]} component={Writing} />
-          <Route path={'/'+data["pages"][4]} component={Talks} />
-          <Route path={'/'+data["pages"][5]} component={Travel} />
-        </Switch>
-        <Footer/>
+        <Route render={({ location }) => {
+          const { pathname, key } = location
+
+          return (
+            <TransitionGroup component={null}>
+              <Transition
+                key={key}
+                appear={true}
+                onEnter={(node, appears) => play(node, isMobile, appears)}
+                onExit={(node, appears) => exit(node, isMobile, appears)}
+                timeout={{enter: isMobile ? 10 : 600, exit: isMobile ? 10 : 400}}
+              >
+                <Switch location={location}>
+                  <Route exact path='/' component={Home} />
+                  <Route path={'/'+data["pages"][1]} component={About} />
+                  <Route path={'/'+data["pages"][2]} component={Projects} />
+                  <Route path={'/'+data["pages"][2]+'/:id'} component={Pages} />
+                  <Route path={'/'+data["pages"][3]} component={Writing} />
+                  <Route path={'/'+data["pages"][4]} component={Talks} />
+                  <Route path={'/'+data["pages"][5]} component={Travel} />
+                </Switch>
+              </Transition>
+            </TransitionGroup>
+          )
+        }}/>
         <ScrollTop/>
       </main>
     );
@@ -68,3 +101,4 @@ class App extends Component {
 }
 
 export default App;
+

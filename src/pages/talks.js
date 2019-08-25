@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ImageBox from '../components/lightbox.js';
 import data from '../data/data.js';
-import human from '../images/illustration1.svg';
+import Footer from '../components/footer.js';
+import human from '../images/illustration4.svg';
 import p1 from '../images/photos/photo1.jpg';
 import p2 from '../images/photos/photo2.jpg';
 import p3 from '../images/photos/photo3.jpg';
@@ -85,7 +86,7 @@ class Talks extends Component {
     }
 
     return (
-      <section id="about">
+      <section id="talks" className="page">
         <div className="box center">
           <div className="flex flex-row-l flex-column ph4-l ph3 mb50">
             <div className="w-two-thirds-l w-100 ph2 o2">
@@ -95,7 +96,7 @@ class Talks extends Component {
             </div>
             <div className="w-third-l w-100 ph2 o1 relative">
               <div className="bg-blue o-20 w-100 br-100 circle center"></div>
-              <img className="human absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang"/>
+              <img className="human absolute left-0 right-0 center" src={human} height="515" alt="Mark Liang"/>
             </div>
           </div>
           <hr className="section-divider"></hr>
@@ -121,6 +122,7 @@ class Talks extends Component {
             <ImageBox onRef={ref => (this.child = ref)} content={[p1,p2,p3,p4]}/>
           </div>
         </div>
+        <Footer/>
       </section>
     );
   }
