@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.bbc77a00.chunk.css",
-    "main.js": "/static/js/main.8c042083.chunk.js",
-    "main.js.map": "/static/js/main.8c042083.chunk.js.map",
+    "main.js": "/static/js/main.c2d3b0ad.chunk.js",
+    "main.js.map": "/static/js/main.c2d3b0ad.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.91d9f00c.js",
     "runtime~main.js.map": "/static/js/runtime~main.91d9f00c.js.map",
-    "static/js/2.9d5a9c1e.chunk.js": "/static/js/2.9d5a9c1e.chunk.js",
-    "static/js/2.9d5a9c1e.chunk.js.map": "/static/js/2.9d5a9c1e.chunk.js.map",
+    "static/js/2.018b6ff7.chunk.js": "/static/js/2.018b6ff7.chunk.js",
+    "static/js/2.018b6ff7.chunk.js.map": "/static/js/2.018b6ff7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.769c3741aeec524bc5f8a94a8fa10cca.js": "/precache-manifest.769c3741aeec524bc5f8a94a8fa10cca.js",
+    "precache-manifest.e7d35adefe1d932313c7a0140f1d384f.js": "/precache-manifest.e7d35adefe1d932313c7a0140f1d384f.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.bbc77a00.chunk.css.map": "/static/css/main.bbc77a00.chunk.css.map",
     "static/media/index.css": "/static/media/AirbnbCerealMedium.220b1dd3.woff",
@@ -17,11 +17,15 @@
     "static/media/icon3.svg": "/static/media/icon3.612577e1.svg",
     "static/media/icon4.svg": "/static/media/icon4.acc6b1fa.svg",
     "static/media/illustration1.svg": "/static/media/illustration1.18ffbca4.svg",
+    "static/media/illustration2.svg": "/static/media/illustration2.4f2be23e.svg",
     "static/media/illustration4.svg": "/static/media/illustration4.6ad7d956.svg",
+    "static/media/illustration5.svg": "/static/media/illustration5.0655f677.svg",
     "static/media/logo.svg": "/static/media/logo.37f2e4a9.svg",
     "static/media/photo1.jpg": "/static/media/photo1.116e762e.jpg",
     "static/media/photo2.jpg": "/static/media/photo2.1008543d.jpg",
     "static/media/photo3.jpg": "/static/media/photo3.581b7054.jpg",
-    "static/media/photo4.jpg": "/static/media/photo4.d919a5ff.jpg"
+    "static/media/photo4.jpg": "/static/media/photo4.d919a5ff.jpg",
+    "static/media/photo5.JPG": "/static/media/photo5.4424a7b8.JPG",
+    "static/media/photo6.JPG": "/static/media/photo6.37ca5a40.JPG"
   }
 }
