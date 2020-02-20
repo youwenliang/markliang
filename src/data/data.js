@@ -10,14 +10,14 @@ var data = {
 	"contents": {
 		"home": {
 			"h1": "Hello,<br/>I'm Mark Liang.<br/><span class='blue fw1'>—</span>",
-			"h3": "I’m a <span class='blue'>Product/UX Designer</span> with over 5 years of experience in design and prototyping, passionate about crafting user experiences and bringing ideas to life with codes.",
+			"h3": "I’m a <span class='blue'>Product/UX Designer</span> with over 5 years of experience in design and prototyping, passionate about crafting user experiences and bringing ideas to life with codes. Recently start learning about Product Management at <a href='https://mozilla-next.com/' target='_blank' class='underline dark-gray'>Mozilla Taiwan</a>.",
 			"h5": [
 				"currently<br/>—",
 				"location<br/>—",
 				"contact<br/>—"
 			],
 			"h4": [
-				"<span class='user-select'>Senior Product/UX Designer<br/>at <a href='https://www.mozilla.org' target='_blank' rel='noopener noreferrer' class='fw7 dark-gray'>Mozilla Taiwan</a></span>",
+				"<span class='user-select'>Senior Product Manager<br/>at <a href='https://www.mozilla.org' target='_blank' rel='noopener noreferrer' class='fw7 dark-gray'>Mozilla Taiwan</a></span>",
 				"<span class='user-select'>Taipei City, Taiwan</span>",
 				"<span class='user-select'><a href='mailto:youwenmarkliang@gmail.com' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>youwenmarkliang@gmail.com</a></span>"
 			],
@@ -54,9 +54,9 @@ var data = {
 			"button": "contact me",
 			"url": "mailto:youwenmarkliang@gmail.com",
 			"small-title": "Past talks",
-			"talk-titles": ["From Observation to Insights", "Prototyping & User Testing", "Delightful Experience with Technology", "Why and Why Not"],
-			"talk-locations": ["Meitu", "Da-Tung University", "Ogilvy", "UI/UX Night"],
-			"talk-dates": ["Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2015  "]
+			"talk-titles": ["How I Develop My Career from Engineering to Design","Design Sprint Case Studies","From Observation to Insights", "Prototyping & User Testing", "Delightful Experience with Technology", "Why and Why Not"],
+			"talk-locations": ["Cakeresume", "Picollage", "Meitu", "Da-Tung University", "Ogilvy", "UI/UX Night"],
+			"talk-dates": ["Feb. 2020", "Nov. 2019", "Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2015  "]
 		},
 		"travel": {
 			"h1": "Travel<span class='blue'>:<br/></span>",

@@ -7,6 +7,8 @@ import p1 from '../images/photos/photo1.jpg';
 import p2 from '../images/photos/photo2.jpg';
 import p3 from '../images/photos/photo3.jpg';
 import p4 from '../images/photos/photo4.jpg';
+import p5 from '../images/photos/photo5.JPG';
+import p6 from '../images/photos/photo6.JPG';
 
 class Talks extends Component {
   constructor(props) {
@@ -48,8 +50,8 @@ class Talks extends Component {
       fontWeight: 500
     }
     var photo = [];
-    var url = [p1,p2,p3,p4];
-    for(var j = 0; j < 4; j++) {
+    var url = [p1,p2,p3,p4,p5,p6];
+    for(var j = 0; j < url.length; j++) {
       var tempURL = {
         background: "url("+url[j]+") no-repeat center center",
         backgroundSize: "cover"
@@ -106,20 +108,26 @@ class Talks extends Component {
               {talk}
             </div>
             <div className="cf mb100">
-              <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(1)}>
-                <div className="w-100 w-100 h5 bg-blue" style={photo[0]}></div>
+              <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(5)}>
+                <div className="w-100 w-100 h5 bg-blue" style={photo[4]}></div>
+              </div>
+              <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(6)}>
+                <div className="w-100 w-100 h5 bg-blue" style={photo[5]}></div>
               </div>
               <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(2)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[1]}></div>
               </div>
-              <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(3)}>
-                <div className="w-100 w-100 h5 bg-blue" style={photo[2]}></div>
+              <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(1)}>
+                <div className="w-100 w-100 h5 bg-blue" style={photo[0]}></div>
               </div>
               <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(4)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[3]}></div>
               </div>
+              <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(3)}>
+                <div className="w-100 w-100 h5 bg-blue" style={photo[2]}></div>
+              </div>
             </div>
-            <ImageBox onRef={ref => (this.child = ref)} content={[p1,p2,p3,p4]}/>
+            <ImageBox onRef={ref => (this.child = ref)} content={[p1,p2,p3,p4,p5,p6]}/>
           </div>
         </div>
         <Footer/>

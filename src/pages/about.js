@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import data from '../data/data.js';
 import Footer from '../components/footer.js';
 
-import human from '../images/illustration1.svg';
+import human from '../images/illustration2.svg';
 import icon1 from '../images/icon1.svg';
 import icon2 from '../images/icon2.svg';
 import icon3 from '../images/icon3.svg';

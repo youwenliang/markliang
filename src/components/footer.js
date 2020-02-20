@@ -18,7 +18,7 @@ class Footer extends Component {
 
     return (
       <footer style={footerStyle}>
-        <p style={footerTextStyle}>© 2019  |  Design & Develop by Mark Liang</p>
+        <p style={footerTextStyle}>© 2020  |  Design & Develop by Mark Liang</p>
       </footer>
     );
   }

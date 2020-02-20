@@ -5,7 +5,7 @@ import Slider from "react-slick";
 
 import gdata from '../data/data.js';
 import Footer from '../components/footer.js';
-import human from '../images/illustration1.svg';
+import human from '../images/illustration5.svg';
 
 const options = {
   get: 'user',
