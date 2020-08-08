@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import ImageBox from '../components/lightbox.js';
 import data from '../data/data.js';
 import Footer from '../components/footer.js';
-import human from '../images/illustration4.svg';
+import human from '../images/illustration5.svg';
 import p1 from '../images/photos/photo1.jpg';
 import p2 from '../images/photos/photo2.jpg';
 import p3 from '../images/photos/photo3.jpg';
 import p4 from '../images/photos/photo4.jpg';
 import p5 from '../images/photos/photo5.JPG';
 import p6 from '../images/photos/photo6.JPG';
+import p7 from '../images/photos/photo7.jpg';
 
 class Talks extends Component {
   constructor(props) {
@@ -50,7 +51,7 @@ class Talks extends Component {
       fontWeight: 500
     }
     var photo = [];
-    var url = [p1,p2,p3,p4,p5,p6];
+    var url = [p1,p2,p3,p4,p5,p6,p7];
     for(var j = 0; j < url.length; j++) {
       var tempURL = {
         background: "url("+url[j]+") no-repeat center center",
@@ -108,17 +109,20 @@ class Talks extends Component {
               {talk}
             </div>
             <div className="cf mb100">
+              <div className="fl w-100 pa2 pointer" onClick={() => this.onClick(6)}>
+                <div className="w-100 w-100 h5 bg-blue" style={photo[5]}></div>
+              </div>
               <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(5)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[4]}></div>
               </div>
-              <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(6)}>
-                <div className="w-100 w-100 h5 bg-blue" style={photo[5]}></div>
+              <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(1)}>
+                <div className="w-100 w-100 h5 bg-blue" style={photo[0]}></div>
               </div>
               <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(2)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[1]}></div>
               </div>
-              <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(1)}>
-                <div className="w-100 w-100 h5 bg-blue" style={photo[0]}></div>
+              <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(7)}>
+                <div className="w-100 w-100 h5 bg-blue" style={photo[6]}></div>
               </div>
               <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(4)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[3]}></div>
@@ -127,7 +131,7 @@ class Talks extends Component {
                 <div className="w-100 w-100 h5 bg-blue" style={photo[2]}></div>
               </div>
             </div>
-            <ImageBox onRef={ref => (this.child = ref)} content={[p1,p2,p3,p4,p5,p6]}/>
+            <ImageBox onRef={ref => (this.child = ref)} content={[p1,p2,p3,p4,p5,p6, p7]}/>
           </div>
         </div>
         <Footer/>

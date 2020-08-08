@@ -47,6 +47,11 @@ class App extends Component {
   }
   componentDidUpdate(){
     $(window).scrollTop(0);
+    if($('#home').css('visibility') === "hidden") {
+      $('body').addClass('vh-100');
+    } else {
+      $('body').removeClass('vh-100');
+    }
   }
 
   render() {

@@ -7,7 +7,8 @@ import icon1 from '../images/icon1.svg';
 import icon2 from '../images/icon2.svg';
 import icon3 from '../images/icon3.svg';
 import icon4 from '../images/icon4.svg';
-const icons = [icon1, icon2, icon3, icon4];
+import icon5 from '../images/icon1.svg';
+const icons = [icon1, icon2, icon3, icon4, icon5];
 
 class About extends Component {
   constructor(props) {
@@ -68,8 +69,16 @@ class About extends Component {
     var focus = [];
     var iw = isMobile ? "80" : "100";
 
-    for (var i = 0; i < 4; i++) {
-      var temp = (
+    for (var i = 0; i < 5; i++) {
+      var temp = (i === 0) ? (
+        <div className="fl w-100 pa3 tl-l tc" key={i}>
+          <div className="bg-white pa4">
+            <img className="mb3" src={icons[i]} width={iw} alt={cdata["focus-title"][i]}/>
+            <h4 className="mv3-ns mv2" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["focus-title"][i]}}></h4>
+            <h6 className="mt3-ns mt2 mb0 pre-wrap" style={aboutH6} dangerouslySetInnerHTML={{__html:cdata["focus-tag"][i]}}></h6>
+          </div>
+        </div>
+        ):(
         <div className="fl w-50-l w-100 pa3 tl-l tc" key={i}>
           <div className="bg-white pa4">
             <img className="mb3" src={icons[i]} width={iw} alt={cdata["focus-title"][i]}/>

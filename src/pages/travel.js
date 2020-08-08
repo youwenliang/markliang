@@ -5,7 +5,7 @@ import Slider from "react-slick";
 
 import gdata from '../data/data.js';
 import Footer from '../components/footer.js';
-import human from '../images/illustration5.svg';
+import human from '../images/illustration6.svg';
 
 const options = {
   get: 'user',
@@ -121,7 +121,7 @@ class Travel extends Component {
             </div>
             <div className="w-third-l w-100 ph2 o1 relative">
               <div className="bg-blue o-20 w-100 br-100 circle center"></div>
-              <img className="human absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang"/>
+              <img className="human absolute left-0 right-0 center" src={human} width="200" height="515" alt="Mark Liang"/>
             </div>
           </div>
         </div>
@@ -152,13 +152,13 @@ class Travel extends Component {
           <div className={"center tc ph4-l ph0 "+box}>
             <Slider {...settings}>
               <div className="video-wrapper mb2-l mb1">
-                <iframe title="Whistler" id="iframeid1" width="560" height="315" src="https://www.youtube.com/embed/hQAP3JU1ktA?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe title="Whistler" id="iframeid1" width="560" height="315" src="https://www.youtube.com/embed/liNNPOenwgg?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
               <div className="video-wrapper mb2-l mb1">
-                <iframe title="Beijing" id="iframeid2" width="560" height="315" src="https://www.youtube.com/embed/B0oDiyoZT0c?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe title="Beijing" id="iframeid2" width="560" height="315" src="https://www.youtube.com/embed/A2UD0ncPuMw?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
               <div className="video-wrapper mb2-l mb1">
-                <iframe title="Netherlands" id="iframeid3" width="560" height="315" src="https://www.youtube.com/embed/7v4JpCHXhvA?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe title="Netherlands" id="iframeid3" width="560" height="315" src="https://www.youtube.com/embed/P1IhRe1LCJE?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
             </Slider>
             <a href={cdata.url[1]} target='_blank' rel='noopener noreferrer'><div className="button mt5 mb0">View more</div></a>

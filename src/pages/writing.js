@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import data from '../data/data.js';
 import Footer from '../components/footer.js';
-import human from '../images/illustration1.svg';
+import human from '../images/illustration4.svg';
 
 class Writing extends Component {
   constructor(props) {
@@ -77,7 +77,7 @@ class Writing extends Component {
             </div>
             <div className="w-third-l w-100 ph2 o1 relative">
               <div className="bg-blue o-20 w-100 br-100 circle center"></div>
-              <img className="human absolute left-0 right-0 center" src={human} width="200" alt="Mark Liang"/>
+              <img className="human absolute left-0 right-0 center" src={human} width="200" height="515" alt="Mark Liang"/>
             </div>
           </div>
           <hr className="section-divider"></hr>
