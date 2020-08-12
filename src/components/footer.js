@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 
 class Footer extends Component {
+  constructor(props) {
+    super(props);
+    
+  }
   render() {
-    var footerStyle = {
+    var footerStyle = this.props.bottom ? {
+      height: "64px",
+      background: "#E1EDF4",
+      textAlign: "center",
+      bottom: 0
+    } : {
       height: "64px",
       background: "#E1EDF4",
       textAlign: "center"
@@ -15,9 +24,10 @@ class Footer extends Component {
       margin: 0,
       fontWeight: 700
     }
+    var b = this.props.bottom ? "bottom":""; 
 
     return (
-      <footer style={footerStyle}>
+      <footer style={footerStyle} className={b}>
         <p style={footerTextStyle}>© 2020  |  Design & Develop by Mark Liang</p>
       </footer>
     );

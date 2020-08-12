@@ -145,6 +145,20 @@ footer {
 	z-index: 9;
 	position: absolute;
   	width: 100%;
+  	transition: all .6s linear .4s;
+}
+
+footer.fade {
+	opacity: 0;
+	pointer-events: none;
+	transition: all .4s linear;
+}
+
+@media screen and (max-width: 959px) {
+	footer,
+	footer.fade {
+  		transition: none;
+	}
 }
 
 .fade-section {

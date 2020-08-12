@@ -25,7 +25,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: window.innerWidth
+      width: window.innerWidth,
+      footer: false
     }
   }
   componentDidMount(){
@@ -46,6 +47,7 @@ class App extends Component {
     this.setState({ width: window.innerWidth });
   }
   componentDidUpdate(){
+    
     $(window).scrollTop(0);
     if($('#home').css('visibility') === "hidden") {
       $('body').addClass('vh-100');
@@ -66,6 +68,10 @@ class App extends Component {
         preserveAspectRatio: 'xMidYMid slice'
       }
     };
+    console.log(window.location.pathname.split('/')[1]);
+    let footer = null;
+    if(window.location.pathname.split('/')[1]) $('footer.bottom').addClass('fade');
+    else $('footer.bottom').removeClass('fade');
       
     return (
       <main>
@@ -99,6 +105,7 @@ class App extends Component {
             </TransitionGroup>
           )
         }}/>
+        <Footer bottom={true}/>
         <ScrollTop/>
       </main>
     );

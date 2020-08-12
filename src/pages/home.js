@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import data from '../data/data.js';
-import Footer from '../components/footer.js';
 import human from '../images/illustration1.svg';
+import Footer from '../components/footer.js';
 import { Tween, Timeline } from 'react-gsap';
 import { Zoom, Fade } from 'react-reveal';
 
@@ -101,7 +101,6 @@ class Home extends Component {
             {details}
           </div>
         </div>
-        <Footer/>
       </section>
     );
   }
