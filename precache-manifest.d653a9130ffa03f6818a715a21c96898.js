@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ae32369081e91b88281d1484c078e4b",
+    "revision": "7768ae693e314886c63ebbac2442e154",
     "url": "/index.html"
   },
   {
-    "revision": "bb89d5d46b28da7ae3ee",
+    "revision": "fa7d896e820bbf41e6b8",
     "url": "/static/css/main.fbdede8c.chunk.css"
   },
   {
-    "revision": "32c1bfa91519622ce5d9",
-    "url": "/static/js/2.7a1680c6.chunk.js"
+    "revision": "bb5f070d63adcfdfefd3",
+    "url": "/static/js/2.9d309cbd.chunk.js"
   },
   {
-    "revision": "bb89d5d46b28da7ae3ee",
-    "url": "/static/js/main.d5690bd8.chunk.js"
+    "revision": "fa7d896e820bbf41e6b8",
+    "url": "/static/js/main.54a5b2e0.chunk.js"
   },
   {
     "revision": "97d78d26826bf7c68729",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "220b1dd31cbf1b11825433158d644def",
     "url": "/static/media/AirbnbCerealMedium.220b1dd3.woff"
+  },
+  {
+    "revision": "29f2d27a132c99016332fff4dc264abb",
+    "url": "/static/media/icon0.29f2d27a.svg"
   },
   {
     "revision": "b58de5eb12f504d9d7132d053f284666",
