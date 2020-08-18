@@ -26,6 +26,7 @@ class App extends Component {
     super(props);
     this.state = {
       width: window.innerWidth,
+      height: window.innerHeight,
       footer: false
     }
   }
@@ -45,6 +46,7 @@ class App extends Component {
   }
   checkMobile = () => {
     this.setState({ width: window.innerWidth });
+    this.setState({ height: window.innerHeight });
   }
   componentDidUpdate(){
     
@@ -57,8 +59,9 @@ class App extends Component {
   }
 
   render() {
-    const { width } = this.state;
+    const { width, height } = this.state;
     const isMobile = width <= 959;
+    const isLow = height <= 1095;
 
     const defaultOptions = {
       loop: false,
@@ -69,7 +72,7 @@ class App extends Component {
       }
     };
     console.log(window.location.pathname.split('/')[1]);
-    let footer = null;
+    let footer = isMobile || isLow ? null:(<Footer bottom={true}/>);
     if(window.location.pathname.split('/')[1]) $('footer.bottom').addClass('fade');
     else $('footer.bottom').removeClass('fade');
       
@@ -105,7 +108,7 @@ class App extends Component {
             </TransitionGroup>
           )
         }}/>
-        <Footer bottom={true}/>
+        {footer}
         <ScrollTop/>
       </main>
     );

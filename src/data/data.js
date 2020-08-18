@@ -10,9 +10,9 @@ var data = {
 	"contents": {
 		"home": {
 			"h1": "Hello,<br/>I'm Mark Liang.<br/><span class='blue fw1'>—</span>",
-			"h3": "I’m a <span class='blue'>Product Manager/UX Designer</span> at <a href='https://mozilla-next.com/' target='_blank' class='underline dark-gray'>Mozilla Taiwan</a>, with over 5 years of experience in design and prototyping, passionate about crafting user experiences and bringing ideas to life with codes.",
+			"h3": "I’m a <span class='blue'>Product Manager/UX Designer</span> with over 5 years of experience in design and prototyping, passionate about crafting user experiences and turning ideas into products with cross-functional teams.",
 			"h5": [
-				"currently<br/>—",
+				"previously<br/>—",
 				"location<br/>—",
 				"contact<br/>—"
 			],
@@ -24,23 +24,31 @@ var data = {
 		},
 		"about": {
 			"h1": "About<span class='blue'>:<br/></span>",
-			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+			"h3": "I'm a <span class='blue'>Product Management</span> professional with expertise in <span class='blue'>User Experience Design</span> and <span class='blue'>Web Development</span>. <br/>My sensitivity to design intent and user experience, coupled with the ability to write code and build prototypes have helped facilitate the launch of several products such as <a class='underline blue' href='https://blog.mozilla.org/blog/2019/03/12/introducing-firefox-send-providing-free-file-transfers-while-keeping-your-personal-information-private/' target='_blank'>Firefox Send</a> and <a class='underline blue' href='https://mozilla-next.com/eng/firefox_lite' target='_blank'>Firefox Lite</a>.",
 			"button": "view resume",
 			"url": "https://www.youwenliang.com/Mark_Liang_Resume.pdf",
 			"small-title": ["What's my mission?", "What's my focus?"],
-			"h1-mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do est laborum.",
-			"h3-mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+			"h1-mission": "Build product experiences that inspire people to imagine better futures.",
+			"h3-mission": "As a product/UX person, I'm passionate about creating better product experiences that solve user problems and speak to the user. Driven by the love of design and craftsmanship, I enjoy working closely with designers and engineers on different aspects of a product to ensure the experiences we provide are seamless and delightful to our users.",
 			"focus-title": ["Product Management", "UX/UI Design", "Prototyping", "Web Development", "Video Editing"],
-			"focus-tag": ["Lorem ipsum dolor sit amet, consectiing elitp dolor sit amet, consum doloreum dolor sit tur adipiscing elit, sed do eiusmod tempor incididunt ut labore.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."],
+			"focus-tag": ["Work closely with cross-functional team to drive new product ideas from conception to launch. Incorporate insights from research and data to prioritize product features. Create detailed plans to track the product development process.", "Partner with engineers to ensure the UX/UI implementation is of high-quality. Learn from users to create & iterate on features that lead the success of the product.","Build prototypes to support user researchers & designers to do usability testing or communicate new product feature to product managers and engineers.", "Use ReactJS to develop various types of websites, sometimes as a way to prototype high-fidelity interactions.", "Shot videos on my GoPro, and create videos as a way to tell the stories of my travel experience using Adobe Premiere."],
 		},
 		"projects": {
 			"h1": "Projects<span class='blue'>:<br/></span>",
-			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
-			"small-title": ["Featured projects", "Side projects"]
+			"h3": "While working at Mozilla, I've participated in many projects, including IoT-related concepts, browser extension experiments, and innovative products that target emerging markets. <br/><br/>I've also played different roles in each project, sometimes jumping into codes to tweak the front-end UI, or supporting researchers to find user insights by building prototypes, or even driving product features from conception to launch. Below are some of my featured projects.",
+			"small-title": ["Featured projects", "Side projects"],
+			"main-title": ["1","2","3","4","5","6"],
+			"main-tag": ["1","2","3","4","5","6"],
+			"main-des": ["1","2","3","4","5","6"],
+			"main-img": ["https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/"],
+			"side-title": ["Our Island","CSS Drawings","G0V Grants","Low-Poly Series"],
+			"side-tag": ["WEB DESIGN & DEVELOPMENT","CSS/CSS ANIMATION","WEB DESIGN & DEVELOPMENT","3D DRAWING/CINEMA 4D"],
+			"side-des": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."],
+			"side-img": ["https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/"]
 		},
 		"writing": {
 			"h1": "Writing<span class='blue'>:<br/></span>",
-			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+			"h3": "Writing for me is a way to document my experiences and also internalized the knowledge I've learned. I enjoy jotting down some notes about my perspectives on different topics, and be able to share with others as a way to start conversations.",
 			"button": "read more",
 			"url": "https://medium.com/@youwenliang",
 			"small-title": "Featured blog posts",
@@ -50,17 +58,17 @@ var data = {
 		},
 		"talks": {
 			"h1": "Talks<span class='blue'>:<br/></span>",
-			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+			"h3": "I've been invited to give talks on different occasions, usually sharing my past experiences, career changes, and processes or tools I've used on various projects. <br/><br/>As a product/UX person, I think it's essential to be able to communicate ideas through storytelling and not afraid of public speaking, so I'm always open to any opportunities to share my experiences.",
 			"button": "contact me",
 			"url": "mailto:youwenmarkliang@gmail.com",
 			"small-title": "Past talks",
-			"talk-titles": ["用 Notion 升級你的腦袋", "How I Develop My Career from Engineering to Design","Design Sprint Case Studies","From Observation to Insights", "Prototyping & User Testing", "Delightful Experience with Technology", "Why and Why Not"],
-			"talk-locations": ["IxDA Taiwan", "JustCo", "Picollage", "Meitu", "Da-Tung University", "Ogilvy", "UI/UX Night"],
-			"talk-dates": ["May 2020", "Feb. 2020", "Nov. 2019", "Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2015  "]
+			"talk-titles": ["Mozilla Taipei's Product Experience in Emerging Markets", "用 Notion 升級你的腦袋", "How I Develop My Career from Engineering to Design","Design Sprint Case Studies","From Observation to Insights", "Prototyping & User Testing", "Delightful Experience with Technology", "Why and Why Not"],
+			"talk-locations": ["Tech Career Fair", "IxDA Taiwan", "JustCo", "Picollage", "Meitu", "Da-Tung University", "Ogilvy", "UI/UX Night"],
+			"talk-dates": ["Aug. 2020", "May 2020", "Feb. 2020", "Nov. 2019", "Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2015  "]
 		},
 		"travel": {
 			"h1": "Travel<span class='blue'>:<br/></span>",
-			"h3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+			"h3": "My passion for traveling starts with the love of discovering new things and experiencing different lifestyles. It connects directly with my interest in photography since I'm eager to capture what I've seen, which enables me to relive those moments. <br/><br/>I started \"SomeTrips\" on Instagram to document my travel photos, and occasionally create travel videos using my GoPro camera.",
 			"button": "Visit Sometrips",
 			"url": ["https://www.instagram.com/sometrips/","http://bit.ly/SomeTrips"],
 			"small-title": ["Travel photography", "Latest travel video"]

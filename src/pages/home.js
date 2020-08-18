@@ -10,7 +10,8 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: window.innerWidth
+      width: window.innerWidth,
+      height: window.innerHeight
     }
   }
   componentDidMount() {
@@ -22,12 +23,14 @@ class Home extends Component {
   }
   checkMobile = () => {
     this.setState({ width: window.innerWidth });
+    this.setState({ height: window.innerHeight });
   }
   
   render() {
     var cdata = data["contents"]["home"];
-    const { width } = this.state;
+    const { width, height } = this.state;
     const isMobile = width <= 959;
+    const isLow = height <= 1095;
 
     var homeH1 = {
       fontSize: !isMobile ? "54px":"30px",
@@ -83,6 +86,8 @@ class Home extends Component {
       textAlign: "center"
     }
 
+    let footer = isMobile || isLow ? (<Footer/>):null;
+    
     return (
       <section id="home" className="page">
         <div className="box center">
@@ -101,6 +106,7 @@ class Home extends Component {
             {details}
           </div>
         </div>
+        {footer}
       </section>
     );
   }

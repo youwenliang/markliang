@@ -7,6 +7,15 @@ import gdata from '../data/data.js';
 import Footer from '../components/footer.js';
 import human from '../images/illustration6.svg';
 
+import p1 from '../images/photos/travel01.jpg';
+import p2 from '../images/photos/travel02.jpg';
+import p3 from '../images/photos/travel03.jpg';
+import p4 from '../images/photos/travel04.jpg';
+import p5 from '../images/photos/travel05.jpg';
+import p6 from '../images/photos/travel06.jpg';
+import p7 from '../images/photos/travel07.jpg';
+import p8 from '../images/photos/travel08.jpg';
+
 const options = {
   get: 'user',
   userId: '7690593619',
@@ -15,7 +24,7 @@ const options = {
   resolution: 'standard_resolution',
 }
 const instagramURL = buildUrl(options);
-var instagramImages = [];
+var instagramImages = [p1,p2,p3,p4,p5,p6,p7,p8]
 var imageCount = 8;
 
 class Travel extends Component {
@@ -24,7 +33,7 @@ class Travel extends Component {
     this.child = React.createRef();
     this.state = {
       width: window.innerWidth,
-      load: false
+      load: true
     }
   }
   componentDidMount() {
@@ -48,9 +57,9 @@ class Travel extends Component {
 
       for (var i = 0; i < imageCount; i++) {
         var tempImg = responseAsJson.data[i].images["standard_resolution"].url;
-        instagramImages.push(tempImg);
+        // instagramImages.push(tempImg);
       }
-      $this.setState({load: true})
+      //$this.setState({load: true})
     })
     .catch(function(error) {
       console.log('Looks like there was a problem: \n', error);
@@ -161,7 +170,7 @@ class Travel extends Component {
                 <iframe title="Netherlands" id="iframeid3" width="560" height="315" src="https://www.youtube.com/embed/P1IhRe1LCJE?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
             </Slider>
-            <a href={cdata.url[1]} target='_blank' rel='noopener noreferrer'><div className="button mt5 mb0">View more</div></a>
+            <a href={cdata.url[1]} target='_blank' rel='noopener noreferrer'><div className="button mt5 mb0">View more videos</div></a>
           </div>
         </div>
         <Footer/>

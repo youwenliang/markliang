@@ -3,11 +3,11 @@ import data from '../data/data.js';
 import Footer from '../components/footer.js';
 
 import human from '../images/illustration2.svg';
-import icon1 from '../images/icon1.svg';
-import icon2 from '../images/icon2.svg';
-import icon3 from '../images/icon3.svg';
-import icon4 from '../images/icon4.svg';
-import icon5 from '../images/icon1.svg';
+import icon1 from '../images/icon0.svg';
+import icon2 from '../images/icon1.svg';
+import icon3 from '../images/icon2.svg';
+import icon4 from '../images/icon3.svg';
+import icon5 from '../images/icon4.svg';
 const icons = [icon1, icon2, icon3, icon4, icon5];
 
 class About extends Component {
@@ -71,7 +71,7 @@ class About extends Component {
 
     for (var i = 0; i < 5; i++) {
       var temp = (i === 0) ? (
-        <div className="fl w-100 pa3 tl-l tc" key={i}>
+        <div className="fl w-100 pa2 tl-l tc" key={i}>
           <div className="bg-white pa4">
             <img className="mb3" src={icons[i]} width={iw} alt={cdata["focus-title"][i]}/>
             <h4 className="mv3-ns mv2" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["focus-title"][i]}}></h4>
@@ -79,7 +79,7 @@ class About extends Component {
           </div>
         </div>
         ):(
-        <div className="fl w-50-l w-100 pa3 tl-l tc" key={i}>
+        <div className="fl w-50-l w-100 pa2 tl-l tc" key={i}>
           <div className="bg-white pa4">
             <img className="mb3" src={icons[i]} width={iw} alt={cdata["focus-title"][i]}/>
             <h4 className="mv3-ns mv2" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["focus-title"][i]}}></h4>
@@ -116,7 +116,7 @@ class About extends Component {
         <div className="fade-section">
           <div className="box center">
             <div className="ph4-l ph2">
-              <p className="small-title mb40 mt0 ph3">{cdata["small-title"][1]}</p>
+              <p className="small-title mb40 mt0 ph2">{cdata["small-title"][1]}</p>
               <div className="cf">
                 {focus}
               </div>

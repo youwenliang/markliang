@@ -131,7 +131,7 @@ class Talks extends Component {
                 <div className="w-100 w-100 h5 bg-blue" style={photo[2]}></div>
               </div>
             </div>
-            <ImageBox onRef={ref => (this.child = ref)} content={[p1,p2,p3,p4,p5,p6, p7]}/>
+            <ImageBox onRef={ref => (this.child = ref)} content={[p1,p2,p3,p4,p5,p6,p7]}/>
           </div>
         </div>
         <Footer/>
