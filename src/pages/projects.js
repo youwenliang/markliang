@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import data from '../data/data.js';
 import Footer from '../components/footer.js';
 import human from '../images/illustration3.svg';
@@ -23,6 +24,7 @@ class Projects extends Component {
   
   render() {
     var cdata = data["contents"]["projects"];
+    var pdata = data["projects"];
     const { width } = this.state;
     const isMobile = width <= 959;
 
@@ -43,20 +45,43 @@ class Projects extends Component {
       lineHeight: !isMobile ? "24px":"20px",
       fontWeight: 700 
     }
+    var projectH4 = {
+      fontSize: !isMobile ? "30px":"20px",
+      lineHeight: !isMobile ? "45px":"30px",
+      color: "#010101",
+      fontWeight: 700
+    }
+    var tagH5 = {
+      fontSize: "14px",
+      lineHeight: "18px",
+      color: "#7BACCB",
+      fontWeight: 500
+    }
+    var tagH4 = {
+      fontSize: "14px",
+      lineHeight: "18px",
+      color: "#222222",
+      textTransform: "uppercase",
+      letterSpacing: "1px",
+      fontWeight: 700
+    }
 
     var main = [];
     for (var i = 0; i < 6; i++) {
       var temp = (
-        <div className="cf mb40">
-          <div className="fl w-40-l w-100 pa2 tl" key={i}>
-            <h4 className="mb3-ns mb2 mt0" dangerouslySetInnerHTML={{__html:cdata["main-title"][i]}}></h4>
-            <h6 className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-tag"][i]}}></h6>
-            <p className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-des"][i]}}></p>
+        <Link to ={'/projects/'+pdata["links"][i]}>
+          <div className="cf mb40">
+            <div className="fl w-40-l w-100 pa2 tl" key={i}>
+              <h4 style={projectH4} className="mb3-ns mb2 mt0" dangerouslySetInnerHTML={{__html:cdata["main-title"][i]}}></h4>
+              <h4 style={projectH4}  className="dark fw5 mv0">—</h4>
+              <h6 style={tagH4} className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-tag"][i]}}></h6>
+              <p style={tagH5} className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-des"][i]}}></p>
+            </div>
+            <div className="fl w-60-l w-100 pa2 tl-l tc" key={i}>
+              <img className="ml4-l ml0" src={cdata["main-img"][i]}/>
+            </div>
           </div>
-          <div className="fl w-60-l w-100 pa2 tl-l tc" key={i}>
-            <img src={cdata["main-img"][i]}/>
-          </div>
-        </div>
+        </Link>
       )
       main.push(temp);
     }
@@ -68,13 +93,15 @@ class Projects extends Component {
         backgroundSize: "cover"
       }
       var temp = (
-        <div className="fl w-50-l w-100 pa2 tl" key={i}>
-          <div className="pa4 h300 white" style={bgSide}>
-            <h4 className="mb3-ns mb2 mt100" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["side-title"][i]}}></h4>
-            <h6 className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["side-tag"][i]}}></h6>
-            <p className="mt3-ns mt2 mb0 pre-wrap lh-copy" dangerouslySetInnerHTML={{__html:cdata["side-des"][i]}}></p>
+        <a href={cdata["side-url"][i]} target="_blank">
+          <div className="fl w-50-l w-100 pa2 tl" key={i}>
+            <div className="pa4 h300 white" style={bgSide}>
+              <h4 className="mb3-ns mb2 mt100" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["side-title"][i]}}></h4>
+              <h6 className="mt3-ns mt2 mb0 pre-wrap tracked" dangerouslySetInnerHTML={{__html:cdata["side-tag"][i]}}></h6>
+              <p className="mt3-ns mt2 mb0 pre-wrap lh-copy fw5" dangerouslySetInnerHTML={{__html:cdata["side-des"][i]}}></p>
+            </div>
           </div>
-        </div>
+        </a>
       )
       side.push(temp);
     }

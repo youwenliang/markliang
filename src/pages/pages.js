@@ -24,9 +24,10 @@ class Pages extends Component {
   }
   
   render() {
+    var title = this.props.match.params.id;
     return (
       <section>
-        <p>This is a pages</p>
+        <p>This is a {title}</p>
       </section>
     );
   }

@@ -98,7 +98,7 @@ class App extends Component {
                 <Switch location={location}>
                   <Route exact path='/' component={Home} />
                   <Route path={'/'+data["pages"][1]} component={About} />
-                  <Route path={'/'+data["pages"][2]} component={Projects} />
+                  <Route exact path={'/'+data["pages"][2]} component={Projects} />
                   <Route path={'/'+data["pages"][2]+'/:id'} component={Pages} />
                   <Route path={'/'+data["pages"][3]} component={Writing} />
                   <Route path={'/'+data["pages"][4]} component={Talks} />

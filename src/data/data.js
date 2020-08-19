@@ -37,14 +37,15 @@ var data = {
 			"h1": "Projects<span class='blue'>:<br/></span>",
 			"h3": "While working at Mozilla, I've participated in many projects, including IoT-related concepts, browser extension experiments, and innovative products that target emerging markets. <br/><br/>I've also played different roles in each project, sometimes jumping into codes to tweak the front-end UI, or supporting researchers to find user insights by building prototypes, or even driving product features from conception to launch. Below are some of my featured projects.",
 			"small-title": ["Featured projects", "Side projects"],
-			"main-title": ["1","2","3","4","5","6"],
-			"main-tag": ["1","2","3","4","5","6"],
-			"main-des": ["1","2","3","4","5","6"],
+			"main-title": ["A fast and lightweight browser for emerging markets.","Collect, organize and find your mobile screenshots easily.","A simple tool for anyone to change the look of Firefox.","Upload and encrypt large files to share online with Firefox Send.","Take, save, and share screenshots without leaving Firefox.","Independent and personalizable Web experience on Smart TVs."],
+			"main-tag": ["Firefox Lite","Screenshot Go","Firefox Color","Firefox Send","Firefox Screenshots","Firefox os tv"],
+			"main-des": ["2019-2020 | Mozilla","2018 | Mozilla","2017-2018 | Mozilla","2017 | Mozilla","2016-2017 | Mozilla","2015 | Mozilla"],
 			"main-img": ["https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/"],
 			"side-title": ["Our Island","CSS Drawings","G0V Grants","Low-Poly Series"],
 			"side-tag": ["WEB DESIGN & DEVELOPMENT","CSS/CSS ANIMATION","WEB DESIGN & DEVELOPMENT","3D DRAWING/CINEMA 4D"],
 			"side-des": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."],
-			"side-img": ["https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/"]
+			"side-img": ["https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/"],
+			"side-url": ["https://newmedia.pts.org.tw/island20", "https://codepen.io/collection/XLRmOe", "https://grants.g0v.tw/power", "https://sketchfab.com/bigheadcool"]
 		},
 		"writing": {
 			"h1": "Writing<span class='blue'>:<br/></span>",
@@ -73,6 +74,9 @@ var data = {
 			"url": ["https://www.instagram.com/sometrips/","http://bit.ly/SomeTrips"],
 			"small-title": ["Travel photography", "Latest travel video"]
 		}
+	},
+	"projects": {
+		"links": ["firefox-lite","screenshot-go","firefox-color","firefox-send","firefox-screenshots","firefoxos-tv"]
 	}
 }
 export default data;
