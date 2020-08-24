@@ -39,7 +39,7 @@ var data = {
 			"small-title": ["Featured projects", "Side projects"],
 			"main-title": ["A fast and lightweight browser for emerging markets.","Collect, organize and find your mobile screenshots easily.","A simple tool for anyone to change the look of Firefox.","Upload and encrypt large files to share online with Firefox Send.","Take, save, and share screenshots without leaving Firefox.","Independent and personalizable Web experience on Smart TVs."],
 			"main-url": ["firefox-lite","screenshot-go","firefox-color","firefox-send","firefox-screenshots","firefoxos-tv"],
-			"main-tag": ["Firefox Lite","Screenshot Go","Firefox Color","Firefox Send","Firefox Screenshots","Firefox os tv"],
+			"main-tag": ["Firefox Lite","Screenshot Go","Firefox Color","Firefox Send","Firefox Screenshots","FirefoxOS TV"],
 			"main-des": ["2019-2020 | Mozilla","2018 | Mozilla","2017-2018 | Mozilla","2017 | Mozilla","2016-2017 | Mozilla","2015 | Mozilla"],
 			"main-img": ["https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/"],
 			"side-title": ["Our Island","CSS Drawings","G0V Grants","Low-Poly Series"],

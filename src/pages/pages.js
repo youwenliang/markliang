@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from '../data/data.js';
 import Footer from '../components/footer.js';
+import List from '../components/list.js';
 import $ from 'jquery';
 
 import project1 from '../images/projects/project-zerda-cover.png';
@@ -105,6 +106,7 @@ class Project01 extends Component {
             <img src={pcover[this.state.num-1]} width="100%" />
           </div>
         </div>
+        <List prev={5} next={1}/>
         <Footer/>
       </section>
     );
@@ -127,9 +129,10 @@ class Project02 extends Component {
  
   render() {
     return (
-      <div>
-        <h1>Project02</h1>    
-      </div>
+      <section>
+        <List prev={0} next={2}/>
+        <Footer/>
+      </section>
     );
   }
 }
@@ -150,9 +153,10 @@ class Project03 extends Component {
  
   render() {
     return (
-      <div>
-        <h1>Project03</h1>    
-      </div>
+      <section>
+        <List prev={1} next={3}/>
+        <Footer/>
+      </section>
     );
   }
 }
@@ -173,9 +177,10 @@ class Project04 extends Component {
  
   render() {
     return (
-      <div>
-        <h1>Project04</h1>    
-      </div>
+      <section>
+        <List prev={2} next={4}/>
+        <Footer/>
+      </section>
     );
   }
 }
@@ -196,9 +201,10 @@ class Project05 extends Component {
  
   render() {
     return (
-      <div>
-        <h1>Project05</h1>    
-      </div>
+      <section>
+        <List prev={3} next={5}/>
+        <Footer/>
+      </section>
     );
   }
 }
@@ -236,6 +242,21 @@ class Project06 extends Component {
       fontSize: !isMobile ? "24px":"18px",
       lineHeight: !isMobile ? "30px":"22.5px"
     }
+    var homeH5 = {
+      fontSize: "14px",
+      lineHeight: "18px",
+      color: "#7BACCB",
+      fontWeight: 700,
+      textTransform: "uppercase",
+      letterSpacing: "1px"
+    }
+    var homeH4 = {
+      fontSize: !isMobile ? "18px":"16px",
+      lineHeight: !isMobile ? "27px":"24px",
+      color: "#222222",
+      fontWeight: 500
+    }
+
     return (
       <section id={this.state.id} className="page">
         <div className="box center tc ph4">
@@ -246,13 +267,18 @@ class Project06 extends Component {
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 mb100">
-          <h5 className="ttu tracked">overview</h5>
+          <h5 className="small-title">overview</h5>
           <div className="cf">
-            <div className="fl w-50-l w-100">
+            <div className="fl w-50-l w-100 mb4 mb0-l">
               <p className="f4 lh-copy fw4">Firefox OS TV presents a seamless Firefox web experience on a Smart TV platform, collaborating with our community to build an optimized TV experience. It is part of the effort to provide Firefox OS as an open platform choice for managing and controlling the broader range of connected devices available in the physical world. It was one of the most prominent projects running in the Mozilla Taipei office in 2015.</p>
             </div>
-            <div className="fl w-50-l w-100 pl4-l">
-              <p className="o-40 fw5 f4 lh-large">• Date: 2015<br/>• Roles: Prototyper / Front-End Development<br/>• Skills: HTML/CSS, Javascript, User Testing</p>
+            <div className="fl w-50-l w-100 pl4-l mb4 mb0-l">
+              <h5 className="mv2" style={homeH5}>Date<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>2015</h4><br/>
+              <h5 className="mv2" style={homeH5}>Roles<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>Prototyper / Front-End Development</h4><br/>
+              <h5 className="mv2" style={homeH5}>Skills<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>HTML/CSS, Javascript, User Testing</h4>
             </div>
           </div>
           <div className="mt3 mb5-l mb4">
@@ -278,6 +304,7 @@ class Project06 extends Component {
             <p className="f4 lh-copy fw4">The bad news is, Mozilla announced that it would no longer be developing the Firefox OS for the smartphone market in December 2015. In consequence, there's also no more Firefox OS for Smart TVs. Since Firefox OS is an open-source project, Panasonic was still able to develop its own "My Home Screen 2.0" based on the old OS. In a way, Firefox OS will continue live on in Panasonic’s 2017 TVs.</p>
           </div>
         </div>
+        <List prev={4} next={0}/>
         <Footer/>
       </section>
     );

@@ -129,6 +129,9 @@ main {
 	color: #7BACCB;
 }
 
+.b--blue {
+	border-color: #7BACCB;
+}
 .bg-blue {
 	background-color: #7BACCB;
 }
@@ -408,6 +411,10 @@ nav li.active::after {
 	font-weight: bold;
 }
 
+.small-title.white {
+	color: white;
+}
+
 .small-link {
 	color: #7BACCB !important;
 }
@@ -457,7 +464,9 @@ nav li.active::after {
   	display: block;
   	padding-bottom: 100%;
 }
-
+.links a{
+	text-decoration: none;
+}
 .title-links {
 	text-decoration: none;
 	position: relative;
@@ -488,6 +497,7 @@ nav li.active::after {
 
 .f4 {
 	font-size: 1.25rem;
+	color: #222222;
 }
 
 @media screen and (max-width: 959px) {
