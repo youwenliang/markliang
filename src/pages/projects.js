@@ -2,7 +2,20 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import data from '../data/data.js';
 import Footer from '../components/footer.js';
+
 import human from '../images/illustration3.svg';
+
+import cover1 from '../images/cover1.png';
+import cover2 from '../images/cover2.png';
+import cover3 from '../images/cover3.png';
+import cover4 from '../images/cover4.png';
+
+import project1 from '../images/projects/project-zerda-cover.png';
+import project2 from '../images/projects/screenshot-plus-cover.png';
+import project3 from '../images/projects/firefox-color-cover.png';
+import project4 from '../images/projects/firefox-send-cover.png';
+import project5 from '../images/projects/firefox-screenshots-cover.png';
+import project6 from '../images/projects/firefoxos-tv-cover.png';
 
 class Projects extends Component {
   constructor(props) {
@@ -67,6 +80,7 @@ class Projects extends Component {
     }
 
     var main = [];
+    var pcover = [project1, project2, project3, project4, project5, project6];
     for (var i = 0; i < 6; i++) {
       var temp = (
         <Link to ={'/projects/'+pdata["links"][i]}>
@@ -78,7 +92,7 @@ class Projects extends Component {
               <p style={tagH5} className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-des"][i]}}></p>
             </div>
             <div className="fl w-60-l w-100 pa2 tl-l tc" key={i}>
-              <img className="ml4-l ml0" src={cdata["main-img"][i]}/>
+              <img className="ml4-l ml0" src={pcover[i]}/>
             </div>
           </div>
         </Link>
@@ -87,18 +101,20 @@ class Projects extends Component {
     }
 
     var side = [];
+    var cover = [cover1, cover2, cover3, cover4];
     for (var i = 0; i < 4; i++) {
       var bgSide = {
-        backgroundImage: "url("+cdata["side-img"][i]+")",
-        backgroundSize: "cover"
+        backgroundImage: "url("+cover[i]+")",
+        backgroundPosition: "center center"
       }
       var temp = (
-        <a href={cdata["side-url"][i]} target="_blank">
+        <a className="bgLink" href={cdata["side-url"][i]} target="_blank">
           <div className="fl w-50-l w-100 pa2 tl" key={i}>
-            <div className="pa4 h300 white" style={bgSide}>
-              <h4 className="mb3-ns mb2 mt100" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["side-title"][i]}}></h4>
-              <h6 className="mt3-ns mt2 mb0 pre-wrap tracked" dangerouslySetInnerHTML={{__html:cdata["side-tag"][i]}}></h6>
-              <p className="mt3-ns mt2 mb0 pre-wrap lh-copy fw5" dangerouslySetInnerHTML={{__html:cdata["side-des"][i]}}></p>
+            <div className="pa4 h300 white relative bgZoom" style={bgSide}>
+              <h4 className="z1 mb3-ns mb2 mt100" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["side-title"][i]}}></h4>
+              <h6 className="z1 mt3-ns mt2 mb0 pre-wrap tracked" dangerouslySetInnerHTML={{__html:cdata["side-tag"][i]}}></h6>
+              <p className="z1 mt3-ns mt2 mb0 pre-wrap lh-copy fw5" dangerouslySetInnerHTML={{__html:cdata["side-des"][i]}}></p>
+              <div className="top-0 left-0 absolute w-100 h-100 mask"></div>
             </div>
           </div>
         </a>
@@ -120,7 +136,7 @@ class Projects extends Component {
             </div>
           </div>
           <hr className="section-divider"></hr>
-          <div className="ph4-l ph2 mb100">
+          <div className="ph4-l ph2 mb100 projects">
             <p className="small-title mb40 mt0 ph2">{cdata["small-title"][0]}</p>
             {main}
           </div>
@@ -138,3 +154,4 @@ class Projects extends Component {
 }
 
 export default Projects;
+

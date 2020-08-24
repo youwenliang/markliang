@@ -72,9 +72,14 @@ class App extends Component {
       }
     };
     console.log(window.location.pathname.split('/')[1]);
-    let footer = isMobile || isLow ? null:(<Footer bottom={true}/>);
-    if(window.location.pathname.split('/')[1]) $('footer.bottom').addClass('fade');
-    else $('footer.bottom').removeClass('fade');
+    let footer = null;
+    if(window.location.pathname.split('/')[1]) {
+      $('footer.bottom').addClass('fade');
+    }
+    else {
+      $('footer.bottom').removeClass('fade');
+      footer = isMobile || isLow ? null:(<Footer bottom={true}/>);
+    }
       
     return (
       <main>

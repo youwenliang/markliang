@@ -261,6 +261,39 @@ nav li.active::after {
   }
 }
 
+.z1 {
+	position: relative;
+	z-index: 1;
+}
+
+.bgZoom {
+	background-size: 100%;
+	transition: all 1s cubic-bezier(.19,1,.22,1);
+}
+
+.bgLink:hover .bgZoom{
+	background-size: 120%;
+	transition: all 1s cubic-bezier(.19,1,.22,1);
+}
+.mask {
+	background: rgba(123,172,203,.9);
+	transition: all 1s cubic-bezier(.19,1,.22,1);
+}
+
+.bgLink:hover .mask {
+	background: rgba(123,172,203,.3);
+	transition: all 1s cubic-bezier(.19,1,.22,1);
+}
+
+.projects a{
+	transform: translateY(0);
+	transition: all 1s cubic-bezier(.19,1,.22,1);	
+}
+.projects a:hover{
+	transform: translateY(10px);
+	transition: all 1s cubic-bezier(.19,1,.22,1);	
+}
+
 .panel {
 	z-index: 8;
 }
