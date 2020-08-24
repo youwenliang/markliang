@@ -173,6 +173,16 @@ footer.fade {
 }
 
 /* Nav.js */
+.bgMask {
+	height: 768px;
+	transition: opacity .4s linear;
+}
+
+@media screen and (max-width: 959px) {
+	.bgMask {
+		height: 384px;
+	}
+}
 
 #logo {
 	width: 84px;
@@ -261,6 +271,10 @@ nav li.active::after {
   }
 }
 
+.lh-large {
+	line-height: 2;
+}
+
 .z1 {
 	position: relative;
 	z-index: 1;
@@ -272,7 +286,7 @@ nav li.active::after {
 }
 
 .bgLink:hover .bgZoom{
-	background-size: 120%;
+	background-size: 110%;
 	transition: all 1s cubic-bezier(.19,1,.22,1);
 }
 .mask {
@@ -468,6 +482,14 @@ nav li.active::after {
 	transform-origin: left center;
 }
 
+.f2 {
+	font-size: 2.25rem;
+}
+
+.f4 {
+	font-size: 1.25rem;
+}
+
 @media screen and (max-width: 959px) {
 	.title-links {
 		text-decoration: underline;
@@ -475,6 +497,13 @@ nav li.active::after {
 	}
 	.title-links::after {
 		display: none;
+	}
+	.f2 {
+		font-size: 2rem;
+	}
+
+	.f4 {
+		font-size: 1rem;
 	}
 }
 
@@ -514,6 +543,11 @@ nav li.active::after {
 
 .mb100 {
 	margin-bottom: 100px;
+}
+
+.pv100 {
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 @media screen and (max-width: 959px) {

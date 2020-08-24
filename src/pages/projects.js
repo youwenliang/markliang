@@ -82,17 +82,23 @@ class Projects extends Component {
     var main = [];
     var pcover = [project1, project2, project3, project4, project5, project6];
     for (var i = 0; i < 6; i++) {
+      var bgCover = {
+        backgroundImage: "url("+pcover[i]+")",
+        backgroundPosition: "center center"
+      }
       var temp = (
         <Link to ={'/projects/'+pdata["links"][i]}>
-          <div className="cf mb40">
+          <div className="cf mb40 bgLink">
             <div className="fl w-40-l w-100 pa2 tl" key={i}>
               <h4 style={projectH4} className="mb3-ns mb2 mt0" dangerouslySetInnerHTML={{__html:cdata["main-title"][i]}}></h4>
               <h4 style={projectH4}  className="dark fw5 mv0">—</h4>
               <h6 style={tagH4} className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-tag"][i]}}></h6>
               <p style={tagH5} className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-des"][i]}}></p>
             </div>
-            <div className="fl w-60-l w-100 pa2 tl-l tc" key={i}>
-              <img className="ml4-l ml0" src={pcover[i]}/>
+            <div className="fl w-60-l w-100 h-100 pa2 tl-l tc" key={i}>
+              <div className="bgZoom ml4-l ml0 w-100 h-100" style={bgCover}>
+                <img className="o-0" src={pcover[i]}/>
+              </div>
             </div>
           </div>
         </Link>

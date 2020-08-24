@@ -38,6 +38,7 @@ var data = {
 			"h3": "While working at Mozilla, I've participated in many projects, including IoT-related concepts, browser extension experiments, and innovative products that target emerging markets. <br/><br/>I've also played different roles in each project, sometimes jumping into codes to tweak the front-end UI, or supporting researchers to find user insights by building prototypes, or even driving product features from conception to launch. Below are some of my featured projects.",
 			"small-title": ["Featured projects", "Side projects"],
 			"main-title": ["A fast and lightweight browser for emerging markets.","Collect, organize and find your mobile screenshots easily.","A simple tool for anyone to change the look of Firefox.","Upload and encrypt large files to share online with Firefox Send.","Take, save, and share screenshots without leaving Firefox.","Independent and personalizable Web experience on Smart TVs."],
+			"main-url": ["firefox-lite","screenshot-go","firefox-color","firefox-send","firefox-screenshots","firefoxos-tv"],
 			"main-tag": ["Firefox Lite","Screenshot Go","Firefox Color","Firefox Send","Firefox Screenshots","Firefox os tv"],
 			"main-des": ["2019-2020 | Mozilla","2018 | Mozilla","2017-2018 | Mozilla","2017 | Mozilla","2016-2017 | Mozilla","2015 | Mozilla"],
 			"main-img": ["https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/"],

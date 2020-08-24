@@ -80,6 +80,12 @@ class App extends Component {
       $('footer.bottom').removeClass('fade');
       footer = isMobile || isLow ? null:(<Footer bottom={true}/>);
     }
+    let mask = null;
+    if(window.location.href.indexOf('projects/') > -1) {
+      mask = (<div className="pn absolute top-0 left-0 w-100 bgMask bg-blue o-20"></div>)
+    } else {
+      mask = (<div className="pn absolute top-0 left-0 w-100 bgMask bg-blue o-0"></div>)
+    }
       
     return (
       <main>
@@ -88,6 +94,7 @@ class App extends Component {
           {/*<img src={loading} alt="Loading..." width="80" height="80"/>*/}
         </div>
         <Nav active={window.location.pathname}/>
+        {mask}
         <Route render={({ location }) => {
           const { pathname, key } = location
 
