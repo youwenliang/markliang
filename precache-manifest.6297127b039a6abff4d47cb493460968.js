@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0010d2cd0a8466678b3ca9461d339e93",
+    "revision": "3754f0f127a593386422ff9c64e866f2",
     "url": "/index.html"
   },
   {
-    "revision": "2e19b3dbdb516fbbd37e",
-    "url": "/static/css/main.259198eb.chunk.css"
+    "revision": "aeb7981c3533eb1c6a3c",
+    "url": "/static/css/main.8e55760b.chunk.css"
   },
   {
-    "revision": "4659d9b63f726ff0609a",
-    "url": "/static/js/2.0de6ae48.chunk.js"
+    "revision": "57a5763fede8ef68b6cd",
+    "url": "/static/js/2.3ff84fb5.chunk.js"
   },
   {
-    "revision": "2e19b3dbdb516fbbd37e",
-    "url": "/static/js/main.bbe2e14d.chunk.js"
+    "revision": "aeb7981c3533eb1c6a3c",
+    "url": "/static/js/main.5de29968.chunk.js"
   },
   {
     "revision": "97d78d26826bf7c68729",
@@ -34,6 +34,38 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "220b1dd31cbf1b11825433158d644def",
     "url": "/static/media/AirbnbCerealMedium.220b1dd3.woff"
+  },
+  {
+    "revision": "f2b54d17e13a2d2652a301e5f1286db5",
+    "url": "/static/media/cover1.f2b54d17.png"
+  },
+  {
+    "revision": "66b2b172cba27b498296e5718fe76279",
+    "url": "/static/media/cover2.66b2b172.png"
+  },
+  {
+    "revision": "da30eceea2bc026aaaea0e9ffa990c4e",
+    "url": "/static/media/cover3.da30ecee.png"
+  },
+  {
+    "revision": "79fa98923ff863302fddc665b016106d",
+    "url": "/static/media/cover4.79fa9892.png"
+  },
+  {
+    "revision": "7ac72318d09bc0df839a01057459379f",
+    "url": "/static/media/firefox-color-cover.7ac72318.png"
+  },
+  {
+    "revision": "1f1851114fe013281a19d2e0d5cfa3e1",
+    "url": "/static/media/firefox-screenshots-cover.1f185111.png"
+  },
+  {
+    "revision": "492b2ed79acc980cbce7c18af730bcec",
+    "url": "/static/media/firefox-send-cover.492b2ed7.png"
+  },
+  {
+    "revision": "0a78d8de24b819659aeb27d63239e78c",
+    "url": "/static/media/firefoxos-tv-cover.0a78d8de.png"
   },
   {
     "revision": "29f2d27a132c99016332fff4dc264abb",
@@ -110,6 +142,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "31df739de7ec11e88f11e604a322a802",
     "url": "/static/media/photo7.31df739d.jpg"
+  },
+  {
+    "revision": "5b7843cedade0b9b13479c80a0d28aaf",
+    "url": "/static/media/project-zerda-cover.5b7843ce.png"
+  },
+  {
+    "revision": "f523c9729d887c3fb8fd980b4412a65b",
+    "url": "/static/media/screenshot-plus-cover.f523c972.png"
   },
   {
     "revision": "40575c1a9defb8e8a84a90d6ad95cb26",
