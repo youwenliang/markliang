@@ -491,6 +491,36 @@ nav li.active::after {
 	transform-origin: left center;
 }
 
+.next {
+	transform: translateX(0);
+	transition: transform .5s cubic-bezier(.19,1,.22,1);
+}
+
+.next:hover {
+	transform: translateX(10px);
+	transition: transform .5s cubic-bezier(.19,1,.22,1);
+}
+
+.prev {
+	transform: translateX(0);
+	transition: transform .5s cubic-bezier(.19,1,.22,1);
+}
+
+.prev:hover {
+	transform: translateX(-10px);
+	transition: transform .5s cubic-bezier(.19,1,.22,1);
+}
+
+.up {
+	transform: translateX(0);
+	transition: transform .5s cubic-bezier(.19,1,.22,1);
+}
+
+.up:hover {
+	transform: translateY(-10px);
+	transition: transform .5s cubic-bezier(.19,1,.22,1);
+}
+
 .f2 {
 	font-size: 2.25rem;
 }

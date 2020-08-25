@@ -88,7 +88,7 @@ class Projects extends Component {
       }
       var temp = (
         <Link to ={'/projects/'+pdata["links"][i]}>
-          <div className="cf mb40 bgLink">
+          <div className="cf mb40 bgLink up">
             <div className="fl w-40-l w-100 pa2 tl" key={i}>
               <h4 style={projectH4} className="mb3-ns mb2 mt0" dangerouslySetInnerHTML={{__html:cdata["main-title"][i]}}></h4>
               <h4 style={projectH4}  className="dark fw5 mv0">—</h4>

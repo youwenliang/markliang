@@ -47,7 +47,7 @@ class List extends Component {
           <h5 className="small-title white pl4">more projects</h5>
           <div className="fl w-50-l w-100 pa4 tl">
             <Link to ={'/projects/'+cdata["main-url"][this.props.prev]}>
-            <div className="bg-white br3 overflow-hidden">
+            <div className="bg-white br3 overflow-hidden prev">
               <img src={pcover[this.props.prev]}/>
               <div className="pa4 bt bw1 b--blue">
                 <h4 className="z1 mb3-ns mb2 mt0" style={aboutH4}>{cdata["main-tag"][this.props.prev]}</h4>
@@ -58,7 +58,7 @@ class List extends Component {
           </div>
           <div className="fl w-50-l w-100 pa4 tl">
             <Link to ={'/projects/'+cdata["main-url"][this.props.next]}>
-            <div className="bg-white br3 overflow-hidden">
+            <div className="bg-white br3 overflow-hidden next">
               <img src={pcover[this.props.next]}/>
               <div className="pa4 bt bw1 b--blue">
                 <h4 className="z1 mb3-ns mb2 mt0" style={aboutH4}>{cdata["main-tag"][this.props.next]}</h4>
