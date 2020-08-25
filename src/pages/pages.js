@@ -66,6 +66,8 @@ export default Pages;
 
 *************************************************************************************************************************/
 
+
+/******************************************************* P1 *************************************************************/
 class Project01 extends Component {
   constructor(props) {
     super(props);
@@ -114,7 +116,7 @@ class Project01 extends Component {
     );
   }
 }
-
+/******************************************************* P2 *************************************************************/
 class Project02 extends Component {
   constructor(props) {
     super(props);
@@ -133,6 +135,9 @@ class Project02 extends Component {
   checkMobile = () => {
     this.setState({ width: window.innerWidth });
   }
+  onClick = (n) => {
+    this.child.openLightboxOnSlide(n+1);
+  };
  
   render() {
     var cdata = data["contents"]["projects"];
@@ -163,6 +168,17 @@ class Project02 extends Component {
       fontWeight: 500
     }
 
+    var images = ["../images/screenshot-go/image-6.png",
+                  "../images/screenshot-go/image-1.png",
+                  "../images/screenshot-go/image-4.png",
+                  "../images/screenshot-go/image-5.png",
+                  "../images/screenshot-go/image-2.png",
+                  "../images/screenshot-go/image-3.png",
+                  "../images/screenshot-go/image-7.gif",
+                  "../images/screenshot-go/image-8.gif",
+                  "../images/screenshot-go/image-0.png"
+                  ]
+
     return (
       <section id={this.state.id} className="page">
         <div className="box center tc ph4">
@@ -172,13 +188,134 @@ class Project02 extends Component {
             <img src={pcover[this.state.num-1]} width="100%" />
           </div>
         </div>
+        <div className="box center ph4 mt5-l mt4 mb100">
+          <h5 className="small-title">overview</h5>
+          <div className="cf">
+            <div className="fl w-50-l w-100 mb4 mb0-l">
+              <p className="f4 lh-copy fw4">Screenshot Plus is an exploration project started by Mozilla Taipei Team, and it is specifically targeting Asia markets such as Indonesia. It is a screenshot tool designed for people who use screenshots to capture information across various apps and browsers. We want to help users organize their screenshots by adding information layer to their screenshots so that it is searchable. One of the ideas is to add links to screenshots so that we can bring users back to the internet for more information about their screenshots.
+</p>
+            </div>
+            <div className="fl w-50-l w-100 pl4-l mb4 mb0-l">
+              <h5 className="mv2" style={homeH5}>Date<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>2018</h4><br/>
+              <h5 className="mv2" style={homeH5}>Roles<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>UX Designer, Prototyper</h4><br/>
+              <h5 className="mv2" style={homeH5}>Skills<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>Sketch, InVision, Framer</h4>
+            </div>
+          </div>
+          <div className="mt3 mb5-l mb4">
+            <a href="https://framer.cloud/woqSs" target="_blank" rel="noopener noreferrer" className="db dib-ns tl-ns tc mb3 br1 near-black button no-underline f12 fw7 mr3-ns pa3 white">Launch Framer Prototype</a>
+          </div>
+          <hr className="section-divider"></hr>
+          <div className="mt5-l mt4">
+            <div>
+              <h2 className="f2 mb5">The Challenge</h2>
+              <p className="f4 lh-copy fw4">Our team in Taipei wanted to start an idea around online shopping in Asia market. We had our previous research reports about Indonesia market so we asked ourselves what we can do to create a better online shopping experiences for them. We started by mapping out the user journey of a typical shopping experience, and see if there's anything we can tackle. After sending out surveys and several rounds of desk research, we decided to look into the idea of "Online Wishlist" and started our high-level concept storyboarding.</p>
+            </div>
+            <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(0)}>
+              <img
+                alt="Research study in Indonesia."
+                src={images[0]}
+                width="100%"
+              />
+              <p className="tc f6 o-60">Research study in Indonesia.</p>
+            </figure>
+          </div>
+        </div>
+        <div className="fade-section">
+          <div className="box center ph4">
+              <h2 className="f2 mb5">Design Process</h2>
+              <p className="f4 lh-copy fw4">After working closely with the engineers about additional functionalities such as "Reset", "Undo" and "Save", we delivered our design with a clear list of components users can customize, and an interactive preview section where users can click and select color. Since Firefox Color is a tool for Firefox users only, it's reasonable to promote Firefox Browser if a user accesses this tool from other browsers. Ideally with more people creating and sharing their themes, we could at the same time gain more users to try out Firefox!</p>
+              
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(1)}>
+                <img
+                alt="Our storyboards."
+                src={images[1]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Our storyboards.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(2)}>
+                <img
+                alt="Team up with engineers to discuss concept."
+                src={images[2]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Team up with engineers to discuss concept.</p>
+              </figure>
+              <p className="f4 lh-copy fw4">With the survey results and our team discussions, we decided to focus on helping people organize their screenshots, and using OCR to detect keywords on the screenshots so they can be searchable. With the text information on the screenshots, we could also direct users to find more information about their screenshots on the internet. We called it "Live Screenshot". For example, if a user screenshot a pair of shoes on an e-commerce site, we can detect the text on the screenshot and potentially bring that user back to that e-commerce site for further actions. </p>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(3)}>
+                <img
+                alt="Our initial product concept."
+                src={images[3]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Our initial product concept.</p>
+              </figure>
+          </div>
+        </div>
+        <div className="box center ph4 pv100">
+            <h2 className="f2 mb5">User Testing Trip</h2>
+            <p className="f4 lh-copy fw4">After refining the concept with our designers and engineers, we started the prototyping process so that we can test the idea with real users. As our team's prototyper, I use Framer to create an interactive prototype where users can add collections for their screenshots, and also pretend to screenshot an item they like on a website. With the finalized prototype, our team flew to Jakarta to meet with the locals we recruited for user testing. We spent a week interviewing eight users, and at the same time iterating our prototype. (At that time we called our app "Wishot")
+</p><p className="f4 lh-copy fw4">
+The whole trip was very inspiring for our design team, and we've learned so much about our users, much more than our desk research. We had better ideas on how they use their mobile devices and their daily activities that involve screenshots. We also learned that data plans, internet speed, and mobile device storage could be important factors that change their mobile behaviors.</p>
+             <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(4)}>
+                <img
+                alt="User testing sessions with our participants."
+                src={images[4]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">User testing sessions with our participants.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(5)}>
+                <img
+                alt="User testing sessions with our participants."
+                src={images[5]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">User testing sessions with our participants.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(6)}>
+                <img
+                alt="Screenshot and add to collection."
+                src={images[6]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Screenshot and add to collection.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(7)}>
+                <img
+                alt="View your recent screenshots."
+                src={images[7]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">View your recent screenshots.</p>
+              </figure>
+        </div>
+        <div className="fade-section">
+          <div className="box center ph4">
+              <h2 className="f2 mb5">What's Next</h2>
+              <p className="f4 lh-copy fw4">Compiling all the interview results from our research trip helps us get a better idea of what our product could be. The team continued refining the concept and create a landing page test to see if the idea is worth enough to pour in our engineering team's effort. If the result is promising, we will define an MVP for designers and engineers to start building the product.</p>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(8)}>
+                <img
+                alt="Landing page website."
+                src={images[8]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Landing page website.</p>
+              </figure>
+              
+          </div>
+        </div>
+        <ImageBox onRef={ref => (this.child = ref)} content={images}/>
         <List prev={0} next={2}/>
         <Footer/>
       </section>
     );
   }
 }
-
+/******************************************************* P3 *************************************************************/
 class Project03 extends Component {
   constructor(props) {
     super(props);
@@ -197,6 +334,9 @@ class Project03 extends Component {
   checkMobile = () => {
     this.setState({ width: window.innerWidth });
   }
+  onClick = (n) => {
+    this.child.openLightboxOnSlide(n+1);
+  };
  
   render() {
     var cdata = data["contents"]["projects"];
@@ -227,6 +367,15 @@ class Project03 extends Component {
       fontWeight: 500
     }
 
+    var images = ["../images/firefox-color/image-0.png",
+                  "../images/firefox-color/image-1.png",
+                  "../images/firefox-color/image-2.png",
+                  "../images/firefox-color/image-3.png",
+                  "../images/firefox-color/image-4.gif",
+                  "../images/firefox-color/image-5.gif",
+                  "../images/firefox-color/image-6.gif",
+                  ]
+
     return (
       <section id={this.state.id} className="page">
         <div className="box center tc ph4">
@@ -236,13 +385,110 @@ class Project03 extends Component {
             <img src={pcover[this.state.num-1]} width="100%" />
           </div>
         </div>
+        <div className="box center ph4 mt5-l mt4 mb100">
+          <h5 className="small-title">overview</h5>
+          <div className="cf">
+            <div className="fl w-50-l w-100 mb4 mb0-l">
+              <p className="f4 lh-copy fw4">Firefox Color lets you customize the look and feel of Firefox. You can change the tab color, background color, toolbar color and more, to create your own theme. You can also share your creations with your friends, or save them for yourself. It is a Test Pilot experiment that emphasis on enabling users to create their own Firefox experiences with customization.</p>
+            </div>
+            <div className="fl w-50-l w-100 pl4-l mb4 mb0-l">
+              <h5 className="mv2" style={homeH5}>Date<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>2017-2018</h4><br/>
+              <h5 className="mv2" style={homeH5}>Roles<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>UX Designer</h4><br/>
+              <h5 className="mv2" style={homeH5}>Skills<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>Sketch, InVision</h4>
+            </div>
+          </div>
+          <div className="mt3 mb5-l mb4">
+            <a href="https://color.firefox.com/" target="_blank" rel="noopener noreferrer" className="db dib-ns tl-ns tc mb3 br1 near-black button no-underline f12 fw7 mr3-ns pa3 white">Launch Website</a>
+          </div>
+          <hr className="section-divider"></hr>
+          <div className="mt5-l mt4">
+            <div>
+              <h2 className="f2 mb5">Design Process</h2>
+              <p className="f4 lh-copy fw4">We started with a <a href="https://addons.mozilla.org/en-US/firefox/addon/themr/" target="_blank" rel="noopener noreferrer">prototype (Themr)</a> our project manager John Gruen created to test out the idea of customizing the colors of Firefox components. After trying out the prototype, we started sketching out ideas to create a more intuitive tool for users to use. One of the issues we saw is that people don't know what they are customizing based on the components name, such as "Background Tab Text Color", so we want to make the preview of the Firefox browser interactive. Users can click on the parts directly if they want to change the colors.</p>
+            </div>
+            <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(0)}>
+              <img
+                alt="Themr addon's interface"
+                src={images[0]}
+                width="100%"
+              />
+              <p className="tc f6 o-60">Themr addon's interface</p>
+            </figure>
+
+            <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(1)}>
+                <img
+                alt="Early wireframes to establish the user interactions."
+                src={images[1]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Early wireframes to establish the user interactions.</p>
+              </figure>
+              <p className="f4 lh-copy fw4">We made several adjustments with the UX spec, and at the same time started several visual explorations on how the interface should look and behave. One of the core value of this project is to make it a fun tool for users to play with, so we wanted to make it less tool-like and more visually intriguing. We tested out adding gradient background color on the interface based on the colors users select, and we also added some "preset" themes for people to choose from if they don't want to create their own.</p>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(2)}>
+                <img
+                alt="UX spec iterations."
+                src={images[2]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">UX spec iterations.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(3)}>
+                <img
+                alt="Exploring different visual ideas."
+                src={images[3]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Exploring different visual ideas.</p>
+              </figure>
+          </div>
+        </div>
+        <div className="fade-section">
+          <div className="box center ph4">
+              <h2 className="f2 mb5">Final Design</h2>
+              <p className="f4 lh-copy fw4">After working closely with the engineers about additional functionalities such as "Reset", "Undo" and "Save", we delivered our design with a clear list of components users can customize, and an interactive preview section where users can click and select color. Since Firefox Color is a tool for Firefox users only, it's reasonable to promote Firefox Browser if a user accesses this tool from other browsers. Ideally with more people creating and sharing their themes, we could at the same time gain more users to try out Firefox!</p>
+              
+              
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(4)}>
+                <img
+                alt="Changing Colors."
+                src={images[4]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Changing Colors.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(5)}>
+                <img
+                alt="Applying preset themes."
+                src={images[5]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Applying preset themes.</p>
+              </figure>
+          </div>
+        </div>
+        <div className="box center ph4 pv100">
+            <h2 className="f2 mb5">What's Next</h2>
+            <p className="f4 lh-copy fw4">Firefox Color received lots of feedback since its launch, and the team also made some major changes to the interface to make it more visual on how to interact with the tool. For the next steps, we want to integrate Firefox Color with the existing customization settings and theme related addons to make it the one true place for people to change their browser's appearance. Hopefully in the future, all the Firefox new users will recognize Firefox Color as a built-in feature on Firefox.</p>
+             <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(6)}>
+                <img
+                alt="Firefox Color latest interactive interface."
+                src={images[6]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Firefox Color latest interactive interface.</p>
+              </figure>
+        </div>
+        <ImageBox onRef={ref => (this.child = ref)} content={images}/>
         <List prev={1} next={3}/>
         <Footer/>
       </section>
     );
   }
 }
-
+/******************************************************* P4 *************************************************************/
 class Project04 extends Component {
   constructor(props) {
     super(props);
@@ -261,6 +507,9 @@ class Project04 extends Component {
   checkMobile = () => {
     this.setState({ width: window.innerWidth });
   }
+  onClick = (n) => {
+    this.child.openLightboxOnSlide(n+1);
+  };
  
   render() {
     var cdata = data["contents"]["projects"];
@@ -291,6 +540,16 @@ class Project04 extends Component {
       fontWeight: 500
     }
 
+    var images = ["../images/firefox-send/image-6.png",
+                  "../images/firefox-send/image-4.png",
+                  "../images/firefox-send/image-5.png",
+                  "../images/firefox-send/image-7.gif",
+                  "../images/firefox-send/image-8.gif",
+                  "../images/firefox-send/image-3.png",
+                  "../images/firefox-send/image-0.png",
+                  "../images/firefox-send/image-1.png"
+                  ]
+
     return (
       <section id={this.state.id} className="page">
         <div className="box center tc ph4">
@@ -300,13 +559,120 @@ class Project04 extends Component {
             <img src={pcover[this.state.num-1]} width="100%" />
           </div>
         </div>
+        <div className="box center ph4 mt5-l mt4 mb100">
+          <h5 className="small-title">overview</h5>
+          <div className="cf">
+            <div className="fl w-50-l w-100 mb4 mb0-l">
+              <p className="f4 lh-copy fw4">Firefox Send is a file transfer service that automatically deletes files from the server after one download or 24 hours. It is the first Test Pilot "Web" experiment coming up this August, which means there's no need to install add-ons, and you can use it across different browsers and devices. </p>
+            </div>
+            <div className="fl w-50-l w-100 pl4-l mb4 mb0-l">
+              <h5 className="mv2" style={homeH5}>Date<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>2017</h4><br/>
+              <h5 className="mv2" style={homeH5}>Roles<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>UX Designer/Engineer</h4><br/>
+              <h5 className="mv2" style={homeH5}>Skills<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>Sketch, InVision, HTML/CSS, Javascript</h4>
+            </div>
+          </div>
+          <div className="mt3 mb5-l mb4">
+            <a href="https://send.firefox.com/" target="_blank" rel="noopener noreferrer" className="db dib-ns tl-ns tc mb3 br1 near-black button no-underline f12 fw7 mr3-ns pa3 white">Launch Website</a>
+          </div>
+          <hr className="section-divider"></hr>
+          <div className="mt5-l mt4">
+            <div>
+              <h2 className="f2 mb5">Design Process</h2>
+              <p className="f4 lh-copy fw4">Our user research team focused on trying to understand the problem space the experiment is intended to address during the early stage of this experiment. To help with the research, the UX team created early wireframes as a prototype to validate some hypothesis and learn from our users. This helps us determine how we are going to move forward with the UX, visual design and content strategy. Checkout the research report .</p>
+<p className="f4 lh-copy fw4">
+The user flow seems simple. There's only uploading and downloading files, so we put our focus on how the interface can address the simpleness of transferring files. We also have to take care of some error cases and help users make sense of the whole process so that they will feel secure and be willing to trust the service.</p>
+            </div>
+            <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(0)}>
+              <img
+                alt="Early wireframes to establish the user interactions."
+                src={images[0]}
+                width="100%"
+              />
+              <p className="tc f6 o-60">Early wireframes to establish the user interactions.</p>
+            </figure>
+
+            <p className="f4 lh-copy fw4">After establishing the UX spec with the team, we started several visual explorations on how the interface should look and behave. We also considered the responsive design for our interfaces since Firefox Send should work across all devices and all browsers.</p>
+          
+            <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(1)}>
+                <img
+                alt="Exploring different visual ideas."
+                src={images[1]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Exploring different visual ideas.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(2)}>
+                <img
+                alt="Designing responsive interfaces."
+                src={images[2]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Designing responsive interfaces.</p>
+              </figure>
+          </div>
+        </div>
+        <div className="fade-section">
+          <div className="box center ph4">
+              <h2 className="f2 mb5">Final Design</h2>
+              <p className="f4 lh-copy fw4">For the final design, we focused on clarifying the steps of uploading and downloading files, and also reduced the chances of people not knowing what to do on error pages. We made a lot effort into making Firefox Send support all browsers and different operating systems, and also localized all the strings to support users in different countries (which requires us to rethink about some of the components because of the string length). Before releasing this experiment, I also jumped in to help push the pixels on the front-end part to make sure all the components have a consistent look and feel. Our visual designer did an outstanding job providing a clean and friendly look for the interfaces!</p>
+              
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(3)}>
+                <img
+                alt="Dragging files to upload."
+                src={images[3]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Dragging files to upload.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(4)}>
+                <img
+                alt="Downloading and decrypting files through a unique link."
+                src={images[4]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Downloading and decrypting files through a unique link.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(5)}>
+                <img
+                alt="Removing files from your history."
+                src={images[5]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Removing files from your history.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(6)}>
+                <img
+                alt="File expired if someone has already downloaded it."
+                src={images[6]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">File expired if someone has already downloaded it.</p>
+              </figure>
+          </div>
+        </div>
+        <div className="box center ph4 pv100">
+            <h2 className="f2 mb5">What's Next</h2>
+            <p className="f4 lh-copy fw4">Since it's launch, we got lots of articles talking about Firefox Send. There's also a vast amount of feedback and over one thousand upvotes on . To continue improving Firefox Send, we collected all the input and compiled into a feature backlog for us to understand what our users think. We then prioritized the feature requests and brought together our design team to sketch up some ideas. One of the most requested features is to add a password to your files, which will roll out soon!</p>
+             <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(7)}>
+                <img
+                alt="Sending files with password protection."
+                src={images[7]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Sending files with password protection.</p>
+              </figure>
+        </div>
+        <ImageBox onRef={ref => (this.child = ref)} content={images}/>
         <List prev={2} next={4}/>
         <Footer/>
       </section>
     );
   }
 }
-
+/******************************************************* P5 *************************************************************/
 class Project05 extends Component {
     constructor(props) {
     super(props);
@@ -433,7 +799,7 @@ class Project05 extends Component {
                 src={images[1]}
                 width="100%"
               />
-                <p className="tc f12 o-60">Wireframes for landing page experience.</p>
+                <p className="tc f6 o-60">Wireframes for landing page experience.</p>
               </figure>
               <p className="f4 lh-copy fw4">We mapped the user flow for the screenshots experience and pointed out some interactions that can be simplified or refined to get better user perception.</p>
               <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(2)}>
@@ -442,7 +808,7 @@ class Project05 extends Component {
                 src={images[2]}
                 width="100%"
               />
-                <p className="tc f12 o-60">Taking shots & detail page user flow.</p>
+                <p className="tc f6 o-60">Taking shots & detail page user flow.</p>
               </figure>
               <p className="f4 lh-copy fw4">We also applied our new Photon Design System to give our UI design a consistent look and feel, while having the freedom to create some new icons with our own touch.</p>
               <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(3)}>
@@ -451,7 +817,7 @@ class Project05 extends Component {
                 src={images[3]}
                 width="100%"
               />
-                <p className="tc f12 o-60">Redesigning the main screens using Sketch.</p>
+                <p className="tc f6 o-60">Redesigning the main screens using Sketch.</p>
               </figure>
             </div>
         </div>
@@ -461,11 +827,11 @@ class Project05 extends Component {
             <p className="f4 lh-copy fw4">While exchanging ideas with our engineers about the UX spec, I also provided some visual interactions on different aspects of the features. I use Codepen to quickly mockup some interaction ideas for the engineers to get a better idea of how things should behave. Here are some of the examples:</p>
             <div className="mt4 mb5-ns mb4">
                 <p data-height="480" data-theme-id="dark" data-slug-hash="YZQbBG" data-default-tab="result" data-user="youwenliang" data-embed-version="2" data-pen-title="IxD Series: Mouse Tracking" className="codepen">See the Pen <a href="https://codepen.io/youwenliang/pen/YZQbBG/">IxD Series: Mouse Tracking</a> by Mark Liang (<a href="https://codepen.io/youwenliang">@youwenliang</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                <p className="tc f12 o-60">Eyes will follow the mouse while users are taking shots.</p><br/>
+                <p className="tc f6 o-60">Eyes will follow the mouse while users are taking shots.</p><br/>
                 <p data-height="480" data-theme-id="dark" data-slug-hash="xqaxXE" data-default-tab="result" data-user="youwenliang" data-embed-version="2" data-pen-title="IxD Series: Photo Viewer" className="codepen">See the Pen <a href="https://codepen.io/youwenliang/pen/xqaxXE/">IxD Series: Photo Viewer</a> by Mark Liang (<a href="https://codepen.io/youwenliang">@youwenliang</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                <p className="tc f12 o-60">Click to zoom in the shots users took.</p><br/>
+                <p className="tc f6 o-60">Click to zoom in the shots users took.</p><br/>
                 <p data-height="480" data-theme-id="light" data-slug-hash="LyvRpR" data-default-tab="result" data-user="youwenliang" data-embed-version="2" data-pen-title="IxD Series: Search Behavior" className="codepen">See the Pen <a href="https://codepen.io/youwenliang/pen/LyvRpR/">IxD Series: Search Behavior</a> by Mark Liang (<a href="https://codepen.io/youwenliang">@youwenliang</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                <p className="tc f12 o-60">Click the magnifying glass to expand and collapse the search field.</p><br/>
+                <p className="tc f6 o-60">Click the magnifying glass to expand and collapse the search field.</p><br/>
               </div>
           </div>
         </div>
@@ -480,7 +846,7 @@ class Project05 extends Component {
                 src={images[4]}
                 width="100%"
               />
-                <p className="tc f12 o-60">Onboarding experience for first time users.</p>
+                <p className="tc f6 o-60">Onboarding experience for first time users.</p>
               </figure>
               <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(5)}>
                 <img
@@ -488,7 +854,7 @@ class Project05 extends Component {
                 src={images[5]}
                 width="100%"
               />
-                <p className="tc f12 o-60">Taking shots in action.</p>
+                <p className="tc f6 o-60">Taking shots in action.</p>
               </figure>
               <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(6)}>
                 <img
@@ -496,7 +862,7 @@ class Project05 extends Component {
                 src={images[6]}
                 width="100%"
               />
-                <p className="tc f12 o-60">Detail page for your shots with sharing panel.</p>
+                <p className="tc f6 o-60">Detail page for your shots with sharing panel.</p>
               </figure>
               <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(7)}>
                 <img
@@ -504,7 +870,7 @@ class Project05 extends Component {
                 src={images[7]}
                 width="100%"
               />
-                <p className="tc f12 o-60">My Shots page with your own collection of screenshots.</p>
+                <p className="tc f6 o-60">My Shots page with your own collection of screenshots.</p>
               </figure>
           </div>
         </div>
@@ -518,7 +884,7 @@ class Project05 extends Component {
                 src={images[8]}
                 width="100%"
               />
-                <p className="tc f12 o-60">A work-in-progress annotation interface I was working on.</p>
+                <p className="tc f6 o-60">A work-in-progress annotation interface I was working on.</p>
               </figure>
           </div>
         </div>
@@ -529,7 +895,7 @@ class Project05 extends Component {
     );
   }
 }
-
+/******************************************************* P6 *************************************************************/
 class Project06 extends Component {
   constructor(props) {
     super(props);
@@ -638,7 +1004,7 @@ class Project06 extends Component {
                 src={images[1]}
                 width="100%"
               />
-                <p className="tc f12 o-60">Rearranging the apps to customize your home screen.</p>
+                <p className="tc f6 o-60">Rearranging the apps to customize your home screen.</p>
               </figure>
               <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(2)}>
                 <img
@@ -646,7 +1012,7 @@ class Project06 extends Component {
                 src={images[2]}
                 width="100%"
               />
-                <p className="tc f12 o-60">Filtering the view to show specific apps.</p>
+                <p className="tc f6 o-60">Filtering the view to show specific apps.</p>
               </figure>
               <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(3)}>
                 <img
@@ -654,7 +1020,7 @@ class Project06 extends Component {
                 src={images[3]}
                 width="100%"
               />
-                <p className="tc f12 o-60">Creating a folder with selected apps.</p>
+                <p className="tc f6 o-60">Creating a folder with selected apps.</p>
               </figure>
               <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(4)}>
                 <img
@@ -662,7 +1028,7 @@ class Project06 extends Component {
                 src={images[4]}
                 width="100%"
               />
-                <p className="tc f12 o-60">Moving an app inside your folder.</p>
+                <p className="tc f6 o-60">Moving an app inside your folder.</p>
               </figure>
             </div>
         </div>
