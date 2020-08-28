@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3754f0f127a593386422ff9c64e866f2",
+    "revision": "ba34fb32d000d3e605d7cbc3042ef31c",
     "url": "/index.html"
   },
   {
-    "revision": "aeb7981c3533eb1c6a3c",
-    "url": "/static/css/main.8e55760b.chunk.css"
+    "revision": "3e6e5613eb74a90f505e",
+    "url": "/static/css/main.55a6766f.chunk.css"
   },
   {
-    "revision": "57a5763fede8ef68b6cd",
-    "url": "/static/js/2.3ff84fb5.chunk.js"
+    "revision": "b7fc896580974d546c1f",
+    "url": "/static/js/2.500953f9.chunk.js"
   },
   {
-    "revision": "aeb7981c3533eb1c6a3c",
-    "url": "/static/js/main.5de29968.chunk.js"
+    "revision": "3e6e5613eb74a90f505e",
+    "url": "/static/js/main.fdc4e811.chunk.js"
   },
   {
     "revision": "97d78d26826bf7c68729",
@@ -144,8 +144,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/photo7.31df739d.jpg"
   },
   {
-    "revision": "5b7843cedade0b9b13479c80a0d28aaf",
-    "url": "/static/media/project-zerda-cover.5b7843ce.png"
+    "revision": "3a3eefaec0bb9e5e650e424910536081",
+    "url": "/static/media/photo8.3a3eefae.jpg"
+  },
+  {
+    "revision": "bf3ec4f22c84abb2cc869d1f6fb4c9f5",
+    "url": "/static/media/project-zerda-cover.bf3ec4f2.png"
   },
   {
     "revision": "f523c9729d887c3fb8fd980b4412a65b",
