@@ -558,12 +558,25 @@ h2.f2:after {
 		display: none;
 	}
 	.f2 {
-		font-size: 2rem;
+		font-size: 1.6rem;
 	}
 
 	.f4 {
 		font-size: 1rem;
 	}
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 50%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Margin */
@@ -609,6 +622,10 @@ h2.f2:after {
 	padding-bottom: 100px;
 }
 
+.pb100 {
+	padding-bottom: 100px;
+}
+
 @media screen and (max-width: 959px) {
 	.mv100 {
 		margin: 50px 0;
@@ -620,6 +637,14 @@ h2.f2:after {
 
 	.mb100 {
 		margin-bottom: 50px;
+	}
+	.pv100 {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.pb100 {
+		padding-bottom: 50px;
 	}
 
 }

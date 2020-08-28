@@ -46,7 +46,7 @@ class Pages extends Component {
     let container = viewContainerMapping[this.state.view];
     
     return (
-      <section id={title}>
+      <section id={title} className="pt0-l pt4">
         {container}
       </section>
     );
@@ -86,6 +86,9 @@ class Project01 extends Component {
   checkMobile = () => {
     this.setState({ width: window.innerWidth });
   }
+  onClick = (n) => {
+    this.child.openLightboxOnSlide(n+1);
+  };
  
   render() {
     var cdata = data["contents"]["projects"];
@@ -101,15 +104,219 @@ class Project01 extends Component {
       fontSize: !isMobile ? "24px":"18px",
       lineHeight: !isMobile ? "30px":"22.5px"
     }
+    var homeH5 = {
+      fontSize: "14px",
+      lineHeight: "18px",
+      color: "#7BACCB",
+      fontWeight: 700,
+      textTransform: "uppercase",
+      letterSpacing: "1px"
+    }
+    var homeH4 = {
+      fontSize: !isMobile ? "18px":"16px",
+      lineHeight: !isMobile ? "27px":"24px",
+      color: "#222222",
+      fontWeight: 500
+    }
+
+    var images = ["../images/firefox-lite/image-0.png",
+                  "../images/firefox-lite/image-9.png",
+                  "../images/firefox-lite/image-1.png",
+                  "../images/firefox-lite/image-3.png",
+                  "../images/firefox-lite/image-4.png",
+                  "../images/firefox-lite/image-5.png",
+                  "../images/firefox-lite/process01.png",
+                  "../images/firefox-lite/process02.png",
+                  "../images/firefox-lite/process03.png",
+                  "../images/firefox-lite/process04.png",
+                  "../images/firefox-lite/image-6.png",
+    ]
+
     return (
       <section id={this.state.id} className="page">
-        <div className="box center tc">
+        <div className="box center tc ph4">
           <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
           <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
           <div className="overflow-hidden br4-l br0">
             <img src={pcover[this.state.num-1]} width="100%" />
           </div>
         </div>
+        <div className="box center ph4 mt5-l mt4 pb100">
+          <h5 className="small-title">overview</h5>
+          <div className="cf">
+            <div className="fl w-50-l w-100 mb4 mb0-l">
+              <p className="f4 lh-copy fw4"><strong>Firefox Lite</strong> is a lightweight browser tailored for the emerging markets, explicitly designed for mobile-first users with different user needs. It provides a new UX with an excellent single hand browsing experience and includes major features such as full-page screenshots, turbo mode, and private browsing. <br/><br/> With the latest update in version 2.5, you can now use Awesome Bar to search faster and easier, customize your home screen with your choice of themes, and pin your preferred sites for quick access. <br/><br/>Since the end of 2019, Firefox Lite's MAU has grown from 1M to almost 1.6M in 7 months.</p>
+            </div>
+            <div className="fl w-50-l w-100 pl4-l mb4 mb0-l">
+              <h5 className="mv2" style={homeH5}>Date<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>2019-2020</h4><br/>
+              <h5 className="mv2" style={homeH5}>Roles<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>Product Manager / UX Designer</h4><br/>
+              <h5 className="mv2" style={homeH5}>Skills<br/>—</h5>
+              <h4 className="mv2" style={homeH4}>Product Strategy/Roadmap, Backlog Prioritization, Feature Requirements, Data Analysis</h4>
+            </div>
+          </div>
+          <div className="mt3 mb5-l mb4 tl-ns tc">
+            <a href="https://play.google.com/store/apps/details?id=org.mozilla.rocket" target="_blank" rel="noopener noreferrer" className="db dib-ns tl-ns tc mb3 br1 near-black button no-underline f12 fw7 mr3-ns pa3 white">Google Play Store</a>
+          </div>
+          <hr className="section-divider"></hr>
+          <div className="mt5-l mt4">
+            <div>
+              <h2 className="f2 mb5">Firefox Lite 2.0</h2>
+              <p className="f4 lh-copy fw4">
+              In 2017, we launched the first version of Firefox Lite, since then we have been improving the products and adding features. When I joined the Firefox Lite team, we planned to launch a whole new 2.0 version with content and services for our target markets. Based on our research and existing users' behaviors, we believe that providing curated content through the browser is an excellent way to engage users, allowing them to use different services without downloading extra apps.
+              </p>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(0)}>
+              <img
+                alt="Firefox Lite 2.0 with Content & Services."
+                src={images[0]}
+                width="100%"
+              />
+              <p className="tc f6 o-60">Firefox Lite 2.0 with Content & Services.</p>
+            </figure>
+            </div>
+            <h5 className="small-title">Shopping Search</h5>
+<p className="f4 lh-copy fw4">
+            At that time, I was in charge of the Shopping related features for the new version, working as a PM and partnering with BD, Designers, and researchers to deliver brand new features such as Shopping Search and Shopping Discovery.
+</p>
+
+<p className="f4 lh-copy fw4">
+During a shopping journey on a browser, users might find something they are interested in and want to research it. That's why we provide this whole new Shopping Search experience that can help them compare prices and specs across different shopping sites. They can simply type a keyword such as backpacks in our shopping search interface, and we will use the keyword to open up all the search results from the top shopping sites. By partnering with different shopping sites, the traffics we bring to them will become our revenue sources.
+</p>
+
+<figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(5)}>
+              <img
+                alt="Comparing products with Shopping Search."
+                src={images[5]}
+                width="100%"
+              />
+              <p className="tc f6 o-60">Comparing products with Shopping Search.</p>
+            </figure>
+          </div>
+        </div>
+        <div className="fade-section">
+          <div className="box center ph4">
+            <h2 className="f2 mb5">Firefox Lite 2.5</h2>
+<p className="f4 lh-copy fw4">
+            Based on our product strategy and prioritization methods, we targeted two new features to launch for Firefox Lite 2.5, including Awesome Bar search enhancement and Home customization with a new onboarding process. I was mainly in charge of the Home customization's design, planning, and testing to ensure we could launch the feature to help our cross-functional team.
+          </p>
+          <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(2)}>
+              <img
+                alt="Firefox Lite 2.5 promotion banner for Awesome Bar."
+                src={images[2]}
+                width="100%"
+              />
+              <p className="tc f6 o-60">Firefox Lite 2.5 promotion banner for Awesome Bar.</p>
+            </figure>
+          
+        
+          <h5 className="small-title">Home Customization</h5>
+          <p className="f4 lh-copy fw4">
+          For the new feature - Home Customization, we focused on three parts: first-time experience, initial customization, and topsite customization. From our data, we notice that users who customized their browsers have higher engagement and retention. We also see that in our previous design, we weren't quite friendly to the first time users, leading to confusion and a higher dropout rate. With those in mind, we created a new onboarding process with a welcome message and options to easily personalized your browser experiences, such as topics of interest and wallpaper colors. We also prompt users to set our browser as default once they finished the customization part.
+          </p>
+          <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(3)}>
+              <img
+                alt="First-time experience, before and after."
+                src={images[3]}
+                width="100%"
+              />
+              <p className="tc f6 o-60">First-time experience, before and after.</p>
+            </figure>
+          <div className="videoWrapper mt5-l mt4 mb3">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/914nWplLBpU?controls=0&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p className="tc f6 o-60 mb5-l mb4">Full onboarding experience.</p>
+          <p className="f4 lh-copy fw4">
+          Topsite is one of the most used features in Firefox Lite once users finished the onboarding; it is the websites that are shown on the home page where users can easily access. With the new updates we allow users to easily remove or add websites to their home page from a list of popular websites, once we confirm the needs, we will implement new features that allow users to input their own choice of websites for their home page.
+          </p>
+          <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(4)}>
+              <img
+                alt="Top site customization."
+                src={images[4]}
+                width="100%"
+              />
+              <p className="tc f6 o-60">Top site customization.</p>
+            </figure>
+
+            <h5 className="small-title">Initial Results</h5>
+            <p className="f4 lh-copy fw4">
+          With the updated version, we now have around 1.5M monthly active users and 19K daily active users, with an average rating of 4.3 stars and over 5M installs. We will continue to monitor the retention changes to see if updated users have more engagement with our browser.</p>
+        <figure className="mv4 mh0 cp" onClick={() => this.onClick(10)}>
+              <img
+                alt="Rating"
+                src={images[10]}
+                width="100%"
+              />
+            </figure>
+        </div>
+        </div>
+          <div className="box center ph4 pv100">
+            <h2 className="f2 mb5">Our Process</h2>
+            <p className="f4 lh-copy fw4">
+            While working with another Product Manager on Firefox Lite, we defined some processes to facilitate our team's innovation process and development cycle.
+  </p>
+
+  <p className="f4 lh-copy fw4">
+  Started with our product's goal, we defined strategies for achieving that goal, whether it is user acquisition, retention or revenue. We also drafted a roadmap as a communication tool for getting stakeholders on board with our plans. </p>
+  <figure className="mv4 mh0 cp" onClick={() => this.onClick(6)}>
+              <img
+                alt="Process"
+                src={images[6]}
+                width="100%"
+              />
+            </figure>
+
+
+<p className="f4 lh-copy fw4">
+  Then, based on the qualitative and quantitative information we collected through different methods as our insights, we can form a backlog with new feature ideas, enhancements and bug fixes. Next step, we will prioritize the backlog items and put them onto a roadmap to help the team understand our priorities in each sprint. 
+            </p>
+            <figure className="mv4 mh0 cp" onClick={() => this.onClick(7)}>
+              <img
+                alt="Process"
+                src={images[7]}
+                width="100%"
+              />
+            </figure>
+            <p className="f4 lh-copy fw4">
+            After that, product managers will start working on the product requirement documents and have continuous discussions with UX designers and engineers to generate UX spec and break down the tasks into measurable tickets. At the same time, Product managers will also work with the data team to define what metrics we need to understand the features' performance.
+            </p>
+            <figure className="mv4 mh0 cp" onClick={() => this.onClick(8)}>
+              <img
+                alt="Process"
+                src={images[8]}
+                width="100%"
+              />
+            </figure>
+            <p className="f4 lh-copy fw4">
+            With all the tickets and specs ready, we will go into sprint planning to decide what to do in the next two weeks and track our progress afterwards with the team. Within each sprint, we also have data meeting, go-to-market meeting, product/UX meeting, UX spec review meeting, and team meeting to continually sync with the team and make sure we understand the tasks and the status of our product.
+            </p>
+            <figure className="mv4 mh0 cp" onClick={() => this.onClick(9)}>
+              <img
+                alt="Process"
+                src={images[9]}
+                width="100%"
+              />
+            </figure>
+          </div>
+
+        <div className="fade-section">
+        <div className="box center ph4">
+          <h2 className="f2 mb5">What's Next</h2>
+            <p className="f4 lh-copy fw4">
+          After the launch of version 2.5, we started to focus on existing issues related to download management. Many of our users are using download frequently, as we've seen from the data and the reviews. Hence, we believe that improving download experience could positively impact the overall retention and bridge the gap on the missing features related to downloading. Stay tuned for more updates on <a href="https://github.com/RocketScientists/Rocket" target="_blank" rel="noopener noreferrer">https://github.com/RocketScientists/Rocket</a>.
+          </p>
+          <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(1)}>
+              <img
+                alt="Download Management work in progress."
+                src={images[1]}
+                width="100%"
+              />
+              <p className="tc f6 o-60">Download Management work in progress.</p>
+            </figure>
+        </div>
+        </div>
+
+        <ImageBox onRef={ref => (this.child = ref)} content={images}/>
         <List prev={5} next={1}/>
         <Footer/>
       </section>
@@ -176,7 +383,8 @@ class Project02 extends Component {
                   "../images/screenshot-go/image-3.png",
                   "../images/screenshot-go/image-7.gif",
                   "../images/screenshot-go/image-8.gif",
-                  "../images/screenshot-go/image-0.png"
+                  "../images/screenshot-go/image-0.png",
+                  "../images/screenshot-go/image-9.png"
                   ]
 
     return (
@@ -188,11 +396,11 @@ class Project02 extends Component {
             <img src={pcover[this.state.num-1]} width="100%" />
           </div>
         </div>
-        <div className="box center ph4 mt5-l mt4 mb100">
+        <div className="box center ph4 mt5-l mt4 pb100">
           <h5 className="small-title">overview</h5>
           <div className="cf">
             <div className="fl w-50-l w-100 mb4 mb0-l">
-              <p className="f4 lh-copy fw4">Screenshot Plus is an exploration project started by Mozilla Taipei Team, and it is specifically targeting Asia markets such as Indonesia. It is a screenshot tool designed for people who use screenshots to capture information across various apps and browsers. We want to help users organize their screenshots by adding information layer to their screenshots so that it is searchable. One of the ideas is to add links to screenshots so that we can bring users back to the internet for more information about their screenshots.
+              <p className="f4 lh-copy fw4"><strong>Screenshot Go</strong> is an exploration project started by Mozilla Taipei Team, and is specifically targeting Asia markets such as Indonesia. It is a screenshot tool designed for people who use screenshots to capture information across various apps and browsers. We want to help users organize their screenshots by adding information layer to their screenshots so that it is searchable. One of the ideas is to add links to screenshots so that we can bring users back to the internet for more information about their screenshots.
 </p>
             </div>
             <div className="fl w-50-l w-100 pl4-l mb4 mb0-l">
@@ -204,7 +412,7 @@ class Project02 extends Component {
               <h4 className="mv2" style={homeH4}>Sketch, InVision, Framer</h4>
             </div>
           </div>
-          <div className="mt3 mb5-l mb4">
+          <div className="mt3 mb5-l mb4 tl-ns tc">
             <a href="https://framer.cloud/woqSs" target="_blank" rel="noopener noreferrer" className="db dib-ns tl-ns tc mb3 br1 near-black button no-underline f12 fw7 mr3-ns pa3 white">Launch Framer Prototype</a>
           </div>
           <hr className="section-divider"></hr>
@@ -296,7 +504,7 @@ The whole trip was very inspiring for our design team, and we've learned so much
         <div className="fade-section">
           <div className="box center ph4">
               <h2 className="f2 mb5">What's Next</h2>
-              <p className="f4 lh-copy fw4">Compiling all the interview results from our research trip helps us get a better idea of what our product could be. The team continued refining the concept and create a landing page test to see if the idea is worth enough to pour in our engineering team's effort. If the result is promising, we will define an MVP for designers and engineers to start building the product.</p>
+              <p className="f4 lh-copy fw4">Compiling all the interview results from our research trip helps us get a better idea of what our product could be. The team continued refining the concept and create a landing page test to see if the idea is worth enough to pour in our engineering team's effort. After that, we successfully built the product with designers and engineers and had launched the product on Google Play Store, renaming to Firefox Screenshot Go. Firefox Screenshot Go now has over 100K installed, with an average rating of 4.6 stars.</p>
               <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(8)}>
                 <img
                 alt="Landing page website."
@@ -304,6 +512,15 @@ The whole trip was very inspiring for our design team, and we've learned so much
                 width="100%"
               />
                 <p className="tc f6 o-60">Landing page website.</p>
+              </figure>
+
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(9)}>
+                <img
+                alt="Google Play Store."
+                src={images[9]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Google Play Store.</p>
               </figure>
               
           </div>
@@ -385,11 +602,11 @@ class Project03 extends Component {
             <img src={pcover[this.state.num-1]} width="100%" />
           </div>
         </div>
-        <div className="box center ph4 mt5-l mt4 mb100">
+        <div className="box center ph4 mt5-l mt4 pb100">
           <h5 className="small-title">overview</h5>
           <div className="cf">
             <div className="fl w-50-l w-100 mb4 mb0-l">
-              <p className="f4 lh-copy fw4">Firefox Color lets you customize the look and feel of Firefox. You can change the tab color, background color, toolbar color and more, to create your own theme. You can also share your creations with your friends, or save them for yourself. It is a Test Pilot experiment that emphasis on enabling users to create their own Firefox experiences with customization.</p>
+              <p className="f4 lh-copy fw4"><strong>Firefox Color</strong> lets you customize the look and feel of Firefox. You can change the tab color, background color, toolbar color and more, to create your own theme. You can also share your creations with your friends, or save them for yourself. It is a Test Pilot experiment that emphasis on enabling users to create their own Firefox experiences with customization.</p>
             </div>
             <div className="fl w-50-l w-100 pl4-l mb4 mb0-l">
               <h5 className="mv2" style={homeH5}>Date<br/>—</h5>
@@ -400,7 +617,7 @@ class Project03 extends Component {
               <h4 className="mv2" style={homeH4}>Sketch, InVision</h4>
             </div>
           </div>
-          <div className="mt3 mb5-l mb4">
+          <div className="mt3 mb5-l mb4 tl-ns tc">
             <a href="https://color.firefox.com/" target="_blank" rel="noopener noreferrer" className="db dib-ns tl-ns tc mb3 br1 near-black button no-underline f12 fw7 mr3-ns pa3 white">Launch Website</a>
           </div>
           <hr className="section-divider"></hr>
@@ -547,7 +764,8 @@ class Project04 extends Component {
                   "../images/firefox-send/image-8.gif",
                   "../images/firefox-send/image-3.png",
                   "../images/firefox-send/image-0.png",
-                  "../images/firefox-send/image-1.png"
+                  "../images/firefox-send/image-1.png",
+                  "../images/firefox-send/image-9.png",
                   ]
 
     return (
@@ -559,11 +777,11 @@ class Project04 extends Component {
             <img src={pcover[this.state.num-1]} width="100%" />
           </div>
         </div>
-        <div className="box center ph4 mt5-l mt4 mb100">
+        <div className="box center ph4 mt5-l mt4 pb100">
           <h5 className="small-title">overview</h5>
           <div className="cf">
             <div className="fl w-50-l w-100 mb4 mb0-l">
-              <p className="f4 lh-copy fw4">Firefox Send is a file transfer service that automatically deletes files from the server after one download or 24 hours. It is the first Test Pilot "Web" experiment coming up this August, which means there's no need to install add-ons, and you can use it across different browsers and devices. </p>
+              <p className="f4 lh-copy fw4"><strong>Firefox Send</strong> is a file transfer service that automatically deletes files from the server after one download or 24 hours. It is the first Test Pilot "Web" experiment, which means there's no need to install add-ons, and you can use it across different browsers and devices. <br/><br/> <em>*Current status: Firefox Send is currently unavailable, the team will reopen it soon once it's ready with the new security improvements.</em> </p>
             </div>
             <div className="fl w-50-l w-100 pl4-l mb4 mb0-l">
               <h5 className="mv2" style={homeH5}>Date<br/>—</h5>
@@ -574,7 +792,7 @@ class Project04 extends Component {
               <h4 className="mv2" style={homeH4}>Sketch, InVision, HTML/CSS, Javascript</h4>
             </div>
           </div>
-          <div className="mt3 mb5-l mb4">
+          <div className="mt3 mb5-l mb4 tl-ns tc">
             <a href="https://send.firefox.com/" target="_blank" rel="noopener noreferrer" className="db dib-ns tl-ns tc mb3 br1 near-black button no-underline f12 fw7 mr3-ns pa3 white">Launch Website</a>
           </div>
           <hr className="section-divider"></hr>
@@ -655,7 +873,7 @@ The user flow seems simple. There's only uploading and downloading files, so we 
         </div>
         <div className="box center ph4 pv100">
             <h2 className="f2 mb5">What's Next</h2>
-            <p className="f4 lh-copy fw4">Since it's launch, we got lots of articles talking about Firefox Send. There's also a vast amount of feedback and over one thousand upvotes on . To continue improving Firefox Send, we collected all the input and compiled into a feature backlog for us to understand what our users think. We then prioritized the feature requests and brought together our design team to sketch up some ideas. One of the most requested features is to add a password to your files, which will roll out soon!</p>
+            <p className="f4 lh-copy fw4">Since it's launch, we got lots of articles talking about Firefox Send. There's also a vast amount of feedback and over one thousand upvotes on . To continue improving Firefox Send, we collected all the input and compiled into a feature backlog for us to understand what our users think. We then prioritized the feature requests and brought together our design team to sketch up some ideas. One of the most requested features we implemented is to add a password to your files!</p>
              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(7)}>
                 <img
                 alt="Sending files with password protection."
@@ -663,6 +881,14 @@ The user flow seems simple. There's only uploading and downloading files, so we 
                 width="100%"
               />
                 <p className="tc f6 o-60">Sending files with password protection.</p>
+              </figure>
+              <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(8)}>
+                <img
+                alt="Firefox Send with new branding visual treatment."
+                src={images[8]}
+                width="100%"
+              />
+                <p className="tc f6 o-60">Firefox Send with new branding visual treatment.</p>
               </figure>
         </div>
         <ImageBox onRef={ref => (this.child = ref)} content={images}/>
@@ -753,11 +979,11 @@ class Project05 extends Component {
             <img src={pcover[this.state.num-1]} width="100%" />
           </div>
         </div>
-        <div className="box center ph4 mt5-l mt4 mb100">
+        <div className="box center ph4 mt5-l mt4 pb100">
           <h5 className="small-title">overview</h5>
           <div className="cf">
             <div className="fl w-50-l w-100 mb4 mb0-l">
-              <p className="f4 lh-copy fw4">Firefox Screenshots is one of the Firefox experiments created by the Test Pilot team. It is a smart screenshotting tool built right inside Firefox, letting users capture elements on a webpage easily, or even take shots of a full webpage. The images are collected in your own online library, ready to be shared.</p>
+              <p className="f4 lh-copy fw4"><strong>Firefox Screenshots</strong> is one of the Firefox experiments created by the Test Pilot team. It is a smart screenshotting tool built right inside Firefox, letting users capture elements on a webpage easily, or even take shots of a full webpage. The images are collected in your own online library, ready to be shared.<br/><br/> <em>*Current status: There is no more screenshot library, users can only copy or download the screenshots they captured. Plus, Firefox Screenshots has already turned into a default feature in Firefox Desktop Browser instead of an extension! </em> </p>
             </div>
             <div className="fl w-50-l w-100 pl4-l mb4 mb0-l">
               <h5 className="mv2" style={homeH5}>Date<br/>—</h5>
@@ -768,7 +994,7 @@ class Project05 extends Component {
               <h4 className="mv2" style={homeH4}>Sketch, InVision, HTML/CSS, Javascript</h4>
             </div>
           </div>
-          <div className="mt3 mb5-l mb4">
+          <div className="mt3 mb5-l mb4 tl-ns tc">
             <a href="https://screenshots.firefox.com/" target="_blank" rel="noopener noreferrer" className="db dib-ns tl-ns tc mb3 br1 near-black button no-underline f12 fw7 mr3-ns pa3 white">Launch Website</a>
           </div>
           <hr className="section-divider"></hr>
@@ -877,7 +1103,7 @@ class Project05 extends Component {
         <div className="box center ph4 pv100">
           <div>
             <h2 className="f2 mb5">What's Next</h2>
-            <p className="f4 lh-copy fw4">We take our users feedback seriously. As we obtained more users to try Firefox Screenshots, we got lots of interesting requests to help improve the overall experiences. One example is to combine screenshots with Firefox Account, so that users can access their screenshots on a different device if they log in with an account. Another example is to let user annotate the shots they took. Currently I'm leading the UX design for the new features, so stay tuned and we will see more updates soon!</p>
+            <p className="f4 lh-copy fw4">We take our users feedback seriously. As we obtained more users to try Firefox Screenshots, we got lots of interesting requests to help improve the overall experiences. One example is to combine screenshots with Firefox Account, so that users can access their screenshots on a different device if they log in with an account. Another example is to let user annotate the shots they took. </p>
             <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(8)}>
                 <img
                 alt="A work-in-progress annotation interface I was working on."
@@ -958,11 +1184,11 @@ class Project06 extends Component {
             <img src={pcover[this.state.num-1]} width="100%" />
           </div>
         </div>
-        <div className="box center ph4 mt5-l mt4 mb100">
+        <div className="box center ph4 mt5-l mt4 pb100">
           <h5 className="small-title">overview</h5>
           <div className="cf">
             <div className="fl w-50-l w-100 mb4 mb0-l">
-              <p className="f4 lh-copy fw4">Firefox OS TV presents a seamless Firefox web experience on a Smart TV platform, collaborating with our community to build an optimized TV experience. It is part of the effort to provide Firefox OS as an open platform choice for managing and controlling the broader range of connected devices available in the physical world. It was one of the most prominent projects running in the Mozilla Taipei office in 2015.</p>
+              <p className="f4 lh-copy fw4"><strong>Firefox OS TV</strong> presents a seamless Firefox web experience on a Smart TV platform, collaborating with our community to build an optimized TV experience. It is part of the effort to provide Firefox OS as an open platform choice for managing and controlling the broader range of connected devices available in the physical world. It was one of the most prominent projects running in the Mozilla Taipei office in 2015.</p>
             </div>
             <div className="fl w-50-l w-100 pl4-l mb4 mb0-l">
               <h5 className="mv2" style={homeH5}>Date<br/>—</h5>
@@ -973,8 +1199,8 @@ class Project06 extends Component {
               <h4 className="mv2" style={homeH4}>HTML/CSS, Javascript, User Testing</h4>
             </div>
           </div>
-          <div className="mt3 mb5-l mb4">
-            <a href="https://youwenliang.github.io/people/mliang/Projects/FirefoxOS_TV-Prototype/" target="_blank" rel="noopener noreferrer" className="db dib-ns tl-ns tc mb3 br1 near-black button no-underline f12 fw7 mr3-ns pa3 white">Launch Prototype</a>
+          <div className="mt3 mb5-l mb4 tl-ns tc">
+            <a href="https://youwenliang.github.io/people/mliang/Projects/FirefoxOS_TV-Prototype/" target="_blank" rel="noopener noreferrer" className="db dib-ns mb3 br1 near-black button no-underline f12 fw7 mr3-ns pa3 white">Launch Prototype</a>
           </div>
           <hr className="section-divider"></hr>
           <div className="mt5-l mt4">

@@ -95,7 +95,7 @@ class Projects extends Component {
               <h6 style={tagH4} className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-tag"][i]}}></h6>
               <p style={tagH5} className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-des"][i]}}></p>
             </div>
-            <div className="fl w-60-l w-100 h-100 pa2 tl-l tc" key={i}>
+            <div className="project-card fl w-60-l w-100 h-100 pa2 tl-l tc" key={i}>
               <div className="bgZoom ml4-l ml0 w-100 h-100" style={bgCover}>
                 <img className="o-0" src={pcover[i]}/>
               </div>

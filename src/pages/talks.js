@@ -10,6 +10,7 @@ import p4 from '../images/photos/photo4.jpg';
 import p5 from '../images/photos/photo5.JPG';
 import p6 from '../images/photos/photo6.JPG';
 import p7 from '../images/photos/photo7.jpg';
+import p8 from '../images/photos/photo8.jpg';
 
 class Talks extends Component {
   constructor(props) {
@@ -51,7 +52,7 @@ class Talks extends Component {
       fontWeight: 500
     }
     var photo = [];
-    var url = [p1,p2,p3,p4,p5,p6,p7];
+    var url = [p1,p2,p3,p4,p5,p6,p7,p8];
     for(var j = 0; j < url.length; j++) {
       var tempURL = {
         background: "url("+url[j]+") no-repeat center center",
@@ -75,16 +76,32 @@ class Talks extends Component {
     }
 
     for (var i = 0; i < cdata["talk-titles"].length; i++) {
-      var temp = (
-        <div key={i}>
-          <div className="fl w-20-l w-100 ph2 flex items-center">
-            <h4 style={talkH4} className="mt1-l mt2 mb0-l mb1" dangerouslySetInnerHTML={{__html:cdata["talk-dates"][i]+"<span class='ml3-l ml1'>→</span>"}}></h4>
+      var temp = null;
+      if(cdata["talk-titles"][i].indexOf("Notion") > -1) {
+        temp = (
+          <div key={i}>
+            <div className="fl w-20-l w-100 ph2 flex items-center">
+              <h4 style={talkH4} className="mt1-l mt2 mb0-l mb1" dangerouslySetInnerHTML={{__html:cdata["talk-dates"][i]+"<span class='ml3-l ml1'>→</span>"}}></h4>
+            </div>
+            <div className="fl w-80-l w-100 ph2">
+              <a href="https://www.facebook.com/watch/live/?v=674313836750160&ref=watch_permalink" target="_blank">
+                <h3 style={talkH3} className="mt0 mb4-l mb3" dangerouslySetInnerHTML={{__html:cdata["talk-titles"][i]+"<span class='faded ml2-l ml0 db dib-l'>@"+cdata["talk-locations"][i]+"</span>"}}></h3>
+              </a>
+            </div>
           </div>
-          <div className="fl w-80-l w-100 ph2">
-            <h3 style={talkH3} className="mt0 mb4-l mb3" dangerouslySetInnerHTML={{__html:cdata["talk-titles"][i]+"<span class='faded ml2-l ml0 db dib-l'>@"+cdata["talk-locations"][i]+"</span>"}}></h3>
+        )
+      } else {
+        temp = (
+          <div key={i}>
+            <div className="fl w-20-l w-100 ph2 flex items-center">
+              <h4 style={talkH4} className="mt1-l mt2 mb0-l mb1" dangerouslySetInnerHTML={{__html:cdata["talk-dates"][i]+"<span class='ml3-l ml1'>→</span>"}}></h4>
+            </div>
+            <div className="fl w-80-l w-100 ph2">
+              <h3 style={talkH3} className="mt0 mb4-l mb3" dangerouslySetInnerHTML={{__html:cdata["talk-titles"][i]+"<span class='faded ml2-l ml0 db dib-l'>@"+cdata["talk-locations"][i]+"</span>"}}></h3>
+            </div>
           </div>
-        </div>
-      )
+        )
+      }
       talk.push(temp);
     }
 
@@ -130,8 +147,11 @@ class Talks extends Component {
               <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(3)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[2]}></div>
               </div>
+              <div className="fl w-100 pa2 pointer" onClick={() => this.onClick(8)}>
+                <div className="w-100 w-100 h5 bg-blue" style={photo[7]}></div>
+              </div>
             </div>
-            <ImageBox onRef={ref => (this.child = ref)} content={[p1,p2,p3,p4,p5,p6,p7]}/>
+            <ImageBox onRef={ref => (this.child = ref)} content={[p1,p2,p3,p4,p5,p6,p7, p8]}/>
           </div>
         </div>
         <Footer/>
