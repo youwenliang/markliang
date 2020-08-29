@@ -303,7 +303,7 @@ During a shopping journey on a browser, users might find something they are inte
         <div className="box center ph4">
           <h2 className="f2 mb5">What's Next</h2>
             <p className="f4 lh-copy fw4">
-          After the launch of version 2.5, we started to focus on existing issues related to download management. Many of our users are using download frequently, as we've seen from the data and the reviews. Hence, we believe that improving download experience could positively impact the overall retention and bridge the gap on the missing features related to downloading. Stay tuned for more updates on <a href="https://github.com/RocketScientists/Rocket" target="_blank" rel="noopener noreferrer">https://github.com/RocketScientists/Rocket</a>.
+          After the launch of version 2.5, we started to focus on existing issues related to download management. Many of our users are using download frequently, as we've seen from the data and the reviews. Hence, we believe that improving download experience could positively impact the overall retention and bridge the gap on the missing features related to downloading. Stay tuned for the upcoming updates!
           </p>
           <figure className="mt4 mb5-ns mb4 mh0 cp" onClick={() => this.onClick(1)}>
               <img

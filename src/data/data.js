@@ -35,7 +35,7 @@ var data = {
 		},
 		"projects": {
 			"h1": "Projects<span class='blue'>:<br/></span>",
-			"h3": "While working at Mozilla, I've participated in many projects, including IoT-related concepts, browser extension experiments, and innovative products that target emerging markets. <br/><br/>I've also played different roles in each project, sometimes jumping into codes to tweak the front-end UI, or supporting researchers to find user insights by building prototypes, or even driving product features from conception to launch. Below are some of my featured projects.",
+			"h3": "While working at Mozilla, I've participated in many projects, including IoT-related concepts, browser extension experiments, and innovative products that target emerging markets. <br/><br/>I've also played different roles in each project, sometimes jumping into codes to tweak the front-end UI, or supporting researchers to find user insights by building prototypes, or even driving product features from conception to launch. Below are some of my featured projects and side projects.",
 			"small-title": ["Featured projects", "Side projects"],
 			"main-title": ["A fast and lightweight browser for emerging markets.","Collect, organize and find your mobile screenshots easily.","A simple tool for anyone to change the look of Firefox.","Upload and encrypt large files to share online with Firefox Send.","Take, save, and share screenshots without leaving Firefox.","Independent and personalizable Web experience on Smart TVs."],
 			"main-url": ["firefox-lite","screenshot-go","firefox-color","firefox-send","firefox-screenshots","firefoxos-tv"],
@@ -66,7 +66,7 @@ var data = {
 			"small-title": "Past talks",
 			"talk-titles": ["Mozilla Taipei's Product Experience in Emerging Markets", "用 Notion 升級你的腦袋", "How I Develop My Career from Engineering to Design","Design Sprint Case Studies","From Observation to Insights", "Prototyping & User Testing", "Delightful Experience with Technology", "Why and Why Not"],
 			"talk-locations": ["Tech Career Fair", "IxDA Taiwan", "JustCo", "Picollage", "Meitu", "Da-Tung University", "Ogilvy", "UI/UX Night"],
-			"talk-dates": ["Aug. 2020", "May 2020", "Feb. 2020", "Nov. 2019", "Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2015  "]
+			"talk-dates": ["Aug. 2020", "May 2020", "Feb. 2020", "Nov. 2019", "Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2016  "]
 		},
 		"travel": {
 			"h1": "Travel<span class='blue'>:<br/></span>",

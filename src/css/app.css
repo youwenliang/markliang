@@ -48,6 +48,28 @@ main {
 	color: #7baccb;
 }
 
+.section-divider2 {
+	position: relative;
+	border: none;
+	display: block;
+	padding-bottom: 50px;
+	margin: 0;
+}
+
+.section-divider2:before {
+	content: '------';
+	letter-spacing: 10px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: absolute;
+	display: inline-block;
+	text-align: center;
+	top: -27px;
+	font-size: 30px;
+	color: #7baccb;
+}
+
 .human {
 	top: 0px;
 }
@@ -119,6 +141,10 @@ main {
 
 .dark-gray {
 	color: #222222;
+}
+
+.light-gray {
+	color: #484848 !important;
 }
 
 .bg-dark-gray {
@@ -610,6 +636,10 @@ h2.f2:after {
 }
 
 .mt100 {
+	margin-top: 100px;
+}
+
+.mt100-fix {
 	margin-top: 100px;
 }
 

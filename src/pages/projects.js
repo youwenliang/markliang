@@ -101,6 +101,7 @@ class Projects extends Component {
               </div>
             </div>
           </div>
+          <hr className="o-20 mb4 dn-l db mh2"/>
         </Link>
       )
       main.push(temp);
@@ -116,10 +117,10 @@ class Projects extends Component {
       var temp = (
         <a className="bgLink" href={cdata["side-url"][i]} target="_blank">
           <div className="fl w-50-l w-100 pa2 tl" key={i}>
-            <div className="pa4 h300 white relative bgZoom" style={bgSide}>
-              <h4 className="z1 mb3-ns mb2 mt100" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["side-title"][i]}}></h4>
+            <div className="pa4 h300 white relative bgZoom tc" style={bgSide}>
+              <h4 className="z1 mb3-ns mb2 mt100-fix" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["side-title"][i]}}></h4>
               <h6 className="z1 mt3-ns mt2 mb0 pre-wrap tracked" dangerouslySetInnerHTML={{__html:cdata["side-tag"][i]}}></h6>
-              <p className="z1 mt3-ns mt2 mb0 pre-wrap lh-copy fw5" dangerouslySetInnerHTML={{__html:cdata["side-des"][i]}}></p>
+              {/*<p className="z1 mt3-ns mt2 mb0 pre-wrap lh-copy fw5" dangerouslySetInnerHTML={{__html:cdata["side-des"][i]}}></p>*/}
               <div className="top-0 left-0 absolute w-100 h-100 mask"></div>
             </div>
           </div>
@@ -142,15 +143,21 @@ class Projects extends Component {
             </div>
           </div>
           <hr className="section-divider"></hr>
-          <div className="ph4-l ph2 mb100 projects">
+          <div className="ph4-l ph2 projects" id="fprojects">
             <p className="small-title mb40 mt0 ph2">{cdata["small-title"][0]}</p>
             {main}
           </div>
-          <div className="ph4-l ph2 mb100">
+          <div className="ph4-l ph2 pv100" id="side_projects">
             <p className="small-title mb40 mt0 ph2">{cdata["small-title"][1]}</p>
             <div className="cf">
               {side}
             </div>
+          </div>
+          <hr className="o-20 mb4 mh4-l mh2"/>
+          <div className="ph4-l ph2 mv100 tc">
+            <h2 style={projectH4}>Let's Connect!</h2>
+            <p className="f4 lh-copy ph4 fw5 light-gray">Feel free to reach out for collaborations or just a friendly hello 😀</p>
+            <a href='mailto:youwen.mark.liang@gmail.com' target='_blank' rel='noopener noreferrer' className="underline f4 fw6 small-link">youwen.mark.liang@gmail.com</a>
           </div>
         </div>
         <Footer/>
