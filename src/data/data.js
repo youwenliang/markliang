@@ -19,14 +19,14 @@ var data = {
 			"h4": [
 				"<span class='user-select'>Senior Product Manager<br/>at <a href='https://www.mozilla.org' target='_blank' rel='noopener noreferrer' class='fw7 dark-gray'>Mozilla Taiwan</a></span>",
 				"<span class='user-select'>Taipei City, Taiwan</span>",
-				"<span class='user-select'><a href='mailto:youwen.mark.liang@gmail.com' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>youwen.mark.liang@gmail.com</a></span>"
+				"<span class='user-select'><a href='mailto:youwen.mark.liang@gmail.com' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>youwen.mark.liang@gmail.com</a></span><br/><span><a href='https://www.linkedin.com/in/mark-liang/' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>linkedin.com/in/mark-liang</a></span>"
 			],
 		},
 		"about": {
 			"h1": "About<span class='blue'>:<br/></span>",
 			"h3": "I'm a <span class='blue'>Product Management</span> professional with expertise in <span class='blue'>User Experience Design</span> and <span class='blue'>Web Development</span>. <br/>My sensitivity to design intent and user experience, coupled with the ability to write code and build prototypes have helped facilitate the launch of several products such as <a class='underline blue' href='https://blog.mozilla.org/blog/2019/03/12/introducing-firefox-send-providing-free-file-transfers-while-keeping-your-personal-information-private/' target='_blank'>Firefox Send</a> and <a class='underline blue' href='https://mozilla-next.com/eng/firefox_lite' target='_blank'>Firefox Lite</a>.",
-			"button": "view resume",
-			"url": "https://www.youwenliang.com/Mark_Liang_Resume.pdf",
+			"button": ["resume", "linkedin"],
+			"url": ["https://www.youwenliang.com/Mark_Liang_Resume.pdf", "https://www.linkedin.com/in/mark-liang/"],
 			"small-title": ["What's my mission?", "What's my focus?"],
 			"h1-mission": "Build product experiences that inspire people to imagine better futures.",
 			"h3-mission": "As a product/UX person, I'm passionate about creating better product experiences that solve user problems and speak to the user. Driven by the love of design and craftsmanship, I enjoy working closely with designers and engineers on different aspects of a product to ensure the experiences we provide are seamless and delightful to our users.",
@@ -54,9 +54,9 @@ var data = {
 			"button": "read more",
 			"url": "https://medium.com/@youwenliang",
 			"small-title": "Featured blog posts",
-			"post-titles": ["產品經理轉職中：UX 到 PM 的半年回顧", "職涯探索：工程師轉職設計師之旅","From Observation to Insights", "TNW 2019 — Disneyland for Nerds", "My experience at UX London 2018", "Learn a New Language"],
-			"post-links": ["https://medium.com/@youwenliang/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86%E8%BD%89%E8%81%B7%E4%B8%AD-ux-%E5%88%B0-pm-%E7%9A%84%E5%8D%8A%E5%B9%B4%E5%9B%9E%E9%A1%A7-ea9112e41f92","https://medium.com/@youwenliang/%E8%81%B7%E6%B6%AF%E6%8E%A2%E7%B4%A2-%E5%B7%A5%E7%A8%8B%E5%B8%AB%E8%BD%89%E8%81%B7%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E6%97%85-5b67c61dcc86","https://medium.com/mozilla-taipei-ux/from-observation-to-insights-digital-behavior-observation-in-thailand-78418050aaf1","https://medium.com/@youwenliang/tnw-2019-disneyland-for-nerds-6e2d889d5ad7","https://medium.com/@youwenliang/ux-london-2018-804be6e0362","https://medium.com/@youwenliang/learn-a-new-language-16baf32b2049"],
-			"post-dates": ["Jul. 12, 2020", "Mar. 6, 2020", "May 17, 2019", "May 15, 2019", "Aug. 24, 2018", "Mar. 3, 2018"]
+			"post-titles": ["設計營運：發揮設計影響力的心法與實踐","產品經理轉職中：UX 到 PM 的半年回顧", "職涯探索：工程師轉職設計師之旅","From Observation to Insights", "TNW 2019 — Disneyland for Nerds", "My experience at UX London 2018", "Learn a New Language"],
+			"post-links": ["https://link.medium.com/a41IDpC3n9", "https://medium.com/@youwenliang/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86%E8%BD%89%E8%81%B7%E4%B8%AD-ux-%E5%88%B0-pm-%E7%9A%84%E5%8D%8A%E5%B9%B4%E5%9B%9E%E9%A1%A7-ea9112e41f92","https://medium.com/@youwenliang/%E8%81%B7%E6%B6%AF%E6%8E%A2%E7%B4%A2-%E5%B7%A5%E7%A8%8B%E5%B8%AB%E8%BD%89%E8%81%B7%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E6%97%85-5b67c61dcc86","https://medium.com/mozilla-taipei-ux/from-observation-to-insights-digital-behavior-observation-in-thailand-78418050aaf1","https://medium.com/@youwenliang/tnw-2019-disneyland-for-nerds-6e2d889d5ad7","https://medium.com/@youwenliang/ux-london-2018-804be6e0362","https://medium.com/@youwenliang/learn-a-new-language-16baf32b2049"],
+			"post-dates": ["Aug. 30, 2020", "Jul. 12, 2020", "Mar. 6, 2020", "May 17, 2019", "May 15, 2019", "Aug. 24, 2018", "Mar. 3, 2018"]
 		},
 		"talks": {
 			"h1": "Talks<span class='blue'>:<br/></span>",
@@ -66,7 +66,13 @@ var data = {
 			"small-title": "Past talks",
 			"talk-titles": ["Mozilla Taipei's Product Experience in Emerging Markets", "用 Notion 升級你的腦袋", "How I Develop My Career from Engineering to Design","Design Sprint Case Studies","From Observation to Insights", "Prototyping & User Testing", "Delightful Experience with Technology", "Why and Why Not"],
 			"talk-locations": ["Tech Career Fair", "IxDA Taiwan", "JustCo", "Picollage", "Meitu", "Da-Tung University", "Ogilvy", "UI/UX Night"],
-			"talk-dates": ["Aug. 2020", "May 2020", "Feb. 2020", "Nov. 2019", "Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2016  "]
+			"talk-dates": ["Aug. 2020", "May 2020", "Feb. 2020", "Nov. 2019", "Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2016  "],
+			"small-title2": "Podcasts",
+			"talk-titles2": ["Mozilla，謝謝你——科技企業如何兼顧社會責任與創新能量", "Mozilla Taipei 畢業快樂！多元產品設計經驗談", "我為什麼從一位工程師轉職成產品設計師"],
+			"talk-locations2": ["科技職涯 Talent Connect", "科技職涯 Talent Connect", "科技職涯 Talent Connect"],
+			"talk-dates2": ["Sep. 2, 2020", "Aug. 26, 2020", "Feb. 25, 2020"]
+
+
 		},
 		"travel": {
 			"h1": "Travel<span class='blue'>:<br/></span>",
