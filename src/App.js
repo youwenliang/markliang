@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Transition, TransitionGroup, CSSTransition } from 'react-transition-group';
+import { Transition, TransitionGroup } from 'react-transition-group';
 import { play, exit } from './timelines'
 
 import { Switch, Route } from 'react-router-dom';
@@ -49,8 +49,8 @@ class App extends Component {
     this.setState({ height: window.innerHeight });
   }
   componentDidUpdate(){
-    
-    $(window).scrollTop(0);
+    console.log("updating");
+    // $(window).scrollTop(0);
     if($('#home').css('visibility') === "hidden") {
       $('body').addClass('vh-100');
     } else {
@@ -96,7 +96,7 @@ class App extends Component {
         <Nav active={window.location.pathname}/>
         {mask}
         <Route render={({ location }) => {
-          const { pathname, key } = location
+          const { key } = location
 
           return (
             <TransitionGroup component={null}>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import data from '../data/data.js';
 import Footer from '../components/footer.js';
+import $ from 'jquery';
 
 import human from '../images/illustration3.svg';
 
@@ -33,6 +34,10 @@ class Projects extends Component {
   }
   checkMobile = () => {
     this.setState({ width: window.innerWidth });
+  }
+
+  scrollTop = () => {
+    $(window).scrollTop(0)
   }
   
   render() {
@@ -87,17 +92,17 @@ class Projects extends Component {
         backgroundPosition: "center center"
       }
       var temp = (
-        <Link to ={'/projects/'+pdata["links"][i]}>
-          <div className="cf mb40 up">
-            <div className="fl w-40-l w-100 pa2 tl" key={i}>
+        <Link to ={'/projects/'+pdata["links"][i]} onClick={this.scrollTop}>
+          <div className="cf mb40 up" key={"project"+i}>
+            <div className="fl w-40-l w-100 pa2 tl">
               <h4 style={projectH4} className="mb3-ns mb2 mt0" dangerouslySetInnerHTML={{__html:cdata["main-title"][i]}}></h4>
               <h4 style={projectH4}  className="dark fw5 mv0">—</h4>
               <h6 style={tagH4} className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-tag"][i]}}></h6>
               <p style={tagH5} className="mt3-ns mt2 mb0 pre-wrap" dangerouslySetInnerHTML={{__html:cdata["main-des"][i]}}></p>
             </div>
-            <div className="project-card fl w-60-l w-100 h-100 pa2 tl-l tc" key={i}>
+            <div className="project-card fl w-60-l w-100 h-100 pa2 tl-l tc">
               <div className="bgZoom ml4-l ml0 w-100 h-100" style={bgCover}>
-                <img className="o-0" src={pcover[i]}/>
+                <img className="o-0" src={pcover[i]} alt={cdata["main-tag"][i]}/>
               </div>
             </div>
           </div>
@@ -109,24 +114,24 @@ class Projects extends Component {
 
     var side = [];
     var cover = [cover1, cover2, cover3, cover4];
-    for (var i = 0; i < 4; i++) {
+    for (var j = 0; j < 4; j++) {
       var bgSide = {
-        backgroundImage: "url("+cover[i]+")",
+        backgroundImage: "url("+cover[j]+")",
         backgroundPosition: "center center"
       }
-      var temp = (
-        <a className="bgLink" href={cdata["side-url"][i]} target="_blank">
-          <div className="fl w-50-l w-100 pa2 tl" key={i}>
+      var temp2 = (
+        <a className="bgLink" href={cdata["side-url"][j]} target="_blank" rel="noopener noreferrer">
+          <div className="fl w-50-l w-100 pa2 tl" key={j}>
             <div className="pa4 h300 white relative bgZoom tc" style={bgSide}>
-              <h4 className="z1 mb3-ns mb2 mt100-fix" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["side-title"][i]}}></h4>
-              <h6 className="z1 mt3-ns mt2 mb0 pre-wrap tracked" dangerouslySetInnerHTML={{__html:cdata["side-tag"][i]}}></h6>
-              {/*<p className="z1 mt3-ns mt2 mb0 pre-wrap lh-copy fw5" dangerouslySetInnerHTML={{__html:cdata["side-des"][i]}}></p>*/}
+              <h4 className="z1 mb3-ns mb2 mt100-fix" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["side-title"][j]}}></h4>
+              <h6 className="z1 mt3-ns mt2 mb0 pre-wrap tracked" dangerouslySetInnerHTML={{__html:cdata["side-tag"][j]}}></h6>
+              {/*<p className="z1 mt3-ns mt2 mb0 pre-wrap lh-copy fw5" dangerouslySetInnerHTML={{__html:cdata["side-des"][j]}}></p>*/}
               <div className="top-0 left-0 absolute w-100 h-100 mask"></div>
             </div>
           </div>
         </a>
       )
-      side.push(temp);
+      side.push(temp2);
     }
 
     return (
@@ -156,7 +161,7 @@ class Projects extends Component {
           <hr className="o-20 mb4 mh4-l mh2"/>
           <div className="ph4-l ph2 mv100 tc">
             <h2 style={projectH4}>Let's Connect!</h2>
-            <p className="f4 lh-copy ph4 fw5 light-gray">Feel free to reach out for collaborations or just a friendly hello 😀</p>
+            <p className="f4 lh-copy ph4 fw5 light-gray">Feel free to reach out for collaborations or just a friendly hello <span role="img" aria-label="smile">😀</span></p>
             <a href='mailto:youwen.mark.liang@gmail.com' target='_blank' rel='noopener noreferrer' className="underline f4 fw6 small-link">youwen.mark.liang@gmail.com</a>
           </div>
         </div>

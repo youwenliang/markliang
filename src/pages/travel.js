@@ -37,7 +37,7 @@ class Travel extends Component {
     }
   }
   componentDidMount() {
-    var $this = this;
+    //var $this = this;
     window.addEventListener('resize', this.checkMobile);
     this.checkMobile();
 
@@ -56,7 +56,7 @@ class Travel extends Component {
       console.log(responseAsJson);
 
       for (var i = 0; i < imageCount; i++) {
-        var tempImg = responseAsJson.data[i].images["standard_resolution"].url;
+        //var tempImg = responseAsJson.data[i].images["standard_resolution"].url;
         // instagramImages.push(tempImg);
       }
       //$this.setState({load: true})

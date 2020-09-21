@@ -62,7 +62,6 @@ class Talks extends Component {
     }
 
     var talk = [];
-    var podcast = [];
     var talkH3 = {
       fontSize: !isMobile ? "30px":"20px",
       lineHeight: !isMobile ? "45px":"30px",
@@ -85,7 +84,7 @@ class Talks extends Component {
               <h4 style={talkH4} className="mt1-l mt2 mb0-l mb1" dangerouslySetInnerHTML={{__html:cdata["talk-dates"][i]+"<span class='ml3-l ml1'>→</span>"}}></h4>
             </div>
             <div className="fl w-80-l w-100 ph2">
-              <a href="https://www.facebook.com/watch/live/?v=674313836750160&ref=watch_permalink" target="_blank">
+              <a href="https://www.facebook.com/watch/live/?v=674313836750160&ref=watch_permalink" target="_blank" rel="noopener noreferrer">
                 <h3 style={talkH3} className="mt0 mb4-l mb3" dangerouslySetInnerHTML={{__html:cdata["talk-titles"][i]+"<span class='faded ml2-l ml0 db dib-l'>@"+cdata["talk-locations"][i]+"</span>"}}></h3>
               </a>
             </div>
@@ -104,20 +103,6 @@ class Talks extends Component {
         )
       }
       talk.push(temp);
-    }
-
-    for (var i = 0; i < cdata["talk-titles2"].length; i++) {
-      var temp = (
-          <div key={i}>
-            <div className="fl w-20-l w-100 ph2 flex items-center">
-              <h4 style={talkH4} className="mt1-l mt2 mb0-l mb1" dangerouslySetInnerHTML={{__html:cdata["talk-dates2"][i]+"<span class='ml3-l ml1'>→</span>"}}></h4>
-            </div>
-            <div className="fl w-80-l w-100 ph2">
-              <h3 style={talkH3} className="mt0 mb4-l mb3" dangerouslySetInnerHTML={{__html:cdata["talk-titles2"][i]+"<span class='faded ml2-l ml0 db dib-l'>@"+cdata["talk-locations2"][i]+"</span>"}}></h3>
-            </div>
-          </div>
-        )
-      podcast.push(temp);
     }
 
     return (
@@ -143,9 +128,9 @@ class Talks extends Component {
             <hr className="section-divider"></hr>
             <p className="small-title mb40 mt0 ph2">{cdata["small-title2"]}</p>
             <div className="cf mb5">
-              <iframe src="https://open.spotify.com/embed-podcast/episode/5R4jaoXZjtIAkqUooZKklG" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-              <iframe src="https://open.spotify.com/embed-podcast/episode/6VsW4BeynFT4xY3w7BGl76" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-              <iframe src="https://open.spotify.com/embed-podcast/episode/42PhdvaiM560fSIo2Xvvi8" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              <iframe title="Mozilla，謝謝你——科技企業如何兼顧社會責任與創新能量" src="https://open.spotify.com/embed-podcast/episode/5R4jaoXZjtIAkqUooZKklG" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              <iframe title="Mozilla Taipei 畢業快樂！多元產品設計經驗談" src="https://open.spotify.com/embed-podcast/episode/6VsW4BeynFT4xY3w7BGl76" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              <iframe title="我為什麼從一位工程師轉職成產品設計師" src="https://open.spotify.com/embed-podcast/episode/42PhdvaiM560fSIo2Xvvi8" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <hr className="section-divider"></hr>
             <p className="small-title mb40 mt0 ph2">photos</p>

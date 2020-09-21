@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import data from '../data/data.js';
+import $ from 'jquery';
 import project1 from '../images/projects/project-zerda-cover.png';
 import project2 from '../images/projects/screenshot-plus-cover.png';
 import project3 from '../images/projects/firefox-color-cover.png';
@@ -27,6 +28,11 @@ class List extends Component {
   checkMobile = () => {
     this.setState({ width: window.innerWidth });
   }
+
+  scrollTop = () => {
+    $(window).scrollTop(0)
+  }
+  
   
   render() {
     const { width } = this.state;
@@ -46,9 +52,9 @@ class List extends Component {
         <div className="cf box center links">
           <h5 className="small-title white pl4">more projects</h5>
           <div className="fl w-50-l w-100 pa4 tl">
-            <Link to ={'/projects/'+cdata["main-url"][this.props.prev]}>
+            <Link to ={'/projects/'+cdata["main-url"][this.props.prev]} onClick={this.scrollTop}>
             <div className="bg-white br3 overflow-hidden prev">
-              <img src={pcover[this.props.prev]}/>
+              <img src={pcover[this.props.prev]} alt={cdata["main-title"][this.props.prev]}/>
               <div className="pa4 bt bw1 b--blue">
                 <h4 className="z1 mb3-ns mb2 mt0" style={aboutH4}>{cdata["main-tag"][this.props.prev]}</h4>
                 <p className="z1 mt3-ns mt2 mb0 pre-wrap lh-copy fw5 o-50 dark-gray">{cdata["main-title"][this.props.prev]}</p>
@@ -57,9 +63,9 @@ class List extends Component {
             </Link>
           </div>
           <div className="fl w-50-l w-100 pa4 tl">
-            <Link to ={'/projects/'+cdata["main-url"][this.props.next]}>
+            <Link to ={'/projects/'+cdata["main-url"][this.props.next]} onClick={this.scrollTop}>
             <div className="bg-white br3 overflow-hidden next">
-              <img src={pcover[this.props.next]}/>
+              <img src={pcover[this.props.next]} alt={cdata["main-title"][this.props.next]}/>
               <div className="pa4 bt bw1 b--blue">
                 <h4 className="z1 mb3-ns mb2 mt0" style={aboutH4}>{cdata["main-tag"][this.props.next]}</h4>
                 <p className="z1 mt3-ns mt2 mb0 pre-wrap lh-copy fw5 o-50 dark-gray">{cdata["main-title"][this.props.next]}</p>

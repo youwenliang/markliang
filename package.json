@@ -63,5 +63,21 @@
       "last 1 safari version"
     ]
   },
+  "reactSnapshot": {
+    "include": [
+      "/about/",
+      "/projects/",
+      "/writing/",
+      "/talks/",
+      "/travel/",
+      "/projects/firefox-lite/",
+      "/projects/screenshot-go/",
+      "/projects/firefox-color/",
+      "/projects/firefox-send/",
+      "/projects/firefox-screenshots/",
+      "/projects/firefoxos-tv/"
+    ],
+    "snapshotDelay": 300
+  },
   "homepage": "http://home.youwenliang.com"
 }

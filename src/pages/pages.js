@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import data from '../data/data.js';
 import Footer from '../components/footer.js';
 import List from '../components/list.js';
-import Zoom from 'react-medium-image-zoom';
 import ImageBox from '../components/lightbox.js';
 import $ from 'jquery';
 
@@ -92,7 +91,7 @@ class Project01 extends Component {
  
   render() {
     var cdata = data["contents"]["projects"];
-    var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
+    //var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
     const { width } = this.state;
     const isMobile = width <= 959;
 
@@ -138,7 +137,7 @@ class Project01 extends Component {
           <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
           <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" />
+            <img src={pcover[this.state.num-1]} alt={cdata["main-tag"][this.state.num-1]} width="100%" />
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -223,7 +222,7 @@ During a shopping journey on a browser, users might find something they are inte
               <p className="tc f6 o-60">First-time experience, before and after.</p>
             </figure>
           <div className="videoWrapper mt5-l mt4 mb3">
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/914nWplLBpU?controls=0&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe title="Firefox Lite Onboarding" width="560" height="315" src="https://www.youtube-nocookie.com/embed/914nWplLBpU?controls=0&rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
           <p className="tc f6 o-60 mb5-l mb4">Full onboarding experience.</p>
           <p className="f4 lh-copy fw4">
@@ -348,7 +347,7 @@ class Project02 extends Component {
  
   render() {
     var cdata = data["contents"]["projects"];
-    var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
+    //var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
     const { width } = this.state;
     const isMobile = width <= 959;
 
@@ -393,7 +392,7 @@ class Project02 extends Component {
           <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
           <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" />
+            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num-1]}/>
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -557,7 +556,7 @@ class Project03 extends Component {
  
   render() {
     var cdata = data["contents"]["projects"];
-    var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
+    //var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
     const { width } = this.state;
     const isMobile = width <= 959;
 
@@ -599,7 +598,7 @@ class Project03 extends Component {
           <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
           <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" />
+            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num-1]} />
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -730,7 +729,7 @@ class Project04 extends Component {
  
   render() {
     var cdata = data["contents"]["projects"];
-    var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
+    //var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
     const { width } = this.state;
     const isMobile = width <= 959;
 
@@ -774,7 +773,7 @@ class Project04 extends Component {
           <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
           <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" />
+            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num-1]} />
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -932,7 +931,7 @@ class Project05 extends Component {
  
   render() {
     var cdata = data["contents"]["projects"];
-    var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
+    //var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
     const { width } = this.state;
     const isMobile = width <= 959;
 
@@ -976,7 +975,7 @@ class Project05 extends Component {
           <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
           <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" />
+            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num-1]} />
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -1146,7 +1145,7 @@ class Project06 extends Component {
  
   render() {
     var cdata = data["contents"]["projects"];
-    var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
+    //var pdata = data["projects"][cdata["main-url"][this.state.num-1]];
     const { width } = this.state;
     const isMobile = width <= 959;
 
@@ -1181,7 +1180,7 @@ class Project06 extends Component {
           <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
           <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" />
+            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num-1]} />
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">

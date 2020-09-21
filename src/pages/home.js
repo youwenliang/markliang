@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import data from '../data/data.js';
 import human from '../images/illustration1.svg';
 import Footer from '../components/footer.js';
-import { Tween, Timeline } from 'react-gsap';
-import { Zoom, Fade } from 'react-reveal';
-
 
 class Home extends Component {
   constructor(props) {
@@ -73,25 +70,12 @@ class Home extends Component {
     }
 
     var margin = isMobile ? "mb50":"mb100"
-    var background = {
-      color: "white",
-      textShadow: "-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000",
-      position: "absolute",
-      fontSize: "160px",
-      opacity: ".05",
-      zIndex: "-1",
-      left: 0,
-      right: 0,
-      margin: "auto",
-      textAlign: "center"
-    }
 
     let footer = isMobile || isLow ? (<Footer/>):null;
     
     return (
       <section id="home" className="page">
         <div className="box center">
-          {/*<h1 style={background}>Mark Liang</h1>*/}
           <div className={"flex flex-row-l flex-column ph4-l ph3 "+margin}>
             <div className="w-two-thirds-l w-100 ph2 o2 relative">
               <h1 style={homeH1} dangerouslySetInnerHTML={{__html:cdata.h1}}></h1>
