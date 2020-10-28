@@ -42,11 +42,11 @@ var data = {
 			"main-tag": ["Firefox Lite","Screenshot Go","Firefox Color","Firefox Send","Firefox Screenshots","FirefoxOS TV"],
 			"main-des": ["2019-2020 | Mozilla","2018 | Mozilla","2017-2018 | Mozilla","2017 | Mozilla","2016-2017 | Mozilla","2015 | Mozilla"],
 			"main-img": ["https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/"],
-			"side-title": ["Our Island","CSS Drawings","G0V Grants","Low-Poly Series"],
-			"side-tag": ["WEB DESIGN & DEVELOPMENT","CSS/CSS ANIMATION","WEB DESIGN & DEVELOPMENT","3D DRAWING/CINEMA 4D"],
+			"side-title": ["Uchronia", "Our Island","CSS Drawings","G0V Grants","Low-Poly Series"],
+			"side-tag": ["WEB DESIGN & DEVELOPMENT", "WEB DESIGN & DEVELOPMENT","CSS/CSS ANIMATION","WEB DESIGN & DEVELOPMENT","3D DRAWING/CINEMA 4D"],
 			"side-des": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."],
 			"side-img": ["https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/"],
-			"side-url": ["https://newmedia.pts.org.tw/island20", "https://codepen.io/collection/XLRmOe", "https://grants.g0v.tw/power", "https://sketchfab.com/bigheadcool"]
+			"side-url": ["https://uchronia.one", "https://newmedia.pts.org.tw/island20", "https://codepen.io/collection/XLRmOe", "https://grants.g0v.tw/power", "https://sketchfab.com/bigheadcool"]
 		},
 		"writing": {
 			"h1": "Writing<span class='blue'>:<br/></span>",
@@ -64,9 +64,9 @@ var data = {
 			"button": "contact me",
 			"url": "mailto:youwenmarkliang@gmail.com",
 			"small-title": "Past talks",
-			"talk-titles": ["Mozilla Taipei's Product Experience in Emerging Markets", "用 Notion 升級你的腦袋", "How I Develop My Career from Engineering to Design","Design Sprint Case Studies","From Observation to Insights", "Prototyping & User Testing", "Delightful Experience with Technology", "Why and Why Not"],
-			"talk-locations": ["Tech Career Fair", "IxDA Taiwan", "JustCo", "Picollage", "Meitu", "Da-Tung University", "Ogilvy", "UI/UX Night"],
-			"talk-dates": ["Aug. 2020", "May 2020", "Feb. 2020", "Nov. 2019", "Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2016  "],
+			"talk-titles": ["The Journey of Discovery", "Mozilla Taipei's Product Experience in Emerging Markets", "用 Notion 升級你的腦袋", "How I Develop My Career from Engineering to Design","Design Sprint Case Studies","From Observation to Insights", "Prototyping & User Testing", "Delightful Experience with Technology", "Why and Why Not"],
+			"talk-locations": ["National Taiwan University", "Tech Career Fair", "IxDA Taiwan", "JustCo", "Picollage", "Meitu", "Da-Tung University", "Ogilvy", "UI/UX Night"],
+			"talk-dates": ["Oct. 2020", "Aug. 2020", "May 2020", "Feb. 2020", "Nov. 2019", "Jun. 2019  ", "May 2017  ", "May 2016  ", "Mar. 2016  "],
 			"small-title2": "Podcasts",
 			"talk-titles2": ["Mozilla，謝謝你——科技企業如何兼顧社會責任與創新能量", "Mozilla Taipei 畢業快樂！多元產品設計經驗談", "我為什麼從一位工程師轉職成產品設計師"],
 			"talk-locations2": ["科技職涯 Talent Connect", "科技職涯 Talent Connect", "科技職涯 Talent Connect"],

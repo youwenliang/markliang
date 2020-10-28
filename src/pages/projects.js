@@ -10,6 +10,7 @@ import cover1 from '../images/cover1.png';
 import cover2 from '../images/cover2.png';
 import cover3 from '../images/cover3.png';
 import cover4 from '../images/cover4.png';
+import cover5 from '../images/cover5.jpg';
 
 import project1 from '../images/projects/project-zerda-cover.png';
 import project2 from '../images/projects/screenshot-plus-cover.png';
@@ -113,13 +114,26 @@ class Projects extends Component {
     }
 
     var side = [];
-    var cover = [cover1, cover2, cover3, cover4];
-    for (var j = 0; j < 4; j++) {
+    var cover = [cover5, cover1, cover2, cover3, cover4];
+    for (var j = 0; j < cover.length; j++) {
       var bgSide = {
         backgroundImage: "url("+cover[j]+")",
         backgroundPosition: "center center"
       }
-      var temp2 = (
+      var temp2 = (j === 0) ? 
+      (
+        <a className="bgLink" href={cdata["side-url"][j]} target="_blank" rel="noopener noreferrer">
+          <div className="fl w-100 pa2 tl" key={j}>
+            <div className="pa4 h300 white relative bgZoom tc" style={bgSide}>
+              <h4 className="z1 mb3-ns mb2 mt100-fix" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["side-title"][j]}}></h4>
+              <h6 className="z1 mt3-ns mt2 mb0 pre-wrap tracked" dangerouslySetInnerHTML={{__html:cdata["side-tag"][j]}}></h6>
+              {/*<p className="z1 mt3-ns mt2 mb0 pre-wrap lh-copy fw5" dangerouslySetInnerHTML={{__html:cdata["side-des"][j]}}></p>*/}
+              <div className="top-0 left-0 absolute w-100 h-100 mask"></div>
+            </div>
+          </div>
+        </a>
+      )
+      :(
         <a className="bgLink" href={cdata["side-url"][j]} target="_blank" rel="noopener noreferrer">
           <div className="fl w-50-l w-100 pa2 tl" key={j}>
             <div className="pa4 h300 white relative bgZoom tc" style={bgSide}>

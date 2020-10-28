@@ -11,6 +11,7 @@ import p5 from '../images/photos/photo5.JPG';
 import p6 from '../images/photos/photo6.JPG';
 import p7 from '../images/photos/photo7.jpg';
 import p8 from '../images/photos/photo8.jpg';
+import p9 from '../images/photos/photo9.jpg';
 
 class Talks extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class Talks extends Component {
       fontWeight: 500
     }
     var photo = [];
-    var url = [p1,p2,p3,p4,p5,p6,p7,p8];
+    var url = [p1,p2,p3,p4,p5,p6,p7,p8,p9];
     for(var j = 0; j < url.length; j++) {
       var tempURL = {
         background: "url("+url[j]+") no-repeat center center",
@@ -135,8 +136,11 @@ class Talks extends Component {
             <hr className="section-divider"></hr>
             <p className="small-title mb40 mt0 ph2">photos</p>
             <div className="cf mb100">
-              <div className="fl w-100 pa2 pointer" onClick={() => this.onClick(6)}>
+              <div className="fl w-100 w-60-l pa2 pointer" onClick={() => this.onClick(6)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[5]}></div>
+              </div>
+              <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(9)}>
+                <div className="w-100 w-100 h5 bg-blue" style={photo[8]}></div>
               </div>
               <div className="fl w-100 w-40-l pa2 pointer" onClick={() => this.onClick(5)}>
                 <div className="w-100 w-100 h5 bg-blue" style={photo[4]}></div>
