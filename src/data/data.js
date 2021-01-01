@@ -12,12 +12,12 @@ var data = {
 			"h1": "Hello,<br/>I'm Mark Liang.<br/><span class='blue fw1'>—</span>",
 			"h3": "I’m a <span class='blue'>Product Manager/UX Designer</span> with over 5 years of experience in design and prototyping, passionate about crafting user experiences and turning ideas into products with cross-functional teams.",
 			"h5": [
-				"previously<br/>—",
+				"currently<br/>—",
 				"location<br/>—",
 				"contact<br/>—"
 			],
 			"h4": [
-				"<span class='user-select'>Senior Product Manager<br/>at <a href='https://www.mozilla.org' target='_blank' rel='noopener noreferrer' class='fw7 dark-gray'>Mozilla Taiwan</a></span>",
+				"<span class='user-select'>Design Manager<br/>at <a href='https://kkboxcorp.com/' target='_blank' rel='noopener noreferrer' class='fw7 dark-gray'>KKBOX</a></span>",
 				"<span class='user-select'>Taipei City, Taiwan</span>",
 				"<span class='user-select'><a href='mailto:youwen.mark.liang@gmail.com' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>youwen.mark.liang@gmail.com</a></span><br/><span><a href='https://www.linkedin.com/in/mark-liang/' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>linkedin.com/in/mark-liang</a></span>"
 			],
