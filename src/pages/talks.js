@@ -4,7 +4,7 @@ import data from '../data/data.js';
 import Footer from '../components/footer.js';
 import human from '../images/illustration5.svg';
 import p1 from '../images/photos/photo1.jpg';
-import p2 from '../images/photos/photo2.jpg';
+import p2 from '../images/photos/photo10.jpg';
 import p3 from '../images/photos/photo3.jpg';
 import p4 from '../images/photos/photo4.jpg';
 import p5 from '../images/photos/photo5.JPG';

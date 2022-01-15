@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import data from '../data/data.js';
 import Footer from '../components/footer.js';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 import human from '../images/illustration2.svg';
 import icon1 from '../images/icon0.svg';
@@ -8,7 +10,17 @@ import icon2 from '../images/icon1.svg';
 import icon3 from '../images/icon2.svg';
 import icon4 from '../images/icon3.svg';
 import icon5 from '../images/icon4.svg';
-const icons = [icon1, icon2, icon3, icon4, icon5];
+import icon6 from '../images/icon5.svg';
+
+import e1 from '../images/IXDA.jpg';
+import e2 from '../images/REBORN.png';
+import e3 from '../images/SOSO.png';
+import e4 from '../images/ADPList.png';
+import e5 from '../images/UXWE.jpg';
+import e6 from '../images/UBC.jpg';
+
+const icons = [icon6, icon1, icon1, icon2, icon3, icon4, icon5];
+const exs = [e1, e2, e3, e4, e5, e6];
 
 class About extends Component {
   constructor(props) {
@@ -66,19 +78,18 @@ class About extends Component {
       fontWeight: 500
     }
 
+    var exH6 = {
+      fontSize: !isMobile ? "18px":"14px",
+      lineHeight: !isMobile ? "20px":"16px",
+      color: "#818789",
+      fontWeight: 500
+    }
+
     var focus = [];
     var iw = isMobile ? "80" : "100";
 
-    for (var i = 0; i < 5; i++) {
-      var temp = (i === 0) ? (
-        <div className="fl w-100 pa2 tl-l tc" key={i}>
-          <div className="bg-white pa4">
-            <img className="mb3" src={icons[i]} width={iw} alt={cdata["focus-title"][i]}/>
-            <h4 className="mv3-ns mv2" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["focus-title"][i]}}></h4>
-            <h6 className="mt3-ns mt2 mb0 pre-wrap" style={aboutH6} dangerouslySetInnerHTML={{__html:cdata["focus-tag"][i]}}></h6>
-          </div>
-        </div>
-        ):(
+    for (var i = 0; i < 6; i++) {
+      var temp = (
         <div className="fl w-50-l w-100 pa2 tl-l tc" key={i}>
           <div className="bg-white pa4">
             <img className="mb3" src={icons[i]} width={iw} alt={cdata["focus-title"][i]}/>
@@ -88,6 +99,26 @@ class About extends Component {
         </div>
       )
       focus.push(temp);
+    }
+
+    var ex = [];
+
+    for (var j = 0; j < 6; j++) {
+      var temp2 = (
+        <div className="pa2 tl-l tc" key={j}>
+          <div className="pa4 ba br2 b--light-gray">
+            <div>
+              <img src={exs[j]} height="60" className="mb2" alt={cdata["ex-title"][j]}/>
+              <div className="">
+                <h4 className="mv2" style={aboutH4} dangerouslySetInnerHTML={{__html:cdata["ex-title"][j]}}></h4>
+                <h6 className="mv0 pre-wrap h3" style={exH6} dangerouslySetInnerHTML={{__html:cdata["ex-tag"][j]}}></h6>
+                <a className="blue fw5" href={cdata["ex-link"][j]} target='_blank' rel='noopener noreferrer'>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+      ex.push(temp2);
     }
 
     return (
@@ -105,7 +136,7 @@ class About extends Component {
               <img className="human absolute left-0 right-0 center" src={human} height="515" alt="Mark Liang"/>
             </div>
           </div>
-          <hr className="section-divider"></hr>
+          <hr className="section-divider"></hr>          
           <div className="ph4-l ph3 mb100">
             <div className="ph2">
               <p className="small-title mb40 mt0">{cdata["small-title"][0]}</p>
@@ -113,11 +144,31 @@ class About extends Component {
               <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata["h3-mission"]}}></h3>
             </div>
           </div>
+          <div className="ph4-l ph3">
+            <div className="ph2">
+              <p className="small-title mb40 mt0">{cdata["small-title"][1]}</p>
+            </div>
+          </div>
+        </div>
+        <div className="mb40">
+          <Carousel
+              infiniteLoop
+              autoPlay
+              centerMode
+              centerSlidePercentage={isMobile ? 80:25}
+              showIndicators={false}
+              swipeable={true}
+              emulateTouch={true}
+              showArrows={false}
+              showStatus={false}
+          >
+              {ex}
+          </Carousel>
         </div>
         <div className="fade-section">
           <div className="box center">
             <div className="ph4-l ph2">
-              <p className="small-title mb40 mt0 ph2">{cdata["small-title"][1]}</p>
+              <p className="small-title mb40 mt0 ph2">{cdata["small-title"][2]}</p>
               <div className="cf">
                 {focus}
               </div>

@@ -888,3 +888,7 @@ src: local('Airbnb Cereal App Bold'), url('./css/fonts/AirbnbCerealBold.woff') f
 		left: 0;
 	}
 }
+
+.carousel .slide img {
+	width: 60px !important;
+}
