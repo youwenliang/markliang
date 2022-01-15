@@ -15,9 +15,9 @@ import icon6 from '../images/icon5.svg';
 import e1 from '../images/IXDA.jpg';
 import e2 from '../images/REBORN.png';
 import e3 from '../images/SOSO.png';
-import e4 from '../images/ADPList.png';
-import e5 from '../images/UXWE.jpg';
-import e6 from '../images/UBC.jpg';
+import e4 from '../images/UXWE.jpg';
+import e5 from '../images/UBC.jpg';
+import e6 from '../images/ADPList.png';
 
 const icons = [icon6, icon1, icon1, icon2, icon3, icon4, icon5];
 const exs = [e1, e2, e3, e4, e5, e6];
@@ -106,7 +106,7 @@ class About extends Component {
     for (var j = 0; j < 6; j++) {
       var temp2 = (
         <div className="pa2 tl-l tc" key={j}>
-          <div className="pa4 ba br2 b--light-gray">
+          <div className="pa4 ba br2 b--light-gray ex-card">
             <div>
               <img src={exs[j]} height="60" className="mb2" alt={cdata["ex-title"][j]}/>
               <div className="">
@@ -127,7 +127,7 @@ class About extends Component {
           <div className="flex flex-row-l flex-column ph4-l ph3 mb50">
             <div className="w-two-thirds-l w-100 ph2 o2">
               <h1 style={homeH1} dangerouslySetInnerHTML={{__html:cdata.h1}}></h1>
-              <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata.h3}}></h3>
+              <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata["h3-mission"]}}></h3>
               <a href={cdata.url[0]} target='_blank' rel='noopener noreferrer'><div className="button mt2 mb0">{cdata.button[0]}</div></a>
               <a href={cdata.url[1]} target='_blank' rel='noopener noreferrer'><div className="button mt2 mb0 ml3">{cdata.button[1]}</div></a>
             </div>
@@ -137,13 +137,13 @@ class About extends Component {
             </div>
           </div>
           <hr className="section-divider"></hr>          
+          {/*
           <div className="ph4-l ph3 mb100">
             <div className="ph2">
               <p className="small-title mb40 mt0">{cdata["small-title"][0]}</p>
               <h2 style={homeH2} dangerouslySetInnerHTML={{__html:cdata["h1-mission"]}}></h2>
-              <h3 style={homeH3} dangerouslySetInnerHTML={{__html:cdata["h3-mission"]}}></h3>
             </div>
-          </div>
+          </div>*/}
           <div className="ph4-l ph3">
             <div className="ph2">
               <p className="small-title mb40 mt0">{cdata["small-title"][1]}</p>

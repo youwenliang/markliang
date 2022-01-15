@@ -10,14 +10,14 @@ var data = {
 	"contents": {
 		"home": {
 			"h1": "Hello,<br/>I'm Mark Liang.<br/><span class='blue fw1'>—</span>",
-			"h3": "I’m a <span class='blue'>Product Manager/UX Designer</span> with over 5 years of experience in design and prototyping, passionate about crafting user experiences and turning ideas into products with cross-functional teams.",
+			"h3": "I’m a <span class='blue-2'>Design Manager</span> with over 8 years of experience in design and a mixture of product & people management experience. I’m passionate about crafting user experience and turning ideas into products with cross-functional teams. <br/><span class='blue f3'>#designleadership #mentorship<span>",
 			"h5": [
 				"currently<br/>—",
 				"location<br/>—",
 				"contact<br/>—"
 			],
 			"h4": [
-				"<span class='user-select'>Design Manager<br/>at <a href='https://kkboxcorp.com/' target='_blank' rel='noopener noreferrer' class='fw7 dark-gray'>KKBOX</a></span>",
+				"<span class='user-select'>Design Manager at <a href='https://www.kkcompany.com/' target='_blank' rel='noopener noreferrer' class='fw7 blue'>KKBOX</a><br/><span class='silver'>Previously at Mozilla and AKQA</span></span>",
 				"<span class='user-select'>Taipei City, Taiwan</span>",
 				"<span class='user-select'><a href='mailto:youwen.mark.liang@gmail.com' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>youwen.mark.liang@gmail.com</a></span><br/><span><a href='https://www.linkedin.com/in/mark-liang/' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>linkedin.com/in/mark-liang</a></span>"
 			],
@@ -27,11 +27,11 @@ var data = {
 			"h3": "I'm a <span class='blue'>Product Management</span> professional with expertise in <span class='blue'>User Experience Design</span> and <span class='blue'>Web Development</span>. <br/>My sensitivity to design intent and user experience, coupled with the ability to write code and build prototypes have helped facilitate the launch of several products such as <a class='underline blue' href='https://blog.mozilla.org/blog/2019/03/12/introducing-firefox-send-providing-free-file-transfers-while-keeping-your-personal-information-private/' target='_blank'>Firefox Send</a> and <a class='underline blue' href='https://mozilla-next.com/eng/firefox_lite' target='_blank'>Firefox Lite</a>.",
 			"button": ["resume", "linkedin"],
 			"url": ["https://www.youwenliang.com/Mark_Liang_Resume_2022.pdf", "https://www.linkedin.com/in/mark-liang/"],
-			"small-title": ["What's my mission?", "Who've I worked with?", "What's my focus?"],
+			"small-title": ["Mission Statement", "additional experience", "Skill set"],
 			"h1-mission": "Build product experiences that inspire people to imagine better futures.",
 			"h3-mission": "As a product/UX person, I'm passionate about creating better product experiences that solve user problems and speak to the user. Driven by the love of design and craftsmanship, I enjoy working closely with designers and engineers on different aspects of a product to ensure the experiences we provide are seamless and delightful to our users.",
-			"ex-title": ["IxDA Taiwan", "Reborn 設計學院", "sofasoda", "ADPList", "UX 四神湯 - 深夜食堂", "UBC 聯合公益讀書會"],
-			"ex-tag": ["Speaker Interview Team @2021", "Guest Lecturer", "Lecturer & Mentor", "10+ mentorship sessions", "Mentor of 3 mentees @2020-2021", "Participated 3 online reading sessions @2021"],
+			"ex-title": ["IxDA Taiwan", "Reborn 設計學院", "sofasoda", "UX 四神湯：深夜食堂", "UBC 聯合公益讀書會", "ADPList"],
+			"ex-tag": ["Speaker Interview Team @2021", "Guest Lecturer", "Lecturer & Mentor", "Mentor of 3 mentees @2020-2021", "Participated 3 online reading sessions @2021", "10+ mentorship sessions"],
 			"ex-link": ["https://ixdtw2021.ixda.org.tw/press/","https://reborn.in/","https://www.sofasoda.com/en/mentorship/145","https://adplist.org/mentors/mark-liang","https://www.linkedin.com/company/uxuxeastmeetswest/","https://www.linkedin.com/company/ux-book-club/"],
 			"focus-title": ["Design Management", "Product Management", "UX/UI Design", "Prototyping", "Web Development", "Video Editing"],
 			"focus-tag": ["Lead UX/UI Designers to define, design and deliver user experience and visual design across cross-platform products and campaigns. Set goals and collaborate with designers and researchers to ensure the success of our design operations.","Work closely with cross-functional team to drive new product ideas from conception to launch. Incorporate insights from research and data to prioritize product features. Create detailed plans to track the product development process.", "Partner with engineers to ensure the UX/UI implementation is of high-quality. Learn from users to create & iterate on features that lead the success of the product.","Build prototypes to support user researchers & designers to do usability testing or communicate new product feature to product managers and engineers.", "Use ReactJS to develop various types of websites, sometimes as a way to prototype high-fidelity interactions.", "Shot videos on my GoPro, and create videos as a way to tell the stories of my travel experience using Adobe Premiere."],
