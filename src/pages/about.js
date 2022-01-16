@@ -51,12 +51,12 @@ class About extends Component {
       color: "#222222",
       fontWeight: 700
     }
-    var homeH2 = {
-      fontSize: !isMobile ? "48px":"27px",
-      lineHeight: !isMobile ? "60px":"36px",
-      color: "#222222",
-      fontWeight: 700
-    }
+    // var homeH2 = {
+    //   fontSize: !isMobile ? "48px":"27px",
+    //   lineHeight: !isMobile ? "60px":"36px",
+    //   color: "#222222",
+    //   fontWeight: 700
+    // }
     var homeH3 = {
       fontSize: !isMobile ? "24px":"18px",
       lineHeight: !isMobile ? "36px":"30px",
@@ -155,7 +155,7 @@ class About extends Component {
               infiniteLoop
               autoPlay
               centerMode
-              centerSlidePercentage={isMobile ? 80:25}
+              centerSlidePercentage={isMobile ? 75:25}
               showIndicators={false}
               swipeable={true}
               emulateTouch={true}

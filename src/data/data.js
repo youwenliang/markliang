@@ -10,7 +10,7 @@ var data = {
 	"contents": {
 		"home": {
 			"h1": "Hello,<br/>I'm Mark Liang.<br/><span class='blue fw1'>—</span>",
-			"h3": "I’m a <span class='blue-2'>Design Manager</span> with over 8 years of experience in design and a mixture of product & people management experience. I’m passionate about crafting user experience and turning ideas into products with cross-functional teams. <br/><span class='blue f3'>#designleadership #mentorship<span>",
+			"h3": "I’m a <span class='blue-2'>Design Manager</span> with over 8 years of experience in design and a mixture of product & people management expertise. I’m passionate about crafting UX/UI and turning ideas into product experiences that inspire people to imagine better futures. <br/><span class='blue'>#designleadership #mentorship<span>",
 			"h5": [
 				"currently<br/>—",
 				"location<br/>—",
@@ -32,7 +32,7 @@ var data = {
 			"h3-mission": "As a product/UX person, I'm passionate about creating better product experiences that solve user problems and speak to the user. Driven by the love of design and craftsmanship, I enjoy working closely with designers and engineers on different aspects of a product to ensure the experiences we provide are seamless and delightful to our users.",
 			"ex-title": ["IxDA Taiwan", "Reborn 設計學院", "sofasoda", "UX 四神湯：深夜食堂", "UBC 聯合公益讀書會", "ADPList"],
 			"ex-tag": ["Speaker Interview Team @2021", "Guest Lecturer", "Lecturer & Mentor", "Mentor of 3 mentees @2020-2021", "Participated 3 online reading sessions @2021", "10+ mentorship sessions"],
-			"ex-link": ["https://ixdtw2021.ixda.org.tw/press/","https://reborn.in/","https://www.sofasoda.com/en/mentorship/145","https://adplist.org/mentors/mark-liang","https://www.linkedin.com/company/uxuxeastmeetswest/","https://www.linkedin.com/company/ux-book-club/"],
+			"ex-link": ["https://ixdtw2021.ixda.org.tw/press/","https://reborn.in/","https://www.sofasoda.com/en/mentorship/145","https://www.linkedin.com/company/uxuxeastmeetswest/","https://www.linkedin.com/company/ux-book-club/","https://adplist.org/mentors/mark-liang"],
 			"focus-title": ["Design Management", "Product Management", "UX/UI Design", "Prototyping", "Web Development", "Video Editing"],
 			"focus-tag": ["Lead UX/UI Designers to define, design and deliver user experience and visual design across cross-platform products and campaigns. Set goals and collaborate with designers and researchers to ensure the success of our design operations.","Work closely with cross-functional team to drive new product ideas from conception to launch. Incorporate insights from research and data to prioritize product features. Create detailed plans to track the product development process.", "Partner with engineers to ensure the UX/UI implementation is of high-quality. Learn from users to create & iterate on features that lead the success of the product.","Build prototypes to support user researchers & designers to do usability testing or communicate new product feature to product managers and engineers.", "Use ReactJS to develop various types of websites, sometimes as a way to prototype high-fidelity interactions.", "Shot videos on my GoPro, and create videos as a way to tell the stories of my travel experience using Adobe Premiere."],
 		},
