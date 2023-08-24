@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.2d9ad0e4.chunk.css",
-    "main.js": "/static/js/main.ee60c7bd.chunk.js",
-    "main.js.map": "/static/js/main.ee60c7bd.chunk.js.map",
+    "main.js": "/static/js/main.bbd87147.chunk.js",
+    "main.js.map": "/static/js/main.bbd87147.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d5eac118.js",
     "runtime-main.js.map": "/static/js/runtime-main.d5eac118.js.map",
     "static/css/2.1ba447cc.chunk.css": "/static/css/2.1ba447cc.chunk.css",
-    "static/js/2.1a2fa67b.chunk.js": "/static/js/2.1a2fa67b.chunk.js",
-    "static/js/2.1a2fa67b.chunk.js.map": "/static/js/2.1a2fa67b.chunk.js.map",
+    "static/js/2.c183fbef.chunk.js": "/static/js/2.c183fbef.chunk.js",
+    "static/js/2.c183fbef.chunk.js.map": "/static/js/2.c183fbef.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.806d41048c9bae13c05247181851be0c.js": "/precache-manifest.806d41048c9bae13c05247181851be0c.js",
+    "precache-manifest.deeaaa8f931f663d1df13f44fbfa7bb8.js": "/precache-manifest.deeaaa8f931f663d1df13f44fbfa7bb8.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.1ba447cc.chunk.css.map": "/static/css/2.1ba447cc.chunk.css.map",
     "static/css/main.2d9ad0e4.chunk.css.map": "/static/css/main.2d9ad0e4.chunk.css.map",
-    "static/js/2.1a2fa67b.chunk.js.LICENSE.txt": "/static/js/2.1a2fa67b.chunk.js.LICENSE.txt",
+    "static/js/2.c183fbef.chunk.js.LICENSE.txt": "/static/js/2.c183fbef.chunk.js.LICENSE.txt",
     "static/media/ADPList.png": "/static/media/ADPList.dacaf255.png",
     "static/media/index.css": "/static/media/AirbnbCerealMedium.220b1dd3.woff",
     "static/media/IXDA.jpg": "/static/media/IXDA.cf4dcc8c.jpg",
@@ -24,6 +24,7 @@
     "static/media/cover3.png": "/static/media/cover3.da30ecee.png",
     "static/media/cover4.png": "/static/media/cover4.79fa9892.png",
     "static/media/cover5.jpg": "/static/media/cover5.8ba49b0c.jpg",
+    "static/media/cover6.png": "/static/media/cover6.b185671d.png",
     "static/media/firefox-color-cover.png": "/static/media/firefox-color-cover.7ac72318.png",
     "static/media/firefox-screenshots-cover.png": "/static/media/firefox-screenshots-cover.1f185111.png",
     "static/media/firefox-send-cover.png": "/static/media/firefox-send-cover.492b2ed7.png",
@@ -50,6 +51,7 @@
     "static/media/photo7.jpg": "/static/media/photo7.31df739d.jpg",
     "static/media/photo8.jpg": "/static/media/photo8.3a3eefae.jpg",
     "static/media/photo9.jpg": "/static/media/photo9.ff8a8b39.jpg",
+    "static/media/project-kkbox.png": "/static/media/project-kkbox.4714cace.png",
     "static/media/project-zerda-cover.png": "/static/media/project-zerda-cover.bf3ec4f2.png",
     "static/media/screenshot-plus-cover.png": "/static/media/screenshot-plus-cover.f523c972.png",
     "static/media/travel01.jpg": "/static/media/travel01.40575c1a.jpg",
@@ -64,8 +66,8 @@
   "entrypoints": [
     "static/js/runtime-main.d5eac118.js",
     "static/css/2.1ba447cc.chunk.css",
-    "static/js/2.1a2fa67b.chunk.js",
+    "static/js/2.c183fbef.chunk.js",
     "static/css/main.2d9ad0e4.chunk.css",
-    "static/js/main.ee60c7bd.chunk.js"
+    "static/js/main.bbd87147.chunk.js"
   ]
 }
