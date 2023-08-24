@@ -24,7 +24,7 @@ class Footer extends Component {
 
     return (
       <footer style={footerStyle} className={b}>
-        <p style={footerTextStyle}>© 2022  |  Design & Develop by Mark Liang</p>
+        <p style={footerTextStyle}>© 2023  |  Design & Develop by Mark Liang</p>
       </footer>
     );
   }
