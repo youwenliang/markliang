@@ -54,7 +54,7 @@ class List extends Component {
           <div className="fl w-50-l w-100 pa4 tl">
             <Link to ={'/projects/'+cdata["main-url"][this.props.prev]} onClick={this.scrollTop}>
             <div className="bg-white br3 overflow-hidden prev">
-              <img src={pcover[this.props.prev]} alt={cdata["main-title"][this.props.prev]}/>
+              <img src={pcover[this.props.prev-1]} alt={cdata["main-title"][this.props.prev]}/>
               <div className="pa4 bt bw1 b--blue">
                 <h4 className="z1 mb3-ns mb2 mt0" style={aboutH4}>{cdata["main-tag"][this.props.prev]}</h4>
                 <p className="z1 mt3-ns mt2 mb0 pre-wrap lh-copy fw5 o-50 dark-gray">{cdata["main-title"][this.props.prev]}</p>
@@ -65,7 +65,7 @@ class List extends Component {
           <div className="fl w-50-l w-100 pa4 tl">
             <Link to ={'/projects/'+cdata["main-url"][this.props.next]} onClick={this.scrollTop}>
             <div className="bg-white br3 overflow-hidden next">
-              <img src={pcover[this.props.next]} alt={cdata["main-title"][this.props.next]}/>
+              <img src={pcover[this.props.next-1]} alt={cdata["main-title"][this.props.next]}/>
               <div className="pa4 bt bw1 b--blue">
                 <h4 className="z1 mb3-ns mb2 mt0" style={aboutH4}>{cdata["main-tag"][this.props.next]}</h4>
                 <p className="z1 mt3-ns mt2 mb0 pre-wrap lh-copy fw5 o-50 dark-gray">{cdata["main-title"][this.props.next]}</p>

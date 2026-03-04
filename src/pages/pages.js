@@ -43,7 +43,18 @@ class Pages extends Component {
       'firefoxos-tv': <Project06 data={data} view={this.state.view} switchView={this.switchView.bind(this)} />
     }
     let container = viewContainerMapping[this.state.view];
-    
+
+    if (!container) {
+      return (
+        <section id="not-found" className="pt0-l pt4 flex items-center justify-center" style={{minHeight: '80vh'}}>
+          <div className="tc">
+            <h1 style={{fontSize: '96px', fontWeight: 700, margin: 0, color: '#222'}}>404</h1>
+            <p style={{fontSize: '24px', color: '#484848'}}>Page not found.</p>
+          </div>
+        </section>
+      );
+    }
+
     return (
       <section id={title} className="pt0-l pt4">
         {container}
@@ -134,10 +145,10 @@ class Project01 extends Component {
     return (
       <section id={this.state.id} className="page">
         <div className="box center tc ph4">
-          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
-          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
+          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num]}</h1>
+          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} alt={cdata["main-tag"][this.state.num-1]} width="100%" />
+            <img src={pcover[this.state.num-1]} alt={cdata["main-tag"][this.state.num]} width="100%" />
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -316,7 +327,7 @@ During a shopping journey on a browser, users might find something they are inte
         </div>
 
         <ImageBox onRef={ref => (this.child = ref)} content={images}/>
-        <List prev={5} next={1}/>
+        <List prev={6} next={2}/>
         <Footer/>
       </section>
     );
@@ -389,10 +400,10 @@ class Project02 extends Component {
     return (
       <section id={this.state.id} className="page">
         <div className="box center tc ph4">
-          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
-          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
+          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num]}</h1>
+          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num-1]}/>
+            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num]}/>
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -525,7 +536,7 @@ The whole trip was very inspiring for our design team, and we've learned so much
           </div>
         </div>
         <ImageBox onRef={ref => (this.child = ref)} content={images}/>
-        <List prev={0} next={2}/>
+        <List prev={1} next={3}/>
         <Footer/>
       </section>
     );
@@ -595,10 +606,10 @@ class Project03 extends Component {
     return (
       <section id={this.state.id} className="page">
         <div className="box center tc ph4">
-          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
-          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
+          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num]}</h1>
+          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num-1]} />
+            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num]} />
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -698,7 +709,7 @@ class Project03 extends Component {
               </figure>
         </div>
         <ImageBox onRef={ref => (this.child = ref)} content={images}/>
-        <List prev={1} next={3}/>
+        <List prev={2} next={4}/>
         <Footer/>
       </section>
     );
@@ -770,10 +781,10 @@ class Project04 extends Component {
     return (
       <section id={this.state.id} className="page">
         <div className="box center tc ph4">
-          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
-          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
+          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num]}</h1>
+          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num-1]} />
+            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num]} />
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -891,7 +902,7 @@ The user flow seems simple. There's only uploading and downloading files, so we 
               </figure>
         </div>
         <ImageBox onRef={ref => (this.child = ref)} content={images}/>
-        <List prev={2} next={4}/>
+        <List prev={3} next={5}/>
         <Footer/>
       </section>
     );
@@ -972,10 +983,10 @@ class Project05 extends Component {
     return (
       <section id={this.state.id} className="page">
         <div className="box center tc ph4">
-          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
-          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
+          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num]}</h1>
+          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num-1]} />
+            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num]} />
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -1114,7 +1125,7 @@ class Project05 extends Component {
           </div>
         </div>
         <ImageBox onRef={ref => (this.child = ref)} content={images}/>
-        <List prev={3} next={5}/>
+        <List prev={4} next={6}/>
         <Footer/>
       </section>
     );
@@ -1177,10 +1188,10 @@ class Project06 extends Component {
     return (
       <section id={this.state.id} className="page">
         <div className="box center tc ph4">
-          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num-1]}</h1>
-          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num-1]}</p>
+          <h1 className="mv0" style={projectH1}>{cdata["main-tag"][this.state.num]}</h1>
+          <p className="mb5-l mb4 mt3 ph4" style={projectH2}>{cdata["main-title"][this.state.num]}</p>
           <div className="overflow-hidden br4-l br0">
-            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num-1]} />
+            <img src={pcover[this.state.num-1]} width="100%" alt={cdata["main-tag"][this.state.num]} />
           </div>
         </div>
         <div className="box center ph4 mt5-l mt4 pb100">
@@ -1272,7 +1283,7 @@ class Project06 extends Component {
             </figure>
         </div>
         <ImageBox onRef={ref => (this.child = ref)} content={images}/>
-        <List prev={4} next={0}/>
+        <List prev={5} next={1}/>
         <Footer/>
       </section>
     );

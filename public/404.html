@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mark Liang</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License — https://github.com/rafgraph/spa-github-pages
+      //
+      // When GitHub Pages serves a 404, this script redirects to index.html
+      // while encoding the original path as a query param so it can be restored.
+      var pathSegmentsToKeep = 0;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.host + '/' +
+        l.pathname.slice(1).split('/').slice(0, pathSegmentsToKeep).join('/') + (pathSegmentsToKeep ? '/' : '') +
+        '?/' + l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

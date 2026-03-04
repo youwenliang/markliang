@@ -17,7 +17,7 @@ var data = {
 				"contact<br/>—"
 			],
 			"h4": [
-				"<span class='user-select'>AVP, Experience Design at <a href='https://www.kkcompany.com/' target='_blank' rel='noopener noreferrer' class='fw7 blue'>KKBOX</a><br/><span class='silver'>Previously at Mozilla and AKQA</span></span>",
+				"<span class='user-select'>Staff Product Designer at <a href='https://www.coupang.com/' target='_blank' rel='noopener noreferrer' class='fw7 blue'>Coupang</a><br/><span class='silver'>Previously at KKBOX, Mozilla and AKQA</span></span>",
 				"<span class='user-select'>Taipei City, Taiwan</span>",
 				"<span class='user-select'><a href='mailto:youwen.mark.liang@gmail.com' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>youwen.mark.liang@gmail.com</a></span><br/><span><a href='https://www.linkedin.com/in/mark-liang/' target='_blank' rel='noopener noreferrer' class='underline dark-gray'>linkedin.com/in/mark-liang</a></span>"
 			],
@@ -49,7 +49,7 @@ var data = {
 			"side-tag": ["WEB DEVELOPMENT", "WEB DESIGN & DEVELOPMENT", "WEB DESIGN & DEVELOPMENT","CSS/CSS ANIMATION","WEB DESIGN & DEVELOPMENT","3D DRAWING/CINEMA 4D"],
 			"side-des": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."],
 			"side-img": ["https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/","https://fakeimg.pl/540x360/"],
-			"side-url": ["https://www.oisee.cool/","https://uchronia.one", "https://newmedia.pts.org.tw/island20", "https://codepen.io/collection/XLRmOe", "https://grants.g0v.tw/power", "https://sketchfab.com/bigheadcool"]
+			"side-url": ["https://www.oisee.cool/","https://uchronia.one", "https://ptstaiwan.github.io/island20/", "https://codepen.io/collection/XLRmOe", "https://grants.g0v.tw/power", "https://sketchfab.com/bigheadcool"]
 		},
 		"writing": {
 			"h1": "Writing<span class='blue'>:<br/></span>",
@@ -86,7 +86,7 @@ var data = {
 		}
 	},
 	"projects": {
-		"links": ["","firefox-lite","screenshot-go","firefox-color","firefox-send","firefox-screenshots","firefoxos-tv"]
+		"links": ["kkbox","firefox-lite","screenshot-go","firefox-color","firefox-send","firefox-screenshots","firefoxos-tv"]
 	}
 }
 export default data;

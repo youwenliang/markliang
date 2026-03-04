@@ -89,14 +89,14 @@ class Projects extends Component {
 
     var main = [];
     var pcover = [project0, project1, project2, project3, project4, project5, project6];
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 7; i++) {
       var bgCover = {
         backgroundImage: "url("+pcover[i]+")",
         backgroundPosition: "center center"
       }
       var temp = (
-        <Link to ={'/projects/'+pdata["links"][i]} onClick={this.scrollTop}>
-          <div className="cf mb40 up" key={"project"+i}>
+        <Link key={"project"+i} to ={'/projects/'+pdata["links"][i]} onClick={this.scrollTop}>
+          <div className="cf mb40 up">
             <div className="fl w-40-l w-100 pa2 tl">
               <h4 style={projectH4} className="mb3-ns mb2 mt0" dangerouslySetInnerHTML={{__html:cdata["main-title"][i]}}></h4>
               <h4 style={projectH4}  className="dark fw5 mv0">—</h4>
